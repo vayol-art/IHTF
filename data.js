@@ -7,7 +7,6 @@ const playsData = {
     "director": "Jackie Briceño",
     "cast": "Julio Rodríguez, Alina Interian, Monica Quintero, Isabella Chirinos",
     "description": "Una adolescente agrede a sus compañeros con violencia. El abuelo tutor, la maestra y una doctora, analizan la extraña conducta de la menor y abren la puerta de un pasado que revela vínculos secretos entre ellos que dictarán sus destinos, anclados en un país, que, al parecer, recién regresó a la democracia.",
-    "extraInfo": "Parte de la serie Away From Home del Auditorio del Condado de Miami-Dade, un programa que consiste en eventos fuera de sus instalaciones en sedes alternativas mientras el MDCA permanece temporalmente cerrado.",
     "image": "assets/f9bb5bfefcbf580338da65d3b9a672234de1553f.png",
     "colorClass": "purple",
     "logos": [
@@ -15,7 +14,7 @@ const playsData = {
       "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
     ],
     "dates": [
-      { "day": "3", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
+      { "day": "3", "month": "Sept", "time": "8:30 PM" },
       { "day": "4", "month": "Sept", "time": "8:30 PM" },
       { "day": "5", "month": "Sept", "time": "8:30 PM" },
       { "day": "6", "month": "Sept", "time": "5:00 PM" }
@@ -29,7 +28,6 @@ const playsData = {
     "director": "Santiago Sanguinetti",
     "cast": "Mateo Altez, Carmen Draper, Carla Moscatelli, Rogelio Gracia",
     "description": "El cadáver de un militar desaparece tras un desentierro clandestino y un secuestro. Una burócrata ejemplar reclama un entierro digno. El muerto se presenta y exige justicia.",
-    "extraInfo": "Parte de la serie Away From Home del Auditorio del Condado de Miami-Dade, un programa que consiste en eventos fuera de sus instalaciones en sedes alternativas mientras el MDCA permanece temporalmente cerrado.",
     "image": "assets/03118e0eda2b2a3dc82478dfcbbc13158e2d2f6c.png",
     "colorClass": "purple",
     "logos": [
@@ -37,7 +35,7 @@ const playsData = {
       "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
     ],
     "dates": [
-      { "day": "10", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
+      { "day": "10", "month": "Sept", "time": "8:30 PM" },
       { "day": "11", "month": "Sept", "time": "8:30 PM" },
       { "day": "12", "month": "Sept", "time": "8:30 PM" }
     ]
@@ -57,7 +55,7 @@ const playsData = {
       "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
     ],
     "dates": [
-      { "day": "11", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
+      { "day": "11", "month": "Sept", "time": "8:30 PM" },
       { "day": "12", "month": "Sept", "time": "8:30 PM" },
       { "day": "13", "month": "Sept", "time": "5:00 PM" }
     ]
@@ -78,7 +76,7 @@ const playsData = {
     ],
     "dates": [
       { "day": "11", "month": "Sept", "time": "8:30 PM" },
-      { "day": "12", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
+      { "day": "12", "month": "Sept", "time": "8:30 PM" },
       { "day": "13", "month": "Sept", "time": "5:00 PM" }
     ]
   },
@@ -90,7 +88,6 @@ const playsData = {
     "director": "Carlos Armesto, Martín Bondone, Facundo Bogarín",
     "cast": "Carmen Borla, Agustina Cedraschi, Lorenza Bernasconi, Andres Montejo, Mauricio Marte, Facundo Bogarin, Giorgia Valenti",
     "description": "Una experiencia sensorial inmersiva que despierta los sentidos y la imaginación. El espectador tiene la oportunidad de experimentar la historia  de un músico ciego a través del sonido, el olfato, el gusto y el tacto en completa oscuridad.",
-    "extraInfo": "Parte de la serie Away From Home del Auditorio del Condado de Miami-Dade, un programa que consiste en eventos fuera de sus instalaciones en sedes alternativas mientras el MDCA permanece temporalmente cerrado.",
     "image": "assets/dda7606981ce230e882b3798b729fa48c1d4242c.png",
     "colorClass": "purple",
     "logos": [
@@ -98,7 +95,7 @@ const playsData = {
       "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
     ],
     "dates": [
-      { "day": "17", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
+      { "day": "17", "month": "Sept", "time": "8:30 PM" },
       { "day": "18", "month": "Sept", "time": "8:30 PM" },
       { "day": "19", "month": "Sept", "time": "8:30 PM" }
     ]
@@ -119,7 +116,7 @@ const playsData = {
     ],
     "dates": [
       { "day": "17", "month": "Sept", "time": "8:30 PM" },
-      { "day": "18", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
+      { "day": "18", "month": "Sept", "time": "8:30 PM" },
       { "day": "19", "month": "Sept", "time": "8:30 PM" }
     ]
   },
@@ -139,7 +136,7 @@ const playsData = {
     ],
     "dates": [
       { "day": "18", "month": "Sept", "time": "8:30 PM" },
-      { "day": "19", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
+      { "day": "19", "month": "Sept", "time": "8:30 PM" },
       { "day": "20", "month": "Sept", "time": "5:00 PM" }
     ]
   },
@@ -152,13 +149,12 @@ const playsData = {
     "director": "Luciano Cortes",
     "cast": "Juan Bautista, Cote Composto",
     "description": "El joven y audaz Robinson decide embarcarse en un viaje sin destino en busca de aventuras. Tras naufragar el barco donde navegaba llega a una isla desierta en donde conoce personajes inolvidables que cambiarán su destino mientras busca volver a su hogar.",
-    "extraInfo": "Parte de la serie Away From Home del Auditorio del Condado de Miami-Dade, un programa que consiste en eventos fuera de sus instalaciones en sedes alternativas mientras el MDCA permanece temporalmente cerrado.",
     "image": "assets/5d19c5452df84b7ff38e739377d7763698b23581.png",
     "colorClass": "teal",
     "buttonText": "Reservar",
     "logos": [],
     "dates": [
-      { "day": "19", "month": "Sept", "time": "5:00 PM", "foro": "Sábado 19 : Foro después de la obra" },
+      { "day": "19", "month": "Sept", "time": "5:00 PM" },
       { "day": "20", "month": "Sept", "time": "5:00 PM" }
     ]
   },
@@ -177,7 +173,7 @@ const playsData = {
       "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
     ],
     "dates": [
-      { "day": "24", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
+      { "day": "24", "month": "Sept", "time": "8:30 PM" },
       { "day": "25", "month": "Sept", "time": "8:30 PM" },
       { "day": "26", "month": "Sept", "time": "8:30 PM" }
     ]

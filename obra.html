@@ -11,18 +11,19 @@
 <body>
   <header class="site-header">
     <a class="brand" href="index.html#inicio" aria-label="IHTF Inicio">
-      <img src="assets/b4de7d1c8f7d8dc37146bf29408eb4bfc929497e.png" alt="IHTF 40" />
+      <img class="logo-white" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
     </a>
     <nav class="main-nav" aria-label="Menú principal">
-      <a href="index.html#esperar">Qué esperar</a>
-      <a href="agenda.html">Programa</a>
-      <a href="teatros.html">Teatros</a>
-      <a href="index.html#newsletter">Newsletter</a>
-      <a class="nav-ticket" href="agenda.html">Entradas</a>
+      <a href="index.html#esperar">NOSOTROS</a>
+      <a href="agenda.html">PROGRAMA</a>
+      <a href="#">ARCHIVOS DEL FESTIVAL</a>
+      <a href="index.html#newsletter">CONTÁCTANOS</a>
+      <a class="nav-ticket" href="#"><span>&#9632;</span> INSCRIPCIONES</a>
     </nav>
   </header>
 
-  <main id="inicio" style="padding-top: 100px;">
+  <main id="inicio">
     <section class="hero" id="play-hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
@@ -88,24 +89,24 @@
       </div>
     </section>
 
-    <section class="newsletter">
-      <div class="section-inner newsletter-inner">
-        <div>
-          <h2>Suscríbete a nuestro Newsletter</h2>
-          <p>Recibe novedades del festival, programación, artistas invitados y noticias especiales del IHTF.</p>
-        </div>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" required />
-          <button type="submit">Enviar</button>
+  </main>
+
+  <div class="footer-wrapper">
+    <section class="newsletter" id="newsletter">
+      <div class="section-inner narrow">
+        <h2>Suscríbete a nuestro Newsletter</h2>
+        <p>Recibe novedades del festival, programación, artistas invitados y noticias especiales del IHTF.</p>
+        <form class="signup">
+          <input type="email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" />
+          <button type="submit">Enviar &rarr;</button>
         </form>
       </div>
     </section>
-  </main>
-
-  <footer class="site-footer">
-    <div><strong>IHTF 40</strong><span>Festival Internacional de Teatro Hispano</span></div>
-    <nav><a href="index.html#esperar">Nosotros</a><a href="agenda.html">Programa</a><a href="teatros.html">Teatros</a><a href="index.html#newsletter">Contáctanos</a></nav>
+    <footer class="site-footer">
+    <div><img src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" class="footer-logo" /></div>
+    <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
   </footer>
+  </div>
 
   <script src="data.js"></script>
   <script>
@@ -256,5 +257,35 @@
       });
     });
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('.site-header');
+      const hero = document.querySelector('.hero');
+      
+      if (header && hero) {
+        const updateHeader = () => {
+          // Calculate when the header leaves the hero section
+          // The header is usually ~80px tall and 20px from top
+          const heroBottom = hero.getBoundingClientRect().bottom;
+          if (heroBottom <= 100) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        };
+        
+        window.addEventListener('scroll', updateHeader);
+        updateHeader(); // Check on load
+      } else if (header) {
+        // Fallback if no hero section
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>

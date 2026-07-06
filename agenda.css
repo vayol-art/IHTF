@@ -1,3 +1,17 @@
+:root {
+  --blue: #1a789e;
+  --orange: #e2831e;
+  --purple: #761354;
+  --red: #a21e00;
+  --teal: #139da3;
+  --cream: #f7f3ec;
+  --light: #f5f5f5;
+  --text: #17333d;
+  --radius: 16px;
+  --font-title: 'Cabinet Grotesk', 'Anton SC', 'Arial Black', system-ui, sans-serif;
+  --font-body: 'General Sans', 'Inter', system-ui, sans-serif;
+}
+
 /* ==========================================================================
    Agenda Page Stylesheet (Wide Card Diagram Layout)
    ========================================================================== */
@@ -181,7 +195,7 @@ main {
   color: #fff;
   text-align: center;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 12px 16px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -190,7 +204,7 @@ main {
 .special-tag {
   font-family: 'Cabinet Grotesk', sans-serif;
   font-size: 26px;
-  font-weight: 900;
+  font-weight: 700;
   padding: 12px 22px;
   border-top: 1px solid rgba(255,255,255,0.4);
   background: var(--c);
@@ -268,7 +282,7 @@ main {
   text-decoration: none;
   border-radius: 999px;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 12px 28px;
   min-width: 140px;
   text-align: center;
@@ -406,7 +420,7 @@ main {
   border: 0;
   background: #e2831e;
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 18px;
   border-radius: 999px;
   padding: 14px 32px;
@@ -415,9 +429,7 @@ main {
 
 /* Responsive Overrides */
 @media (max-width: 1000px) {
-  .theaters-bar {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
   .program-card {
     grid-template-columns: 1fr;
   }
@@ -427,9 +439,7 @@ main {
 }
 
 @media (max-width: 600px) {
-  .theaters-bar {
-    grid-template-columns: 1fr;
-  }
+
   .card-body {
     padding: 24px 20px;
   }
@@ -459,16 +469,16 @@ main {
   left: 50%;
   transform: translateX(-50%);
   z-index: 50;
-  width: min(1180px, calc(100% - 32px));
+  width: 96%;
+  max-width: 1800px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid transparent;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  background: transparent;
+  transition: all 0.3s ease;
 }
 .brand {
   display: flex;
@@ -561,5 +571,208 @@ main {
   .site-footer nav {
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+/* --- NEW FOOTER STYLES --- */
+.footer-wrapper {
+  background: var(--blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/textura%20fondo.png');
+  background-size: cover;
+  mix-blend-mode: screen;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.newsletter {
+  position: relative;
+  padding: 80px 24px 40px;
+  text-align: center;
+  z-index: 1;
+  background: transparent !important;
+}
+
+.newsletter .section-inner {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.newsletter h2 {
+  font-size: clamp(34px, 4vw, 48px);
+  color: var(--blue);
+  text-transform: none
+}
+
+.newsletter p {
+  max-width: 760px;
+  margin: 14px auto 38px;
+  color: var(--blue);
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 600
+}
+
+.signup {
+  display: flex;
+  gap: 12px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 8px;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  background: #fff
+}
+
+.signup input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: var(--blue)
+}
+
+.signup button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 30px;
+  cursor: pointer
+}
+
+.site-footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: transparent !important;
+  color: #fff;
+  padding: 20px 64px 60px;
+  z-index: 1;
+}
+
+.site-footer .footer-logo {
+  max-width: 250px;
+  width: 250px;
+}
+
+.site-footer nav {
+  display: flex;
+  gap: 20px;
+  font-weight: normal
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Header scroll states */
+.site-header {
+  color: #fff;
+}
+.site-header .main-nav a {
+  font-weight: normal;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.site-header.scrolled {
+  color: var(--blue);
+}
+.site-header.scrolled .main-nav a {
+  color: var(--blue);
+}
+
+/* Logo toggle */
+.site-header .brand .logo-color { display: none; }
+.site-header.scrolled .brand .logo-white { display: none; }
+.site-header.scrolled .brand .logo-color { display: block; }
+
+.site-header.scrolled {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('assets/textura%20fondo.png') center/cover;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.theaters-bar-section {
+  padding: 40px 20px 0;
+  background: #eff6f7;
+}
+
+.theaters-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.theater-badge {
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  height: 160px;
+  border: 1px solid var(--accent);
+  border-bottom: 24px solid var(--accent);
+  box-sizing: border-box;
+}
+
+.theater-badge img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.theater-badge.purple { --accent: #761354; }
+.theater-badge.red { --accent: #c4291c; }
+.theater-badge.orange { --accent: #df8826; }
+.theater-badge.pink { --accent: #cf66a2; }
+
+@media (max-width: 900px) {
+  .theaters-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .theaters-bar {
+    grid-template-columns: 1fr;
   }
 }
