@@ -26,6 +26,21 @@
   <main id="inicio">
     <section class="hero-wrapper" id="hero-wrapper">
       <section class="hero" id="play-hero">
+        <div class="hero-carousel-container" id="hero-carousel">
+          <div class="carousel-track">
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 1.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 10.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 11.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 2.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 3.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 4.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 5.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 6.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 7.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 8.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 9.webp" alt="Hero Photo" loading="lazy" />
+          </div>
+        </div>
         <div class="hero-overlay"></div>
         <div class="hero-content bottom-left">
           <h1 id="play-title">Título</h1>
@@ -145,7 +160,7 @@
       document.getElementById("play-title").innerHTML = play.titleHTML || play.title;
       
       const heroBg = playId === "a-fuego" ? "assets/hero-a-fuego.jpg" : `assets/${posterMap[playId]}`;
-      document.getElementById("play-hero").style.backgroundImage = `url('${heroBg}')`;
+      // document.getElementById("play-hero").style.backgroundImage = `url('${heroBg}')`;
       
       // Setup the play bar
       document.getElementById("inicio").style.setProperty('--theme-color', 'var(--' + play.colorClass + ')');
@@ -285,5 +300,30 @@
     });
   </script>
 
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const carousels = document.querySelectorAll(".carousel-track");
+      carousels.forEach(track => {
+        const images = track.querySelectorAll("img");
+        if (images.length <= 1) return;
+        
+        let currentIndex = 0;
+        setTimeout(() => {
+          setInterval(() => {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+              currentIndex = 0;
+            }
+            track.scrollTo({
+              top: 0,
+              left: currentIndex * track.clientWidth,
+              behavior: 'smooth'
+            });
+          }, 3000); 
+        }, Math.random() * 1000);
+      });
+    });
+  </script>
 </body>
 </html>
