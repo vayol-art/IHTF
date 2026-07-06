@@ -670,6 +670,12 @@ h1{
 }
 
 .hero h1 {
+  font-family: 'Cabinet Grotesk', 'Arial Black', sans-serif;
+  font-size: clamp(58px, 10vw, 120px);
+  line-height: .85;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -0.03em;
   position: relative;
   z-index: 1;
 }
