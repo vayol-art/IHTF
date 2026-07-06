@@ -43,6 +43,7 @@ const playsData = {
   "historia-de-un-jabali": {
     "id": "historia-de-un-jabali",
     "title": "Historia de un jabalí (o algo de Ricardo III)",
+    "titleHTML": "Historia de un jabalí<br>(o algo de Ricardo III)",
     "country": "Chile",
     "author": "Gabriel Calderón",
     "director": "Cristian Plana",

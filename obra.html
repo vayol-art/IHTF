@@ -148,7 +148,7 @@
 
       // Hero
       document.getElementById("play-country").textContent = play.country;
-      document.getElementById("play-title").textContent = play.title;
+      document.getElementById("play-title").innerHTML = play.titleHTML || play.title;
       
       const heroBg = playId === "a-fuego" ? "assets/hero-a-fuego.jpg" : `assets/${posterMap[playId]}`;
       document.getElementById("play-hero").style.backgroundImage = `url('${heroBg}')`;
@@ -248,7 +248,7 @@
         card.innerHTML = `
           <div class="country">${item.country}</div>
           <div class="work-content">
-            <h3>${item.title}</h3>
+            <h3>${item.titleHTML || item.title}</h3>
             <p>${item.description.substring(0, 100)}...</p>
             <a href="obra.html?play=${item.id}">Más información</a>
           </div>

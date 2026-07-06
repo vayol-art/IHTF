@@ -117,7 +117,7 @@
             <div class="country">Chile</div>
             <div class="card-info">
               <div class="copy">
-                <h3>Historia de un jabalí (o algo de Ricardo III)</h3>
+                <h3>Historia de un jabalí<br>(o algo de Ricardo III)</h3>
                 <p>Dos actores se enfrentan al reto de interpretar a Ricardo III y entregan un espacio clave para reflexionar sobre los límites de la ambición humana.</p>
                 <a class="more" href="obra-historia-de-un-jabali.html">Más información</a>
               </div>
@@ -433,19 +433,23 @@
     document.addEventListener("DOMContentLoaded", () => {
       const carousels = document.querySelectorAll(".carousel-track");
       carousels.forEach(track => {
+        const images = track.querySelectorAll("img");
+        if (images.length <= 1) return;
+        
+        let currentIndex = 0;
         setTimeout(() => {
           setInterval(() => {
-            const itemWidth = track.clientWidth;
-            let nextScrollLeft = track.scrollLeft + itemWidth;
-            if (nextScrollLeft + 10 >= track.scrollWidth) {
-              nextScrollLeft = 0;
+            currentIndex++;
+            if (currentIndex >= images.length) {
+              currentIndex = 0;
             }
+            // Use track.scrollTo so the main window doesn't jump!
             track.scrollTo({
               top: 0,
-              left: nextScrollLeft,
+              left: currentIndex * track.clientWidth,
               behavior: 'smooth'
             });
-          }, 3500); 
+          }, 3000); 
         }, Math.random() * 1000);
       });
     });
