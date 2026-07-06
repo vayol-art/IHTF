@@ -381,7 +381,7 @@ section h2 {
 
 .copy h3 {
   font-family: var(--font-title);
-  font-size: 28px;
+  font-size: 32px;
   line-height: 1.04;
   margin: 0 0 12px;
   text-transform: uppercase;
@@ -389,12 +389,14 @@ section h2 {
 }
 
 .copy p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.25;
   margin: 0 0 14px
 }
 
 .more {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none;
   margin-top: auto;
   align-self: flex-start;
   display: inline-flex;
@@ -419,6 +421,8 @@ section h2 {
 }
 
 .ticket {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -687,6 +691,8 @@ section h2 {
   }
 
   .ticket {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none;
     width: 110px;
     font-size: 17px
   }
@@ -788,7 +794,7 @@ section h2 {
 
 .theater-card h3 {
   font-family: var(--font-title);
-  font-size: 28px;
+  font-size: 32px;
   color: var(--blue);
   margin: 0 0 15px;
   text-transform: uppercase;
@@ -1337,3 +1343,57 @@ section h2 {
 .site-header .brand .logo-color { display: none; }
 .site-header.scrolled .brand .logo-white { display: none; }
 .site-header.scrolled .brand .logo-color { display: block; }
+
+
+/* Button Animations */
+.ticket:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  filter: brightness(1.15);
+}
+
+.more:hover {
+  background: var(--c);
+  color: #fff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.ticket:active, .more:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* Image Carousel Styles */
+.image-carousel {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
