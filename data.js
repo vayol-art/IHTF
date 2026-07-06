@@ -6,12 +6,12 @@ const playsData = {
     "author": "Abel González Melo",
     "director": "Jackie Briceño",
     "cast": "Julio Rodríguez, Alina Interian, Monica Quintero, Isabella Chirinos",
-    "description": "Una adolescente agrede a sus compañeros con violencia. El abuelo tutor, la maestra y una doctora, analizan la extraña conducta de la menor y abren la puerta de un pasado que revela vínculos secretos entre ellos que dictarán sus destinos, anclados en un país, que, al parecer, recién regresó a la democracia.",
+    "description": "Parece ser un país en reciente democracia que ha vivido un convulso y extenso período de dictadura. O quizás es al contrario, aunque los personajes no sean conscientes, o no deban decirlo. En medio de una clase de Matemáticas, una adolescente comienza a agredir a sus compañeros de modo inesperado y violento. La maestra se reúne con el abuelo, su tutor legal, para analizar la extraña conducta, que ha generado notables daños físicos incluso a la propia menor. El diálogo con una doctora aportará más incertidumbres que certezas, pero abrirá la puerta a un pasado que, poco a poco, moviéndonos entre dos tiempos, irá revelando secretos vínculos entre estos cuatro seres y dictará sus destinos.",
     "image": "assets/f9bb5bfefcbf580338da65d3b9a672234de1553f.png",
     "colorClass": "purple",
     "logos": [
       "assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png",
-      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+      "assets/Logos%20teatros/6a17e299d0a0bd93c818319f_Westchester_Center.avif"
     ],
     "dates": [
       { "day": "3", "month": "Sept", "time": "8:30 PM" },
@@ -32,7 +32,7 @@ const playsData = {
     "colorClass": "purple",
     "logos": [
       "assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png",
-      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+      "assets/Logos%20teatros/6a17e299d0a0bd93c818319f_Westchester_Center.avif"
     ],
     "dates": [
       { "day": "10", "month": "Sept", "time": "8:30 PM" },
@@ -52,7 +52,7 @@ const playsData = {
     "image": "assets/07fb4fbd9864c0979b71bc86cf6ea90268b59cc0.png",
     "colorClass": "red",
     "logos": [
-      "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
+      "assets/Logos%20teatros/6a17e2d82ff7f5b53dd06eb1_arsht-white-logo.webp"
     ],
     "dates": [
       { "day": "11", "month": "Sept", "time": "8:30 PM" },
@@ -67,12 +67,12 @@ const playsData = {
     "author": "Pablo Macho Otero",
     "director": "Emma Arquillué y Pablo Macho Otero",
     "cast": "Pablo Macho Otero",
-    "description": "La fascinación de un personaje por la figura de Eróstrato se convierte en obsesión. En un verso lleno de sátira, juegos de palabras y metateatralidad, la historia invita a reflexionar sobre el narcisismo actual y el deseo intrínseco al ser humano de dejar huella.",
+    "description": "Eróstrato, un pastor de la Antigua Grecia, incendió el templo de Artemisa de Éfeso, considerado una de las siete maravillas del mundo antiguo. Después de ser detenido, interrogado y torturado, acabó confesando la verdadera razón que lo había llevado a cometer aquel acto: pasar a la posteridad. En este monólogo íntegramente en verso, lleno de sátira, juegos de palabras y metateatralidad, veremos cómo la fascinación del protagonista por la figura de Eróstrato se convierte progresivamente en una obsesión, hasta hacerlo cometer un crimen a la altura de su ídolo infame. Saltando de un personaje a otro, el autor-intérprete se ríe de su propia megalomanía, invitándonos a reflexionar sobre el narcisismo imperante de nuestra época y el deseo intrínseco al ser humano de dejar huella; ya sea a través de una expresión artística, un oficio, una revolución o un acto criminal.",
     "extraInfo": "",
     "image": "assets/7bff60db5f4c6efeb5de0f8638d105d40370289f.png",
     "colorClass": "orange",
     "logos": [
-      "assets/bf99a69e846fde8469636c29ea2c8298735dc14d.png"
+      "assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
     ],
     "dates": [
       { "day": "11", "month": "Sept", "time": "8:30 PM" },
@@ -82,17 +82,17 @@ const playsData = {
   },
   "odd-man-out": {
     "id": "odd-man-out",
-    "title": "Odd Man Out",
+    "title": "Odd man out",
     "country": "USA",
     "author": "Martín Bondone",
     "director": "Carlos Armesto, Martín Bondone, Facundo Bogarín",
     "cast": "Carmen Borla, Agustina Cedraschi, Lorenza Bernasconi, Andres Montejo, Mauricio Marte, Facundo Bogarin, Giorgia Valenti",
-    "description": "Una experiencia sensorial inmersiva que despierta los sentidos y la imaginación. El espectador tiene la oportunidad de experimentar la historia  de un músico ciego a través del sonido, el olfato, el gusto y el tacto en completa oscuridad.",
+    "description": "ODD MAN OUT es una experencia sensorial inmersiva que despierta tus sentidos y tu imaginación. Tomarás un vuelo como ningún otro – en completa oscuridad. Llegas a nuestro aeropuerto y esperas en el salón y la puerta de embarque de PITCHBLACK Airlines, donde te preparamos para el viaje. Te guiamos hasta tu asiento en una cabina completamente oscura. Una vez en el vuelo, experimentarás una historia a través del sonido, el olfato, el gusto y el tacto. Incluso sentirás el clima sucediendo dentro de la habitación. Pero todo en completa oscuridad. Una vez que salgas, te invitamos a quedarte y disfrutar de la belleza, la vida y la esperanza de tu nuevo destino. El espectáculo narra la historia de un músico ciego cuya vida lo lleva desde Buenos Aires hasta Nueva York. Seguiremos la vida de Alberto mientras descubre la música, aprende a tocar la guitarra, viaja por el mundo y finalmente lidera y triunfa con su propia banda. También experimentará desamor y pérdida en un país desgarrado por conflictos internos. “ODD MAN OUT” no solo se trata de contar una historia, sino de crear una experiencia teatral única.",
     "image": "assets/dda7606981ce230e882b3798b729fa48c1d4242c.png",
     "colorClass": "purple",
     "logos": [
       "assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png",
-      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+      "assets/Logos%20teatros/6a17e299d0a0bd93c818319f_Westchester_Center.avif"
     ],
     "dates": [
       { "day": "17", "month": "Sept", "time": "8:30 PM" },
@@ -107,12 +107,12 @@ const playsData = {
     "author": "Emiliano Dionisi",
     "director": "Emiliano Dionisi",
     "cast": "Emiliano Dionisi, Lucia Baya Casal, Tomas Castiglione, Julia Garriz",
-    "description": "Unos artistas se juntan en el bosque a ensayar una obra. El lugar está plagado de seres mágicos dispuestos a jugar caprichosamente con sus emociones, lo cual convierte el espectáculo en un torbellino teatral plagado de ritmo, poesía, música y mucho humor.",
+    "description": "Una compañía de artistas se juntan en el bosque a ensayar una obra, sin darse cuenta de que ese lugar está plagado de seres mágicos dispuestos a jugar caprichosamente con sus emociones ¿O es que los verdaderos deseos se manifiestan libres lejos de las imposiciones? A la ya conocida trayectoria de la Compañía Criolla de re imaginar textos clásicos para acercarlos a nuevos públicos, haciéndolos vibrar en el presente (“Romeo y Julieta de bolsillo”, “Cyrano de más acá”, “La comedia de los Herrores”) se suma esta nueva propuesta inspirada en una de las comedias más mágicas y divertidas de Shakespeare; “Sueño de una noche de verano”. Esta vez, cuatro interpretes serán los encargados de personificar a todos los personajes de la obra original, en un verdadero torbellino teatral, plagado de ritmo, despliegue físico, poesía, música, humor y mucho amor. Desde su estreno en 2021, la pieza se ha convertido en un verdadero éxito de crítica y público, realizando más de trecientas funciones, tanto dentro como fuera de su país. Ha participado en festivales alrededor del mundo y recibido múltiples premios y distinciones, entre ellos el del “Certamen Barroco” del Festival de Teatro Clásico de Almagro, España en el año 2024 y la Fiesta Nacional de Teatro del INT Argentina en el año 2023, Premios ATINA, ACE y Maria Guerrero. Es además candidata a los Premios MAX 2026 en España Gracias a sus múltiples capas de interpretación, y a una mirada ágil y joven, algunas instituciones, como la “Escuela de espectadores de Buenos Aires”, la cataloga como la puerta de entrada ideal para quienes se interesan en los clásicos universales por primera vez, como también para los amantes y más avezados espectadores teatrales. Una invitación al juego teatral, a la risa catártica y a vivir el teatro clásico como si fuese escrito hoy, para nosotros. Una verdadera celebración del ritual que nos sigue convocando y conmoviendo.",
     "extraInfo": "",
     "image": "assets/0136c7ebd8c26799cf5362ae00edb9c0931f234f.png",
     "colorClass": "orange",
     "logos": [
-      "assets/bf99a69e846fde8469636c29ea2c8298735dc14d.png"
+      "assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
     ],
     "dates": [
       { "day": "17", "month": "Sept", "time": "8:30 PM" },
@@ -132,7 +132,7 @@ const playsData = {
     "image": "assets/43302b448a1ffe7cb9d5272e3b982cd5529c6b8e.png",
     "colorClass": "red",
     "logos": [
-      "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
+      "assets/Logos%20teatros/6a17e2d82ff7f5b53dd06eb1_arsht-white-logo.webp"
     ],
     "dates": [
       { "day": "18", "month": "Sept", "time": "8:30 PM" },
@@ -165,12 +165,12 @@ const playsData = {
     "author": "W. Shakespeare (Adaptación de Chela de Ferrari)",
     "director": "Chela De Ferrari",
     "cast": "Octavio Bernaza, Jaime Cruz, Lucas Demarchi, Manuel García, Diana Gutierrez, Cristina León Barandiarán, Ximena Rodríguez, Álvaro Toledo",
-    "description": "En el tejido entre Shakespeare y la vida de actores con síndrome de Down, surge un poderoso Hamlet basado en las preguntas ¿ser o no ser? o ¿qué implica ser para personas que no encuentran espacios donde se los tome en cuenta? El resultado es un espectáculo reflexivo e inquietante.",
+    "description": "El “Hamlet” de Teatro de La plaza, viene recorriendo Europa, Latinoamérica y Estados Unidos, cosechando premios, duplicando giras internaciones y dejando en miles de espectadores una manera distinta de mirar al ser humano. Un grupo de personas con síndrome de Down toma el escenario para compartir sus anhelos y frustraciones a través de una versión libre de Hamlet. La obra es un tejido entre el texto de Shakespeare y la vida de los actores y toma como punto de partida la pregunta que nos formula frente a la existencia. ¿Ser o no ser? ¿Qué implica ser para personas que no encuentran espacios donde se los tome en cuenta?\n\n“Teatro inclusivo y actores discapacitados cambian la mirada de la sociedad” (EFE- Madrid)\n“Otro Hamlet es posible: los actores con discapacidad tumban los prejuicios y triunfan en la cartelera teatral”. (Raquel Vidales, El PAÍS.)",
     "extraInfo": "",
     "image": "assets/cbf2ef76e88d69fa6ae983c74d812d2ade032c43.png",
     "colorClass": "red",
     "logos": [
-      "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
+      "assets/Logos%20teatros/6a17e2d82ff7f5b53dd06eb1_arsht-white-logo.webp"
     ],
     "dates": [
       { "day": "24", "month": "Sept", "time": "8:30 PM" },

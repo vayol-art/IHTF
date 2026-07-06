@@ -107,13 +107,7 @@
   <script src="data.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      let playId = urlParams.get("play");
-
-      // Si no existe, buscamos por id por defecto
-      if (!playId || !playsData[playId]) {
-        playId = "carrusel";
-      }
+      let playId = "habitacion-macbeth";
 
       const play = playsData[playId];
 
