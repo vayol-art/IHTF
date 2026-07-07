@@ -71,11 +71,14 @@
   </header>
 
   <main>
-    <section class="hero" id="inicio">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-content">
-        <img class="hero-logo" src="assets/b4de7d1c8f7d8dc37146bf29408eb4bfc929497e.png" alt="40th International Hispanic Theatre Festival" />
+    <section class="hero-scroll-track" id="inicio">
+      <div class="hero-sticky-container">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        
+        <div class="hero-sticky-logo">
+          <img class="hero-logo" src="assets/b4de7d1c8f7d8dc37146bf29408eb4bfc929497e.png" alt="40th International Hispanic Theatre Festival" />
+        </div>
       </div>
     </section>
 
@@ -467,7 +470,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const header = document.querySelector('.site-header');
-      const hero = document.querySelector('.hero');
+      const hero = document.querySelector('.hero, .hero-scroll-track');
       
       if (header && hero) {
         const updateHeader = () => {
@@ -489,6 +492,42 @@
           if (window.scrollY > 50) header.classList.add('scrolled');
           else header.classList.remove('scrolled');
         });
+      }
+
+      // Scroll animations for Vistal effect
+      const scrollTrack = document.querySelector('.hero-scroll-track');
+      const bg = document.querySelector('.hero-scroll-track .hero-bg');
+      const logo = document.querySelector('.hero-scroll-track .hero-sticky-logo');
+
+      if (scrollTrack && bg && logo) {
+        const handleScrollAnimation = () => {
+          const trackRect = scrollTrack.getBoundingClientRect();
+          const trackHeight = scrollTrack.offsetHeight;
+          const viewportHeight = window.innerHeight;
+          
+          const totalScrollable = trackHeight - viewportHeight;
+          if (totalScrollable <= 0) return;
+
+          const scrolledAmount = -trackRect.top;
+          let progress = scrolledAmount / totalScrollable;
+          progress = Math.max(0, Math.min(1, progress));
+
+          // 1. Zoom the background image (scale from 1.05 to 1.2)
+          const scaleVal = 1.05 + (progress * 0.15);
+          bg.style.transform = `scale(${scaleVal})`;
+
+          // 2. Logo accompanying and moving down (does not fade out)
+          const logoTranslateY = progress * 200; // Va bajando 200px según haces scroll
+          const logoScale = 1 - (progress * 0.05); // Escala muy ligera
+          logo.style.transform = `translateY(${logoTranslateY}px) scale(${logoScale})`;
+          logo.style.opacity = 1;
+        };
+
+        window.addEventListener('scroll', () => {
+          requestAnimationFrame(handleScrollAnimation);
+        });
+        // Run once on load to initialize position
+        handleScrollAnimation();
       }
     });
   </script>
