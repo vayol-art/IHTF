@@ -14,7 +14,7 @@ const playsData = {
       "assets/Logos%20teatros/6a17e299d0a0bd93c818319f_Westchester_Center.avif"
     ],
     "dates": [
-      { "day": "3", "month": "Sept", "time": "8:30 PM" },
+      { "day": "3", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
       { "day": "4", "month": "Sept", "time": "8:30 PM" },
       { "day": "5", "month": "Sept", "time": "8:30 PM" },
       { "day": "6", "month": "Sept", "time": "5:00 PM" }
@@ -35,7 +35,7 @@ const playsData = {
       "assets/Logos%20teatros/6a17e299d0a0bd93c818319f_Westchester_Center.avif"
     ],
     "dates": [
-      { "day": "10", "month": "Sept", "time": "8:30 PM" },
+      { "day": "10", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
       { "day": "11", "month": "Sept", "time": "8:30 PM" },
       { "day": "12", "month": "Sept", "time": "8:30 PM" }
     ]
@@ -56,7 +56,7 @@ const playsData = {
       "assets/Logos%20teatros/6a17e2d82ff7f5b53dd06eb1_arsht-white-logo.webp"
     ],
     "dates": [
-      { "day": "11", "month": "Sept", "time": "8:30 PM" },
+      { "day": "11", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
       { "day": "12", "month": "Sept", "time": "8:30 PM" },
       { "day": "13", "month": "Sept", "time": "5:00 PM" }
     ]
@@ -77,7 +77,7 @@ const playsData = {
     ],
     "dates": [
       { "day": "11", "month": "Sept", "time": "8:30 PM" },
-      { "day": "12", "month": "Sept", "time": "8:30 PM" },
+      { "day": "12", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
       { "day": "13", "month": "Sept", "time": "5:00 PM" }
     ]
   },
@@ -96,7 +96,7 @@ const playsData = {
       "assets/Logos%20teatros/6a17e299d0a0bd93c818319f_Westchester_Center.avif"
     ],
     "dates": [
-      { "day": "17", "month": "Sept", "time": "8:30 PM" },
+      { "day": "17", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
       { "day": "18", "month": "Sept", "time": "8:30 PM" },
       { "day": "19", "month": "Sept", "time": "8:30 PM" }
     ]
@@ -117,7 +117,7 @@ const playsData = {
     ],
     "dates": [
       { "day": "17", "month": "Sept", "time": "8:30 PM" },
-      { "day": "18", "month": "Sept", "time": "8:30 PM" },
+      { "day": "18", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
       { "day": "19", "month": "Sept", "time": "8:30 PM" }
     ]
   },
@@ -137,7 +137,7 @@ const playsData = {
     ],
     "dates": [
       { "day": "18", "month": "Sept", "time": "8:30 PM" },
-      { "day": "19", "month": "Sept", "time": "8:30 PM" },
+      { "day": "19", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
       { "day": "20", "month": "Sept", "time": "5:00 PM" }
     ]
   },
@@ -174,7 +174,7 @@ const playsData = {
       "assets/Logos%20teatros/6a17e2d82ff7f5b53dd06eb1_arsht-white-logo.webp"
     ],
     "dates": [
-      { "day": "24", "month": "Sept", "time": "8:30 PM" },
+      { "day": "24", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
       { "day": "25", "month": "Sept", "time": "8:30 PM" },
       { "day": "26", "month": "Sept", "time": "8:30 PM" }
     ]
