@@ -399,6 +399,15 @@ main {
 
 @media (max-width: 600px) {
 
+  .program-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .program-grid {
+    width: 100%;
+    gap: 20px;
+  }
+
   .card-body {
     padding: 24px 20px;
   }
@@ -735,8 +744,20 @@ main {
 }
 
 @media (max-width: 600px) {
+  .theaters-bar-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .theaters-bar {
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 10px;
+  }
+  .theater-badge {
+    padding: 12px;
+    height: 110px;
+    border-bottom-width: 12px;
+    border-radius: 12px;
   }
 }
 
