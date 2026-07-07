@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cargando Obra... | IHTF</title>
+  <meta name="description" content="Ficha de la obra en el International Hispanic Theatre Festival." />
+  <link rel="stylesheet" href="fonts.css" />
+  <link rel="stylesheet" href="obra.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#inicio" aria-label="IHTF Inicio">
+      <img class="logo-white" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+    </a>
+    <nav class="main-nav" aria-label="Menú principal">
+      <a href="index.html#esperar">NOSOTROS</a>
+      <a href="agenda.html">PROGRAMA</a>
+      <a href="#">ARCHIVOS DEL FESTIVAL</a>
+      <a href="index.html#newsletter">CONTÁCTANOS</a>
+      <a class="nav-ticket" href="#"><span>&#9632;</span> INSCRIPCIONES</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero-wrapper" id="hero-wrapper">
+      <section class="hero" id="play-hero">
+        <div class="hero-carousel-container" id="hero-carousel">
+          <div class="carousel-track">
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 1.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 3.webp" alt="Hero Photo" loading="lazy" />
+            <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 5.webp" alt="Hero Photo" loading="lazy" />
+          </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content bottom-left">
+          <h1 id="play-title">Título</h1>
+          <span class="eyebrow" id="play-country">País</span>
+        </div>
+      </section>
+      <div class="play-bar" id="play-bar">
+        <div class="play-bar-inner">
+          <div class="play-bar-left" id="play-bar-logo">
+            <!-- Logo dynamically inserted -->
+          </div>
+          <div class="play-bar-right" id="play-schedule">
+            <!-- Dates dynamically inserted -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="obra" class="detail-section">
+      <div class="section-inner single-column">
+        <div class="credits-box">
+          <div class="credit-item">
+            <strong>Autor:</strong>
+            <span id="play-author">Autor</span>
+          </div>
+          <div class="credit-item">
+            <strong>Director:</strong>
+            <span id="play-director">Director</span>
+          </div>
+          <div class="credit-item">
+            <strong>Elenco:</strong>
+            <span id="play-cast">Elenco</span>
+          </div>
+        </div>
+        
+        <div class="description-box">
+          <div id="play-description" class="desc-text">
+            <p>Descripción detallada...</p>
+          </div>
+          <div id="play-extra-info"></div>
+          <a class="btn-buy" id="play-buy-btn" href="agenda.html">Comprar entradas</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="otras-obras" class="works-section">
+      <div class="section-inner">
+        <div class="section-heading centered">
+          <span>Programa</span>
+          <h2>También puede interesarte</h2>
+        </div>
+        <div class="works-grid" id="related-plays-grid">
+          <!-- Se poblará dinámicamente -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="footer-wrapper">
+    <section class="newsletter" id="newsletter">
+      <div class="section-inner narrow">
+        <h2>Suscríbete a nuestro Newsletter</h2>
+        <p>Recibe novedades del festival, programación, artistas invitados y noticias especiales del IHTF.</p>
+        <form class="signup">
+          <input type="email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" />
+          <button type="submit">Enviar &rarr;</button>
+        </form>
+      </div>
+    </section>
+    <footer class="site-footer">
+    <div><img src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" class="footer-logo" /></div>
+    <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
+  </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let playId = "odd-man-out";
+
+      const play = playsData[playId];
+
+      // Mapeo de posters para fondos del Hero
+      const posterMap = {
+        "carrusel": "carrusel.jpg",
+        "zombi-manifiesto": "zombi.jpg",
+        "historia-de-un-jabali": "jabali.jpg",
+        "a-fuego": "a-fuego.jpg",
+        "odd-man-out": "odd-man-out.jpg",
+        "sueno": "sueno.jpg",
+        "habitacion-macbeth": "habitacion-macbeth.jpg",
+        "robinson-crusoe": "robinson.jpg",
+        "hamlet": "hamlet.jpg"
+      };
+
+      // Mapeo de tarjetas recomendadas
+      const cardMap = {
+        "carrusel": "card-carrusel.jpg",
+        "zombi-manifiesto": "card-zombi.jpg",
+        "historia-de-un-jabali": "card-jabali.jpg",
+        "a-fuego": "card-a-fuego.jpg",
+        "odd-man-out": "card-odd.jpg",
+        "sueno": "card-sueno.jpg",
+        "habitacion-macbeth": "card-macbeth.jpg",
+        "robinson-crusoe": "card-robinson.jpg",
+        "hamlet": "card-hamlet.jpg"
+      };
+
+      // Título de la página
+      document.title = `${play.title} | Festival Internacional de Teatro Hispano`;
+
+      // Hero
+      document.getElementById("play-country").textContent = play.country;
+      document.getElementById("play-title").innerHTML = play.titleHTML || play.title;
+      
+      const heroBg = playId === "a-fuego" ? "assets/hero-a-fuego.jpg" : `assets/${posterMap[playId]}`;
+      // document.getElementById("play-hero").style.backgroundImage = `url('${heroBg}')`;
+      
+      // Setup the play bar
+      document.getElementById("inicio").style.setProperty('--theme-color', 'var(--' + play.colorClass + ')');
+      const playBar = document.getElementById("play-bar");
+      playBar.className = "play-bar " + play.colorClass;
+      
+      // Setup the theater logo
+      const playBarLogo = document.getElementById("play-bar-logo");
+      // The theater logo is usually the last one, or the only one
+      const theaterLogoSrc = play.logos[play.logos.length - 1];
+      if (theaterLogoSrc) {
+        playBarLogo.innerHTML = `<img src="${theaterLogoSrc}" alt="Logo Teatro">`;
+      }
+
+      
+      
+      // Funciones
+      const scheduleContainer = document.getElementById("play-schedule");
+      scheduleContainer.innerHTML = "";
+      play.dates.forEach(d => {
+        const card = document.createElement("div");
+        card.className = "play-date-item";
+        card.innerHTML = `
+          <span class="m">${d.month.toUpperCase()}</span>
+          <strong class="d">${d.day}</strong>
+          <small class="t">${d.time}</small>
+          ${d.foro ? `<small class="note">${d.foro}</small>` : ""}
+        `;
+        scheduleContainer.appendChild(card);
+      });
+
+      // Ficha Técnica
+      document.getElementById("play-author").textContent = play.author;
+      document.getElementById("play-director").textContent = play.director;
+      document.getElementById("play-cast").textContent = play.cast;
+
+      // Descripción
+      const descContainer = document.getElementById("play-description");
+      descContainer.innerHTML = "";
+      
+      // Dividir descripción por párrafos o frases largas para mejorar legibilidad
+      const sentences = play.description.split(". ");
+      let currentParagraph = "";
+      sentences.forEach((sentence, index) => {
+        if (sentence.trim()) {
+          currentParagraph += sentence.trim() + ". ";
+          if ((index + 1) % 2 === 0 || index === sentences.length - 1) {
+            const p = document.createElement("p");
+            p.textContent = currentParagraph;
+            descContainer.appendChild(p);
+            currentParagraph = "";
+          }
+        }
+      });
+
+      // Información adicional (MDCA Away From Home, etc.)
+      const extraContainer = document.getElementById("play-extra-info");
+      extraContainer.innerHTML = "";
+      if (play.extraInfo) {
+        const extraP = document.createElement("p");
+        extraP.className = "note";
+        extraP.style.borderLeft = "3px solid var(--orange)";
+        extraP.style.paddingLeft = "14px";
+        extraP.style.marginTop = "24px";
+        extraP.style.fontStyle = "italic";
+        extraP.style.fontSize = "16px";
+        extraP.style.color = "var(--orange)";
+        extraP.textContent = play.extraInfo;
+        extraContainer.appendChild(extraP);
+      }
+
+      // Botón Comprar Entradas
+      const buyBtn = document.getElementById("play-buy-btn");
+      buyBtn.textContent = buyText === "Reservar" ? "Reservar ahora" : "Comprar entradas";
+
+      // Obras relacionadas (3 aleatorias excluyendo la actual)
+      const allPlayIds = Object.keys(playsData).filter(id => id !== playId);
+      const shuffled = allPlayIds.sort(() => 0.5 - Math.random());
+      const selected = shuffled.slice(0, 3);
+
+      const relatedGrid = document.getElementById("related-plays-grid");
+      relatedGrid.innerHTML = "";
+
+      selected.forEach(id => {
+        const item = playsData[id];
+        const card = document.createElement("article");
+        card.className = `work-card ${item.colorClass}`;
+        
+        let dateSpans = "";
+        item.dates.forEach(d => {
+          dateSpans += `<span>${d.month} <strong>${d.day}</strong><small>${d.time}</small></span>`;
+        });
+
+        card.innerHTML = `
+          <div class="country">${item.country}</div>
+          <div class="work-content">
+            <h3>${item.titleHTML || item.title}</h3>
+            <p>${item.description.substring(0, 100)}...</p>
+            <a href="obra.html?play=${item.id}">Más información</a>
+          </div>
+          <div class="dates">
+            ${dateSpans}
+          </div>
+          <img src="assets/${cardMap[item.id]}" alt="${item.title}" />
+        `;
+        relatedGrid.appendChild(card);
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('.site-header');
+      const hero = document.querySelector('.hero');
+      
+      if (header && hero) {
+        const updateHeader = () => {
+          // Calculate when the header leaves the hero section
+          // The header is usually ~80px tall and 20px from top
+          const heroBottom = hero.getBoundingClientRect().bottom;
+          if (heroBottom <= 100) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        };
+        
+        window.addEventListener('scroll', updateHeader);
+        updateHeader(); // Check on load
+      } else if (header) {
+        // Fallback if no hero section
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+        });
+      }
+    });
+  </script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const carousels = document.querySelectorAll(".carousel-track");
+      carousels.forEach(track => {
+        const images = track.querySelectorAll("img");
+        if (images.length <= 1) return;
+        
+        let currentIndex = 0;
+        setTimeout(() => {
+          setInterval(() => {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+              currentIndex = 0;
+            }
+            track.scrollTo({
+              top: 0,
+              left: currentIndex * track.clientWidth,
+              behavior: 'smooth'
+            });
+          }, 3000); 
+        }, Math.random() * 1000);
+      });
+    });
+  </script>
+</body>
+</html>
