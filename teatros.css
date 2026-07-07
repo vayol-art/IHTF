@@ -862,5 +862,7 @@ h1{
   .venue-btn {
     width: 100%;
     min-width: 0;
+    word-break: break-all;
+    padding: 14px 20px;
   }
 }
