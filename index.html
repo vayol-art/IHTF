@@ -73,7 +73,7 @@
   <main>
     <section class="hero-scroll-track" id="inicio">
       <div class="hero-sticky-container">
-        <div class="hero-bg" aria-hidden="true"></div>
+        <video class="hero-bg" src="assets/Loop%20banner.mp4" autoplay loop muted playsinline aria-hidden="true"></video>
         <div class="hero-overlay" aria-hidden="true"></div>
         
         <div class="hero-sticky-logo">
@@ -517,7 +517,8 @@
           bg.style.transform = `scale(${scaleVal})`;
 
           // 2. Logo accompanying and moving down (does not fade out)
-          const logoTranslateY = progress * 200; // Va bajando 200px según haces scroll
+          const maxTranslateY = window.innerHeight * 0.85 - logo.offsetHeight;
+          const logoTranslateY = progress * maxTranslateY; // Va bajando hasta abajo según haces scroll
           const logoScale = 1 - (progress * 0.05); // Escala muy ligera
           logo.style.transform = `translateY(${logoTranslateY}px) scale(${logoScale})`;
           logo.style.opacity = 1;
