@@ -14,11 +14,8 @@
       <img class="logo-color" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
     </a>
     <nav class="main-nav" aria-label="Menú principal">
-      <a href="index.html#esperar">NOSOTROS</a>
       <a href="agenda.html">PROGRAMA</a>
-      <a href="#">ARCHIVOS DEL FESTIVAL</a>
-      <a href="index.html#newsletter">CONTÁCTANOS</a>
-      <a class="nav-ticket" href="#"><span>&#9632;</span> INSCRIPCIONES</a>
+      <a href="teatros.html">TEATROS</a>
     </nav>
     <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
       <span></span>
@@ -42,6 +39,30 @@
               mainNav.classList.remove("open");
               hamburger.setAttribute("aria-expanded", "false");
             }
+          });
+        }
+
+        // Secciones animadas (scroll reveal)
+        const sections = document.querySelectorAll("main > section, .venues-stack > section, .program-grid > article, .program-card, .play-card, .subpage-hero, .footer-wrapper");
+        if (window.IntersectionObserver) {
+          const observerOptions = {
+            root: null,
+            rootMargin: "0px 0px -60px 0px",
+            threshold: 0.08
+          };
+          
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+                obs.unobserve(entry.target);
+              }
+            });
+          }, observerOptions);
+
+          sections.forEach(sec => {
+            sec.classList.add("reveal");
+            observer.observe(sec);
           });
         }
       });

@@ -217,3 +217,18 @@
     margin-top: 4px !important;
   }
 }
+
+/* ==========================================================================
+   Scroll Reveal & Fade-in Animations
+   ========================================================================== */
+.reveal {
+  opacity: 0 !important;
+  transform: translateY(40px) !important;
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.reveal.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
