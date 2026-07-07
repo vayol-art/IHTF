@@ -131,3 +131,89 @@
   font-display: swap;
   font-style: normal;
 }
+
+/* ==========================================================================
+   Hamburger Menu Global Styles
+   ========================================================================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+  outline: none;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: #1a789e;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Open Animation */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 1100px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav {
+    display: none !important;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 260px;
+    background: #ffffff;
+    border: 1px solid rgba(26, 120, 158, 0.2);
+    border-radius: 16px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 8px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+  }
+
+  .main-nav.open {
+    display: flex !important;
+  }
+
+  .main-nav.open a {
+    display: block !important;
+    padding: 12px 16px !important;
+    color: #1a789e !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    transition: background 0.2s !important;
+  }
+
+  .main-nav.open a:hover {
+    background: rgba(26, 120, 158, 0.08) !important;
+  }
+  
+  .main-nav.open .nav-ticket {
+    background: #1a789e !important;
+    color: #ffffff !important;
+    margin-top: 4px !important;
+  }
+}

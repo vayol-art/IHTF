@@ -21,6 +21,32 @@
       <a href="index.html#newsletter">CONTÁCTANOS</a>
       <a class="nav-ticket" href="#"><span>&#9632;</span> INSCRIPCIONES</a>
     </nav>
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.querySelector(".hamburger");
+        const mainNav = document.querySelector(".main-nav");
+        if (hamburger && mainNav) {
+          hamburger.addEventListener("click", function(e) {
+            e.stopPropagation();
+            const isOpen = hamburger.classList.toggle("open");
+            mainNav.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function(event) {
+            if (!hamburger.contains(event.target) && !mainNav.contains(event.target)) {
+              hamburger.classList.remove("open");
+              mainNav.classList.remove("open");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+    </script>
   </header>
 
   <main id="inicio">

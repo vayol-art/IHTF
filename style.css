@@ -442,6 +442,14 @@ section h2 {
   object-fit: contain
 }
 
+.logos-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
 .actions .wide-logo {
   max-width: 128px;
   max-height: 56px
@@ -622,6 +630,33 @@ section h2 {
   .play-card {
     min-height: auto
   }
+
+  .card-info {
+    flex-direction: column;
+    gap: 20px;
+    min-height: unset;
+  }
+
+  .actions {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 16px;
+  }
+
+  .ticket {
+    width: auto;
+    font-size: 18px;
+  }
+
+  .logos-wrapper {
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 0;
+  }
 }
 
 @media (max-width:760px) {
@@ -679,7 +714,9 @@ section h2 {
   }
 
   .card-info {
-    min-height: unset
+    min-height: unset;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .copy h3 {
@@ -687,13 +724,17 @@ section h2 {
   }
 
   .actions {
-    width: 110px
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
   }
 
   .ticket {
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  text-decoration: none;
-    width: 110px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
+    width: auto;
     font-size: 17px
   }
 

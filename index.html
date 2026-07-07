@@ -21,6 +21,32 @@
       <a href="index.html#newsletter">CONTÁCTANOS</a>
       <a class="nav-ticket" href="#"><span>&#9632;</span> INSCRIPCIONES</a>
     </nav>
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.querySelector(".hamburger");
+        const mainNav = document.querySelector(".main-nav");
+        if (hamburger && mainNav) {
+          hamburger.addEventListener("click", function(e) {
+            e.stopPropagation();
+            const isOpen = hamburger.classList.toggle("open");
+            mainNav.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function(event) {
+            if (!hamburger.contains(event.target) && !mainNav.contains(event.target)) {
+              hamburger.classList.remove("open");
+              mainNav.classList.remove("open");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+    </script>
   </header>
 
   <main>
@@ -71,7 +97,13 @@
                 <p>Una adolescente agrede a sus compañeros con violencia y abre la puerta de un pasado que revela vínculos secretos que cambiarán el destino de todos.</p>
                 <a class="more" href="obra-carrusel.html">Más información</a>
               </div>
-              <div class="actions"><a class="ticket" href="obra-carrusel.html">Entradas</a><img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" /><img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png" alt="Westchester Cultural Arts Center" /></div>
+              <div class="actions">
+                <a class="ticket" href="obra-carrusel.html">Entradas</a>
+                <div class="logos-wrapper">
+                  <img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" />
+                  <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png" alt="Westchester Cultural Arts Center" />
+                </div>
+              </div>
             </div>
             <div class="dates"><div><span>Sept</span><strong>3</strong><em>8:30 PM</em></div><div><span>Sept</span><strong>4</strong><em>8:30 PM</em></div><div><span>Sept</span><strong>5</strong><em>8:30 PM</em></div><div><span>Sept</span><strong>6</strong><em>5:00 PM</em></div></div>
             
@@ -92,7 +124,13 @@
                 <p>El cadáver de un militar desaparece tras un desentierro clandestino y un secuestro. El muerto se presenta y exige justicia.</p>
                 <a class="more" href="obra-zombi-manifiesto.html">Más información</a>
               </div>
-              <div class="actions"><a class="ticket" href="obra-zombi-manifiesto.html">Entradas</a><img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" /><img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png" alt="Westchester Cultural Arts Center" /></div>
+              <div class="actions">
+                <a class="ticket" href="obra-zombi-manifiesto.html">Entradas</a>
+                <div class="logos-wrapper">
+                  <img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" />
+                  <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png" alt="Westchester Cultural Arts Center" />
+                </div>
+              </div>
             </div>
             <div class="dates"><div><span>Sept</span><strong>10</strong><em>8:30 PM</em></div><div><span>Sept</span><strong>11</strong><em>8:30 PM</em></div><div><span>Sept</span><strong>12</strong><em>8:30 PM</em></div></div>
             
@@ -173,7 +211,13 @@
                 <p>Una experiencia sensorial inmersiva que despierta los sentidos a través del sonido, el olfato, el gusto y el tacto en completa oscuridad.</p>
                 <a class="more" href="obra-odd-man-out.html">Más información</a>
               </div>
-              <div class="actions"><a class="ticket" href="obra-odd-man-out.html">Entradas</a><img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" /><img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png" alt="Westchester Cultural Arts Center" /></div>
+              <div class="actions">
+                <a class="ticket" href="obra-odd-man-out.html">Entradas</a>
+                <div class="logos-wrapper">
+                  <img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" />
+                  <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png" alt="Westchester Cultural Arts Center" />
+                </div>
+              </div>
             </div>
             <div class="dates"><div><span>Sept</span><strong>17</strong><em>8:30 PM</em></div><div><span>Sept</span><strong>18</strong><em>8:30 PM</em></div><div><span>Sept</span><strong>19</strong><em>8:30 PM</em></div></div>
             
