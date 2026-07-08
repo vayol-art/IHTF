@@ -80,6 +80,14 @@
           });
         }
 
+        // Fade out the hero intro image after 3 seconds
+        const introImg = document.querySelector('.hero-intro-img');
+        if (introImg) {
+          setTimeout(() => {
+            introImg.classList.add('fade-out');
+          }, 3000);
+        }
+
         // Secciones animadas (scroll reveal)
         const sections = document.querySelectorAll("main > section, .venues-stack > section, .program-grid > article, .program-card, .play-card, .subpage-hero, .footer-wrapper");
         if (window.IntersectionObserver) {
@@ -112,6 +120,7 @@
       <div class="hero-sticky-container">
         <video class="hero-bg" src="assets/Loop%20banner.mp4" autoplay loop muted playsinline
           aria-hidden="true"></video>
+        <img class="hero-bg hero-intro-img" src="assets/afiche_1_horizontal.jpg" alt="Poster de IHTF" />
         <div class="hero-overlay" aria-hidden="true"></div>
 
         <div class="hero-sticky-logo">
@@ -661,11 +670,11 @@
 
       // Scroll animations for Vistal effect
       const scrollTrack = document.querySelector('.hero-scroll-track');
-      const bg = document.querySelector('.hero-scroll-track .hero-bg');
+      const bgs = document.querySelectorAll('.hero-scroll-track .hero-bg');
       const logo = document.querySelector('.hero-scroll-track .hero-sticky-logo');
       const indicator = document.getElementById('scroll-indicator');
 
-      if (scrollTrack && bg && logo) {
+      if (scrollTrack && bgs.length > 0 && logo) {
         const handleScrollAnimation = () => {
           const trackRect = scrollTrack.getBoundingClientRect();
           const trackHeight = scrollTrack.offsetHeight;
@@ -680,7 +689,9 @@
 
           // 1. Zoom the background image (scale from 1.05 to 1.2)
           const scaleVal = 1.05 + (progress * 0.15);
-          bg.style.transform = `scale(${scaleVal})`;
+          bgs.forEach(bg => {
+            bg.style.transform = `scale(${scaleVal})`;
+          });
 
           // 2. Logo accompanying and moving down (does not fade out)
           const maxTranslateY = window.innerHeight * 0.85 - logo.offsetHeight;

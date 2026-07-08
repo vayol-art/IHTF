@@ -1799,3 +1799,14 @@ section h2 {
     opacity: 0;
   }
 }
+
+/* Hero Intro Image Fade-out */
+.hero-intro-img {
+  transition: opacity 1.2s ease-in-out;
+  z-index: 0;
+}
+
+.hero-intro-img.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
