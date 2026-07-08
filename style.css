@@ -140,7 +140,8 @@ img {
 /* Vistal-style Hero Scroll Track */
 .hero-scroll-track {
   position: relative;
-  height: 200vh; /* Scroll track height */
+  height: 200vh;
+  /* Scroll track height */
   background: #000;
 }
 
@@ -157,7 +158,8 @@ img {
 
 .hero-sticky-logo {
   position: absolute;
-  top: 15%; /* Empieza desde más arriba */
+  top: 15%;
+  /* Empieza desde más arriba */
   z-index: 2;
   width: min(580px, 80vw);
   display: flex;
@@ -267,16 +269,21 @@ img {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .hero-content-bottom {
     padding-bottom: 40px;
   }
+
   .hero-content-wrap h1 {
     font-size: 28px;
   }
+
   .hero-content-right p {
     font-size: 1rem;
   }
-  .button-primary, .button-secondary {
+
+  .button-primary,
+  .button-secondary {
     padding: 12px 24px;
     font-size: 0.9rem;
     flex: 1;
@@ -457,8 +464,15 @@ section h2 {
 }
 
 .program-section .section-inner {
-  width: calc(100% - 64px);
-  max-width: 100%;
+  width: calc(70% - 64px);
+  max-width: 70%;
+}
+
+@media (max-width: 760px) {
+  .program-section .section-inner {
+    width: min(100% - 32px, 680px);
+    max-width: 100%;
+  }
 }
 
 .program-section h2 {
@@ -480,7 +494,7 @@ section h2 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 780px;
+  min-height: 546px;
   color: var(--c)
 }
 
@@ -500,9 +514,9 @@ section h2 {
   background: var(--c);
   color: #fff;
   text-align: center;
-  font-size: 24px;
+  font-size: 17px;
   font-weight: 600;
-  padding: 12px 16px
+  padding: 8px 11px
 }
 
 .kids-day {
@@ -510,16 +524,16 @@ section h2 {
   color: #fff;
   text-align: center;
   font-family: var(--font-title);
-  font-size: 30px;
+  font-size: 21px;
   font-weight: 600;
-  padding: 10px 22px
+  padding: 7px 15px
 }
 
 .card-info {
   display: flex;
   gap: 16px;
-  padding: 24px 20px;
-  min-height: 236px;
+  padding: 17px 14px;
+  min-height: 165px;
   flex: 1;
 }
 
@@ -532,7 +546,7 @@ section h2 {
 
 .copy h3 {
   font-family: var(--font-title);
-  font-size: 32px;
+  font-size: 22px;
   line-height: 1.04;
   margin: 0 0 12px;
   text-transform: uppercase;
@@ -540,7 +554,7 @@ section h2 {
 }
 
 .copy p {
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.25;
   margin: 0 0 14px
 }
@@ -556,14 +570,14 @@ section h2 {
   border: 1px solid var(--c);
   border-radius: 999px;
   background: var(--light);
-  padding: 7px 14px;
+  padding: 5px 10px;
   font-family: var(--font-title);
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600
 }
 
 .actions {
-  width: 144px;
+  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -577,19 +591,19 @@ section h2 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 143px;
-  padding: 8px 18px;
+  width: 100px;
+  padding: 6px 13px;
   border-radius: 999px;
   background: var(--c);
   color: #fff;
   font-family: var(--font-title);
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600
 }
 
 .actions img {
-  max-width: 122px;
-  max-height: 58px;
+  max-width: 85px;
+  max-height: 41px;
   object-fit: contain
 }
 
@@ -602,8 +616,8 @@ section h2 {
 }
 
 .actions .wide-logo {
-  max-width: 128px;
-  max-height: 56px
+  max-width: 90px;
+  max-height: 39px
 }
 
 .dates {
@@ -616,16 +630,16 @@ section h2 {
   margin-top: auto
 }
 
-.dates > div {
+.dates>div {
   background: var(--c);
   color: #fff;
   text-align: center;
-  padding: 17px 10px
+  padding: 12px 7px
 }
 
 .dates span {
   display: block;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: normal;
   text-transform: uppercase
 }
@@ -633,13 +647,13 @@ section h2 {
 .dates strong {
   display: block;
   font-family: var(--font-title);
-  font-size: 44px;
+  font-size: 31px;
   line-height: .95
 }
 
 .dates em {
   display: block;
-  font-size: 14px;
+  font-size: 10px;
   font-style: normal;
   font-weight: normal
 }
@@ -692,7 +706,7 @@ section h2 {
   border-radius: 20px;
   padding: 60px 40px;
   margin: 0 auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .newsletter h2 {
@@ -893,7 +907,7 @@ section h2 {
     font-size: 17px
   }
 
-  .dates > div {
+  .dates>div {
     padding: 14px 6px
   }
 
@@ -1514,6 +1528,7 @@ section h2 {
     justify-content: center;
   }
 }
+
 .site-footer a {
   color: #fff;
   text-decoration: none;
@@ -1523,28 +1538,39 @@ section h2 {
 .site-header {
   color: #fff;
 }
+
 .site-header .main-nav a {
   font-weight: normal;
   color: #fff;
   transition: color 0.3s ease;
 }
+
 .site-header.scrolled {
   color: var(--blue);
 }
+
 .site-header.scrolled .main-nav a {
   color: var(--blue);
 }
 
 /* Logo toggle */
-.site-header .brand .logo-color { display: none; }
-.site-header.scrolled .brand .logo-white { display: none; }
-.site-header.scrolled .brand .logo-color { display: block; }
+.site-header .brand .logo-color {
+  display: none;
+}
+
+.site-header.scrolled .brand .logo-white {
+  display: none;
+}
+
+.site-header.scrolled .brand .logo-color {
+  display: block;
+}
 
 
 /* Button Animations */
 .ticket:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   filter: brightness(1.15);
 }
 
@@ -1552,12 +1578,13 @@ section h2 {
   background: var(--c);
   color: #fff !important;
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-.ticket:active, .more:active {
+.ticket:active,
+.more:active {
   transform: translateY(0);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -1592,4 +1619,26 @@ section h2 {
   height: 100%;
   object-fit: cover;
   scroll-snap-align: start;
+}
+
+/* Robinson Crusoe special play card overrides */
+.play-card.special .dates>div {
+  padding: 10px 7px !important;
+}
+
+.play-card.special .dates img[alt="Key Biscayne"] {
+  width: 56px !important;
+}
+
+.play-card.special .dates img[alt="MDCA"] {
+  height: 24px !important;
+}
+
+.play-card.special .dates img[alt="Koubek Center"] {
+  height: 20px !important;
+}
+
+.play-card.special .dates .ticket {
+  font-size: 13px !important;
+  padding: 4px 14px !important;
 }
