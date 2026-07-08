@@ -1659,7 +1659,7 @@ section h2 {
 
 .mouse-outline {
   width: 28px;
-  height: 52px;
+  height: 104px;
   border: 2.5px solid #0083ff;
   border-radius: 999px;
   display: flex;
@@ -1667,16 +1667,16 @@ section h2 {
   padding-top: 8px;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 131, 255, 0.4);
 }
 
 .mouse-arrow {
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 8px solid #0083ff;
-  animation: scrollArrowAnim 1.6s infinite ease-in-out;
+  width: 6px;
+  height: 16px;
+  border-radius: 999px;
+  background: #0083ff;
+  box-shadow: 0 0 6px rgba(0, 131, 255, 0.8);
+  animation: scrollArrowAnim 2s infinite ease-in-out;
 }
 
 @keyframes scrollArrowAnim {
@@ -1685,17 +1685,17 @@ section h2 {
     opacity: 0.2;
   }
 
-  30% {
+  20% {
     opacity: 1;
   }
 
   80% {
-    transform: translateY(18px);
+    transform: translateY(64px);
     opacity: 0;
   }
 
   100% {
-    transform: translateY(18px);
+    transform: translateY(64px);
     opacity: 0;
   }
 }

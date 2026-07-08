@@ -657,7 +657,7 @@
 
           // 3. Fade out scroll indicator as user scrolls down
           if (indicator) {
-            const indicatorOpacity = Math.max(0, 1 - (progress * 6));
+            const indicatorOpacity = Math.max(0, Math.min(1, 1.5 - (progress * 3.3)));
             indicator.style.opacity = indicatorOpacity;
           }
         };
