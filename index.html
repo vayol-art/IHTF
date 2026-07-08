@@ -84,6 +84,12 @@
           <img class="hero-logo" src="assets/b4de7d1c8f7d8dc37146bf29408eb4bfc929497e.png"
             alt="40th International Hispanic Theatre Festival" />
         </div>
+
+        <div class="scroll-down-indicator" id="scroll-indicator" aria-hidden="true">
+          <div class="mouse-outline">
+            <div class="mouse-arrow"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -623,6 +629,7 @@
       const scrollTrack = document.querySelector('.hero-scroll-track');
       const bg = document.querySelector('.hero-scroll-track .hero-bg');
       const logo = document.querySelector('.hero-scroll-track .hero-sticky-logo');
+      const indicator = document.getElementById('scroll-indicator');
 
       if (scrollTrack && bg && logo) {
         const handleScrollAnimation = () => {
@@ -647,6 +654,12 @@
           const logoScale = 1 - (progress * 0.05); // Escala muy ligera
           logo.style.transform = `translateY(${logoTranslateY}px) scale(${logoScale})`;
           logo.style.opacity = 1;
+
+          // 3. Fade out scroll indicator as user scrolls down
+          if (indicator) {
+            const indicatorOpacity = Math.max(0, 1 - (progress * 6));
+            indicator.style.opacity = indicatorOpacity;
+          }
         };
 
         window.addEventListener('scroll', () => {

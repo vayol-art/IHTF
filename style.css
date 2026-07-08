@@ -1642,3 +1642,60 @@ section h2 {
   font-size: 13px !important;
   padding: 4px 14px !important;
 }
+
+/* Scroll Down Indicator Styles */
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.mouse-outline {
+  width: 28px;
+  height: 52px;
+  border: 2.5px solid #0083ff;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mouse-arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #0083ff;
+  animation: scrollArrowAnim 1.6s infinite ease-in-out;
+}
+
+@keyframes scrollArrowAnim {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+}
