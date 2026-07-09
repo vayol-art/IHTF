@@ -845,3 +845,7 @@ main {
   }
 }
 
+.nobrk {
+  white-space: nowrap;
+}
+
