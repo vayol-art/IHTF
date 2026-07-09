@@ -281,27 +281,6 @@ main {
   display: block;
 }
 
-.dates {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  gap: 1px;
-  background: var(--c);
-  border-top: 1px solid var(--c);
-}
-
-.date {
-  background: var(--c);
-  color: #fff;
-  display: flex;
-  min-height: 110px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 12px 8px;
-  position: relative;
-}
 
 .date span {
   text-transform: uppercase;
@@ -775,10 +754,12 @@ main {
   background: var(--c);
   width: 100%;
   align-items: stretch;
+  border-top: 1px solid var(--c);
 }
 .date {
   flex: 1;
   display: flex;
+  min-height: 110px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -786,6 +767,7 @@ main {
   border-left: 1px solid rgba(255,255,255,0.4);
   color: #fff;
   text-align: center;
+  position: relative;
 }
 .date:first-child { border-left: none; }
 .date span { font-size: 0.85rem; font-weight: 400; text-transform: uppercase; margin-bottom: 2px; }
