@@ -121,26 +121,6 @@ const playsData = {
       { "day": "19", "month": "Sept", "time": "8:30 PM" }
     ]
   },
-  "habitacion-macbeth": {
-    "id": "habitacion-macbeth",
-    "title": "Habitación Macbeth",
-    "country": "Argentina",
-    "author": "Pompeyo Audivert",
-    "director": "Pompeyo Audivert",
-    "cast": "Pompeyo Audivert",
-    "description": "“Habitación Macbeth”, es la obra de teatro argentino más premiada desde su estreno en 2021, con más de 400 funciones realizadas y más de 250.000 espectadores ovacionándola en el país y en el exterior. A través del cuerpo de un actor (encontrado en la fosa del teatro), las Brujas Fatídicas representarán la tragedia Habitación Macbeth, para el goce, deleite, y catarsis metafísica de los espectadores. En Macbeth es el espíritu del crimen el que se presenta, atizado por una fuerza sobrenatural (Hécate/Público) que lo reclama y despierta, que lo impele a encarnar y manifestarse, a tomar el poder. Habitación Macbeth violenta la actuación y exalta su metáfora: el actor como habitáculo y zona de encarnaciones. Esa es la apuesta paradojal de esta obra: por un lado, señalar a través de Macbeth y sus circunstancias, cómo la identidad histórica es arrastrada a las compulsiones criminales que rigen al mundo y por otro, hacerlo mediante un procedimiento que restablezca y exalte las facultades sagradas de nuestra identidad poética a través de un cuerpo habitado donde sucede la tragedia. \\n\\n“A la alegoría ambiciosa de Macbeth se le añade un hondo interrogante de carácter existencial que construye una pieza de sobrecogedora intensidad física y emocional. La labor de Pompeyo Audivert es descomunal”. Sergio Arboleya (Agencia de Noticias Télam)",
-    "extraInfo": "",
-    "image": "assets/43302b448a1ffe7cb9d5272e3b982cd5529c6b8e.png",
-    "colorClass": "red",
-    "logos": [
-      "assets/Logos%20teatros/6a17e2d82ff7f5b53dd06eb1_arsht-white-logo.webp"
-    ],
-    "dates": [
-      { "day": "18", "month": "Sept", "time": "8:30 PM" },
-      { "day": "19", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
-      { "day": "20", "month": "Sept", "time": "5:00 PM" }
-    ]
-  },
   "robinson-crusoe": {
     "id": "robinson-crusoe",
     "title": "Las asombrosas aventuras de Robinson Crusoe",
