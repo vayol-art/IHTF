@@ -522,6 +522,10 @@ main {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .desc,
+  .credits {
+    font-size: 15px !important;
+  }
 }
 
 /* --- NEW FOOTER STYLES --- */
