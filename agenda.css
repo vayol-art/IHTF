@@ -835,18 +835,6 @@ main {
     opacity: 1 !important;
     transform: none !important;
   }
-
-  /* Ocultar el texto original "Foro después de la obra" en móviles */
-  .date .note {
-    font-size: 0 !important;
-  }
-  
-  /* Mostrar "Foro" en su lugar */
-  .date .note::before {
-    content: "Foro";
-    font-size: 0.7rem;
-    display: block;
-  }
 }
 
 .nobrk {
