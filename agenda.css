@@ -804,7 +804,7 @@ main {
 /* Image Carousel Styles */
 .image-carousel {
   width: 100%;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 5 / 3;
   height: auto;
   overflow: hidden;
   position: relative;
@@ -830,13 +830,34 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   scroll-snap-align: start;
+}
+
+.carousel-track img.is-portrait {
+  object-position: center top;
+}
+
+.carousel-track img.is-landscape {
+  object-position: center center;
 }
 
 @media (max-width: 768px) {
   .reveal {
     opacity: 1 !important;
     transform: none !important;
+  }
+
+  /* Ocultar el texto original "Foro después de la obra" en móviles */
+  .date .note {
+    font-size: 0 !important;
+  }
+  
+  /* Mostrar "Foro" en su lugar */
+  .date .note::before {
+    content: "Foro";
+    font-size: 0.7rem;
+    display: block;
   }
 }
 
