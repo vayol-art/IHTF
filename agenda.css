@@ -755,6 +755,7 @@ main {
   width: 100%;
   align-items: stretch;
   border-top: 1px solid var(--c);
+  flex: 1;
 }
 .date {
   flex: 1;
