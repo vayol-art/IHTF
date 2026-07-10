@@ -219,6 +219,29 @@ img {
   will-change: transform;
 }
 
+.media-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.media-slide.active {
+  opacity: 1;
+}
+
+@keyframes kenburns {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.15); }
+}
+
+.zoom-effect {
+  animation: kenburns 3s linear forwards;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -1774,7 +1797,8 @@ section h2 {
 }
 
 .play-card-wrapper.special .dates img[alt="Key Biscayne"] {
-  width: 56px !important;
+  width: auto !important;
+  height: 32px !important;
 }
 
 .play-card-wrapper.special .dates img[alt="MDCA"] {

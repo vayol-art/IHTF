@@ -88,6 +88,127 @@
           }, 3000);
         }
 
+        // Hero Media Sequencer
+        const mediaSequence = [
+          { type: 'image', sources: [
+              "assets/videos loops/1. carrusel/Carrusel-HiRes_Jun26-008.webp",
+              "assets/videos loops/1. carrusel/Carrusel-HiRes_Jun26-015.webp",
+              "assets/videos loops/1. carrusel/OSPS+TA_Carrusel-HiRes_Jun26-005.webp"
+            ] 
+          },
+          { type: 'video', src: "assets/videos loops/2. zombi_manifiesto (1080p)-001.mp4" },
+          { type: 'image', sources: [
+              "assets/videos loops/3. historia-de-un-jabali/Copia de JABALI FOTO 3.webp",
+              "assets/videos loops/3. historia-de-un-jabali/Copia de JABALI FOTO 4.webp",
+              "assets/videos loops/3. historia-de-un-jabali/Copia de JABALI FOTO 5.webp",
+              "assets/videos loops/3. historia-de-un-jabali/JABALI FOTO 8.webp"
+            ] 
+          },
+          { type: 'video', src: "assets/videos loops/4. a_fuego (720p).mp4" },
+          { type: 'image', sources: [
+              "assets/videos loops/5. odd-man-out/OMO FOTO 1.webp",
+              "assets/videos loops/5. odd-man-out/OMO FOTO 3.webp",
+              "assets/videos loops/5. odd-man-out/OMO FOTO 5.webp"
+            ] 
+          },
+          { type: 'video', src: "assets/videos loops/6. SUEÑO completo.mp4" },
+          { type: 'video', src: "assets/videos loops/7. Las Asombrosas Aventuras de Robinson Crusoe.mp4" },
+          { type: 'image', sources: [
+              "assets/videos loops/8. hamlet/Copia de HAMLET FOTO 1.webp",
+              "assets/videos loops/8. hamlet/Copia de HAMLET FOTO 2.webp",
+              "assets/videos loops/8. hamlet/Copia de HAMLET FOTO 3.webp",
+              "assets/videos loops/8. hamlet/Copia de HAMLET FOTO 4.webp"
+            ] 
+          }
+        ];
+
+        const mediaContainer = document.getElementById('hero-media-container');
+        if (mediaContainer) {
+          let currentSeqIndex = 0;
+          let currentImageIndex = 0;
+          let activeElement = null;
+
+          function playNextMedia() {
+            const item = mediaSequence[currentSeqIndex];
+            const nextElement = document.createElement(item.type === 'video' ? 'video' : 'img');
+            nextElement.className = 'media-slide';
+            
+            if (item.type === 'video') {
+              nextElement.src = item.src;
+              nextElement.muted = true;
+              nextElement.playsInline = true;
+              nextElement.onended = () => {
+                currentSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
+                playNextMedia();
+              };
+              
+              nextElement.play().catch(e => {
+                console.error("Video play failed:", e);
+                currentSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
+                setTimeout(playNextMedia, 1000);
+              });
+            } else {
+              // Image logic
+              nextElement.src = item.sources[0];
+              nextElement.classList.add('zoom-effect');
+              
+              currentImageIndex = 0;
+              const imageDuration = 2000; // 2 seconds per image slide
+              
+              const slideImages = () => {
+                currentImageIndex++;
+                if (currentImageIndex < item.sources.length) {
+                  const nextImg = document.createElement('img');
+                  nextImg.className = 'media-slide zoom-effect';
+                  nextImg.src = item.sources[currentImageIndex];
+                  mediaContainer.appendChild(nextImg);
+                  
+                  // Trigger reflow
+                  void nextImg.offsetWidth;
+                  nextImg.classList.add('active');
+                  
+                  const oldImg = activeElement;
+                  if (oldImg) {
+                    oldImg.classList.remove('active');
+                    setTimeout(() => {
+                      if (oldImg && mediaContainer.contains(oldImg)) {
+                        mediaContainer.removeChild(oldImg);
+                      }
+                    }, 1000); // Wait for CSS transition
+                  }
+                  
+                  activeElement = nextImg;
+                  setTimeout(slideImages, imageDuration);
+                } else {
+                  currentSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
+                  playNextMedia();
+                }
+              };
+              
+              setTimeout(slideImages, imageDuration);
+            }
+
+            mediaContainer.appendChild(nextElement);
+            // Trigger reflow
+            void nextElement.offsetWidth;
+            nextElement.classList.add('active');
+
+            if (activeElement) {
+              const oldElement = activeElement;
+              oldElement.classList.remove('active');
+              setTimeout(() => {
+                if(oldElement && mediaContainer.contains(oldElement)) {
+                  mediaContainer.removeChild(oldElement);
+                }
+              }, 1000);
+            }
+            activeElement = nextElement;
+          }
+
+          // Start sequence 1 second after the intro poster fades out (starts at 3s, fade takes 1.2s)
+          setTimeout(playNextMedia, 4000);
+        }
+
         // Secciones animadas (scroll reveal)
         const sections = document.querySelectorAll("main > section, .venues-stack > section, .program-grid > article, .program-card, .play-card-wrapper, .subpage-hero, .footer-wrapper");
         if (window.IntersectionObserver) {
@@ -118,8 +239,7 @@
   <main>
     <section class="hero-scroll-track" id="inicio">
       <div class="hero-sticky-container">
-        <video class="hero-bg" src="assets/Loop%20banner.mp4" autoplay loop muted playsinline
-          aria-hidden="true"></video>
+        <div id="hero-media-container" class="hero-bg"></div>
         <div class="hero-bg hero-intro-img">
           <img src="assets/Copia%20de%20afiche_1.jpg" alt="Poster de IHTF" style="width: 100%; height: 100%; object-fit: contain; -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 95%); mask-image: radial-gradient(ellipse at center, black 55%, transparent 95%);" />
         </div>
