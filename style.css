@@ -564,8 +564,8 @@ section h2 {
 }
 
 .program-section .section-inner {
-  width: calc(70% - 64px);
-  max-width: 70%;
+  width: min(1376px, calc(100% - 64px));
+  max-width: 100%;
 }
 
 @media (max-width: 760px) {
@@ -595,6 +595,13 @@ section h2 {
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.play-card-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
 }
 
 .play-card-wrapper.orange {
@@ -613,6 +620,7 @@ section h2 {
   position: relative;
   height: 310px;
   display: block;
+  flex-grow: 1;
 }
 
 .play-card .image-carousel {
@@ -658,8 +666,8 @@ section h2 {
   color: #fff;
   padding: 4px 10px;
   border-radius: 20px;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -672,8 +680,8 @@ section h2 {
   color: #fff;
   padding: 4px 10px;
   border-radius: 20px;
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -713,12 +721,17 @@ section h2 {
 }
 
 .theatre-logos img {
-  height: 16px;
+  height: 24px;
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
   opacity: 0.85;
   transition: opacity 0.2s;
+}
+
+.theatre-logos img[alt="Koubek Center"],
+.theatre-logos img[alt="Westchester Cultural Arts Center"] {
+  height: 32px;
 }
 
 .theatre-logos img:hover {
@@ -731,7 +744,7 @@ section h2 {
   padding: 6px 14px;
   border-radius: 20px;
   font-family: var(--font-title);
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
@@ -764,7 +777,7 @@ section h2 {
 
 .dates span {
   display: block;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -772,21 +785,21 @@ section h2 {
 .dates strong {
   display: block;
   font-family: var(--font-title);
-  font-size: 22px;
+  font-size: 26px;
   line-height: .95;
 }
 
 .dates em {
   display: block;
-  font-size: 9px;
+  font-size: 11px;
   font-style: normal;
   font-weight: normal;
 }
 
 .dates .foro-label {
   display: block;
-  font-size: 8px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: normal;
   text-transform: uppercase;
   margin-top: 3px;
   opacity: 0.85;
@@ -1756,23 +1769,23 @@ section h2 {
 }
 
 /* Robinson Crusoe special play card overrides */
-.play-card.special .dates>div {
+.play-card-wrapper.special .dates>div {
   padding: 10px 7px !important;
 }
 
-.play-card.special .dates img[alt="Key Biscayne"] {
+.play-card-wrapper.special .dates img[alt="Key Biscayne"] {
   width: 56px !important;
 }
 
-.play-card.special .dates img[alt="MDCA"] {
+.play-card-wrapper.special .dates img[alt="MDCA"] {
   height: 24px !important;
 }
 
-.play-card.special .dates img[alt="Koubek Center"] {
+.play-card-wrapper.special .dates img[alt="Koubek Center"] {
   height: 20px !important;
 }
 
-.play-card.special .dates .ticket {
+.play-card-wrapper.special .dates .ticket {
   font-size: 13px !important;
   padding: 4px 14px !important;
 }
