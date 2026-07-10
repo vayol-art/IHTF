@@ -666,7 +666,9 @@ section h2 {
 }
 
 .kids-badge {
-  background: var(--orange);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #fff;
   padding: 4px 10px;
   border-radius: 20px;
@@ -674,6 +676,7 @@ section h2 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .card-bottom {
