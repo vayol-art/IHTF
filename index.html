@@ -89,7 +89,7 @@
         }
 
         // Secciones animadas (scroll reveal)
-        const sections = document.querySelectorAll("main > section, .venues-stack > section, .program-grid > article, .program-card, .play-card, .subpage-hero, .footer-wrapper");
+        const sections = document.querySelectorAll("main > section, .venues-stack > section, .program-grid > article, .program-card, .play-card-wrapper, .subpage-hero, .footer-wrapper");
         if (window.IntersectionObserver) {
           const observerOptions = {
             root: null,
@@ -168,32 +168,9 @@
       <div class="section-inner">
         <h2>RESUMEN DEL PROGRAMA</h2>
         <div class="program-grid">
-          <article class="play-card purple">
-            <div class="country">USA</div>
-            <div class="card-info">
-              <div class="copy">
-                <h3>Carrusel</h3>
-                <p>Una adolescente agrede a sus compañeros con violencia y abre la puerta de un pasado que revela
-                  vínculos secretos que cambiarán el destino de todos.</p>
-                <a class="more" href="obra-carrusel.html">Más información</a>
-              </div>
-              <div class="actions">
-                <a class="ticket" href="obra-carrusel.html">Entradas</a>
-                <div class="logos-wrapper">
-                  <img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" />
-                  <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
-                    alt="Westchester Cultural Arts Center" />
-                </div>
-              </div>
-            </div>
-            <div class="dates">
-              <div><span>Sept</span><strong>3</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
-              <div><span>Sept</span><strong>4</strong><em>8:30 PM</em></div>
-              <div><span>Sept</span><strong>5</strong><em>8:30 PM</em></div>
-              <div><span>Sept</span><strong>6</strong><em>5:00 PM</em></div>
-            </div>
-
-            <div class="image-carousel">
+                    <div class="play-card-wrapper purple">
+            <article class="play-card">
+              <div class="image-carousel">
               <div class="carousel-track">
                 <img src="assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/Carrusel-HiRes_Jun26-008.webp"
                   alt="carrusel photo" loading="lazy" />
@@ -201,34 +178,34 @@
                   alt="carrusel photo" loading="lazy" />
               </div>
             </div>
-
-          </article>
-
-          <article class="play-card purple">
-            <div class="country">Uruguay</div>
-            <div class="card-info">
-              <div class="copy">
-                <h3>Zombi Manifiesto</h3>
-                <p>El cadáver de un militar desaparece tras un desentierro clandestino y un secuestro. El muerto se
-                  presenta y exige justicia.</p>
-                <a class="more" href="obra-zombi-manifiesto.html">Más información</a>
-              </div>
-              <div class="actions">
-                <a class="ticket" href="obra-zombi-manifiesto.html">Entradas</a>
-                <div class="logos-wrapper">
-                  <img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" />
+              <div class="card-content">
+                <div class="card-top">
+                  <span class="country-badge">USA</span>
+                </div>
+                <div class="card-bottom">
+                  <div class="card-meta">
+                    <h3>Carrusel</h3>
+                    <div class="theatre-logos">
+                      <img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" />
                   <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
                     alt="Westchester Cultural Arts Center" />
+                    </div>
+                  </div>
+                  <a class="ticket-btn" href="obra-carrusel.html">Entradas</a>
                 </div>
               </div>
-            </div>
+            </article>
             <div class="dates">
-              <div><span>Sept</span><strong>10</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
-              <div><span>Sept</span><strong>11</strong><em>8:30 PM</em></div>
-              <div><span>Sept</span><strong>12</strong><em>8:30 PM</em></div>
+              <div><span>Sept</span><strong>3</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>4</strong><em>8:30 PM</em></div>
+              <div><span>Sept</span><strong>5</strong><em>8:30 PM</em></div>
+              <div><span>Sept</span><strong>6</strong><em>5:00 PM</em></div>
             </div>
+          </div>
 
-            <div class="image-carousel">
+                    <div class="play-card-wrapper purple">
+            <article class="play-card">
+              <div class="image-carousel">
               <div class="carousel-track">
                 <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 1.webp"
                   alt="zombi-manifiesto photo" loading="lazy" />
@@ -252,29 +229,33 @@
                   alt="zombi-manifiesto photo" loading="lazy" />
               </div>
             </div>
-
-          </article>
-
-          <article class="play-card red">
-            <div class="country">Chile</div>
-            <div class="card-info">
-              <div class="copy">
-                <h3>Historia de un jabalí<br>(o algo de Ricardo III)</h3>
-                <p>Dos actores se enfrentan al reto de interpretar a Ricardo III y entregan un espacio clave para
-                  reflexionar sobre los límites de la ambición humana.</p>
-                <a class="more" href="obra-historia-de-un-jabali.html">Más información</a>
+              <div class="card-content">
+                <div class="card-top">
+                  <span class="country-badge">Uruguay</span>
+                </div>
+                <div class="card-bottom">
+                  <div class="card-meta">
+                    <h3>Zombi Manifiesto</h3>
+                    <div class="theatre-logos">
+                      <img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" />
+                  <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+                    alt="Westchester Cultural Arts Center" />
+                    </div>
+                  </div>
+                  <a class="ticket-btn" href="obra-zombi-manifiesto.html">Entradas</a>
+                </div>
               </div>
-              <div class="actions"><a class="ticket" href="obra-historia-de-un-jabali.html">Entradas</a><img
-                  class="wide-logo" src="assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
-                  alt="Adrienne Arsht Center" /></div>
-            </div>
+            </article>
             <div class="dates">
-              <div><span>Sept</span><strong>11</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>10</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>11</strong><em>8:30 PM</em></div>
               <div><span>Sept</span><strong>12</strong><em>8:30 PM</em></div>
-              <div><span>Sept</span><strong>13</strong><em>5:00 PM</em></div>
             </div>
+          </div>
 
-            <div class="image-carousel">
+                    <div class="play-card-wrapper red">
+            <article class="play-card">
+              <div class="image-carousel">
               <div class="carousel-track">
                 <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 1.webp"
                   alt="historia-de-un-jabali photo" loading="lazy" />
@@ -294,28 +275,31 @@
                   alt="historia-de-un-jabali photo" loading="lazy" />
               </div>
             </div>
-
-          </article>
-
-          <article class="play-card orange">
-            <div class="country">España</div>
-            <div class="card-info">
-              <div class="copy">
-                <h3>A fuego</h3>
-                <p>En un verso lleno de sátira, juego de palabras y metateatralidad, un personaje obsesionado deja
-                  expuesto el narcisismo en la actualidad.</p>
-                <a class="more" href="obra-a-fuego.html">Más información</a>
+              <div class="card-content">
+                <div class="card-top">
+                  <span class="country-badge">Chile</span>
+                </div>
+                <div class="card-bottom">
+                  <div class="card-meta">
+                    <h3>Historia de un jabalí<br>(o algo de Ricardo III)</h3>
+                    <div class="theatre-logos">
+                      <img src="assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png" alt="Logo teatro" />
+                    </div>
+                  </div>
+                  <a class="ticket-btn" href="obra-historia-de-un-jabali.html">Entradas</a>
+                </div>
               </div>
-              <div class="actions"><a class="ticket" href="obra-a-fuego.html">Entradas</a><img class="wide-logo"
-                  src="assets/bf99a69e846fde8469636c29ea2c8298735dc14d.png" alt="Logo teatro" /></div>
-            </div>
+            </article>
             <div class="dates">
-              <div><span>Sept</span><strong>11</strong><em>8:30 PM</em></div>
-              <div><span>Sept</span><strong>12</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>11</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>12</strong><em>8:30 PM</em></div>
               <div><span>Sept</span><strong>13</strong><em>5:00 PM</em></div>
             </div>
+          </div>
 
-            <div class="image-carousel">
+                    <div class="play-card-wrapper orange">
+            <article class="play-card">
+              <div class="image-carousel">
               <div class="carousel-track">
                 <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 1.webp" alt="a-fuego photo"
                   loading="lazy" />
@@ -331,34 +315,31 @@
                   loading="lazy" />
               </div>
             </div>
-
-          </article>
-
-          <article class="play-card purple">
-            <div class="country">USA</div>
-            <div class="card-info">
-              <div class="copy">
-                <h3>Odd Man Out</h3>
-                <p>Una experiencia sensorial inmersiva que despierta los sentidos a través del sonido, el olfato, el
-                  gusto y el tacto en completa oscuridad.</p>
-                <a class="more" href="obra-odd-man-out.html">Más información</a>
-              </div>
-              <div class="actions">
-                <a class="ticket" href="obra-odd-man-out.html">Entradas</a>
-                <div class="logos-wrapper">
-                  <img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" />
-                  <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
-                    alt="Westchester Cultural Arts Center" />
+              <div class="card-content">
+                <div class="card-top">
+                  <span class="country-badge">España</span>
+                </div>
+                <div class="card-bottom">
+                  <div class="card-meta">
+                    <h3>A fuego</h3>
+                    <div class="theatre-logos">
+                      <img src="assets/bf99a69e846fde8469636c29ea2c8298735dc14d.png" alt="Logo teatro" />
+                    </div>
+                  </div>
+                  <a class="ticket-btn" href="obra-a-fuego.html">Entradas</a>
                 </div>
               </div>
-            </div>
+            </article>
             <div class="dates">
-              <div><span>Sept</span><strong>17</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
-              <div><span>Sept</span><strong>18</strong><em>8:30 PM</em></div>
-              <div><span>Sept</span><strong>19</strong><em>8:30 PM</em></div>
+              <div><span>Sept</span><strong>11</strong><em>8:30 PM</em></div>
+              <div><span>Sept</span><strong>12</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>13</strong><em>5:00 PM</em></div>
             </div>
+          </div>
 
-            <div class="image-carousel">
+                    <div class="play-card-wrapper purple">
+            <article class="play-card">
+              <div class="image-carousel">
               <div class="carousel-track">
                 <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 1.webp" alt="odd-man-out photo"
                   loading="lazy" />
@@ -368,28 +349,33 @@
                   loading="lazy" />
               </div>
             </div>
-
-          </article>
-
-          <article class="play-card orange">
-            <div class="country">Argentina</div>
-            <div class="card-info">
-              <div class="copy">
-                <h3>Sueño</h3>
-                <p>Artistas se juntan en el bosque a ensayar una obra y seres mágicos juegan con sus emociones en un
-                  torbellino lleno de humor, música y poesía.</p>
-                <a class="more" href="obra-sueno.html">Más información</a>
+              <div class="card-content">
+                <div class="card-top">
+                  <span class="country-badge">USA</span>
+                </div>
+                <div class="card-bottom">
+                  <div class="card-meta">
+                    <h3>Odd Man Out</h3>
+                    <div class="theatre-logos">
+                      <img src="assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png" alt="MDCA" />
+                  <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+                    alt="Westchester Cultural Arts Center" />
+                    </div>
+                  </div>
+                  <a class="ticket-btn" href="obra-odd-man-out.html">Entradas</a>
+                </div>
               </div>
-              <div class="actions"><a class="ticket" href="obra-sueno.html">Entradas</a><img class="wide-logo"
-                  src="assets/bf99a69e846fde8469636c29ea2c8298735dc14d.png" alt="Logo teatro" /></div>
-            </div>
+            </article>
             <div class="dates">
-              <div><span>Sept</span><strong>17</strong><em>8:30 PM</em></div>
-              <div><span>Sept</span><strong>18</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>17</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>18</strong><em>8:30 PM</em></div>
               <div><span>Sept</span><strong>19</strong><em>8:30 PM</em></div>
             </div>
+          </div>
 
-            <div class="image-carousel">
+                    <div class="play-card-wrapper orange">
+            <article class="play-card">
+              <div class="image-carousel">
               <div class="carousel-track">
                 <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 1.webp" alt="sueno photo"
                   loading="lazy" />
@@ -405,22 +391,69 @@
                   loading="lazy" />
               </div>
             </div>
+              <div class="card-content">
+                <div class="card-top">
+                  <span class="country-badge">Argentina</span>
+                </div>
+                <div class="card-bottom">
+                  <div class="card-meta">
+                    <h3>Sueño</h3>
+                    <div class="theatre-logos">
+                      <img src="assets/bf99a69e846fde8469636c29ea2c8298735dc14d.png" alt="Logo teatro" />
+                    </div>
+                  </div>
+                  <a class="ticket-btn" href="obra-sueno.html">Entradas</a>
+                </div>
+              </div>
+            </article>
+            <div class="dates">
+              <div><span>Sept</span><strong>17</strong><em>8:30 PM</em></div>
+              <div><span>Sept</span><strong>18</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>19</strong><em>8:30 PM</em></div>
+            </div>
+          </div>
 
-          </article>
 
 
-
-          <article class="play-card teal special">
-            <div class="country">USA</div>
-            <div class="kids-day">Día Internacional del Niño</div>
-            <div class="card-info">
-              <div class="copy">
-                <h3>Las asombrosas aventuras de Robinson Crusoe</h3>
-                <p>El joven Robinson decide embarcarse en un viaje en busca de aventuras. Tras naufragar llega a una
-                  isla desierta con personajes inolvidables.</p>
-                <a class="more" href="obra-robinson-crusoe.html">Más información</a>
+                    <div class="play-card-wrapper teal special">
+            <article class="play-card">
+              <div class="image-carousel">
+              <div class="carousel-track">
+                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 1.webp"
+                  alt="robinson-crusoe photo" loading="lazy" />
+                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 2.webp"
+                  alt="robinson-crusoe photo" loading="lazy" />
+                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 3.webp"
+                  alt="robinson-crusoe photo" loading="lazy" />
+                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 4.webp"
+                  alt="robinson-crusoe photo" loading="lazy" />
+                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 5.webp"
+                  alt="robinson-crusoe photo" loading="lazy" />
+                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 6.webp"
+                  alt="robinson-crusoe photo" loading="lazy" />
+                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 7.webp"
+                  alt="robinson-crusoe photo" loading="lazy" />
+                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 8.webp"
+                  alt="robinson-crusoe photo" loading="lazy" />
               </div>
             </div>
+              <div class="card-content">
+                <div class="card-top">
+                  <span class="country-badge">USA</span>
+          <span class="kids-badge">Día Internacional del Niño</span>
+                </div>
+                <div class="card-bottom">
+                  <div class="card-meta">
+                    <h3>Las asombrosas aventuras de Robinson Crusoe</h3>
+                    <div class="theatre-logos">
+                      <img src="assets/Logos%20teatros/Copia%20de%206a17e343778e61a102967a29_Village_Biscayne.png" alt="Village Biscayne" />
+                      <img src="assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png" alt="Koubek Center" />
+                    </div>
+                  </div>
+                  <a class="ticket-btn" href="obra-robinson-crusoe.html">Reservar</a>
+                </div>
+              </div>
+            </article>
             <div class="dates" style="grid-template-columns: 1fr 1fr;">
               <div
                 style="background: #CD65AD; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 14px 10px;">
@@ -444,49 +477,11 @@
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="image-carousel">
-              <div class="carousel-track">
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 1.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 2.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 3.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 4.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 5.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 6.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 7.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 8.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-              </div>
-            </div>
-
-          </article>
-
-          <article class="play-card red">
-            <div class="country">Perú</div>
-            <div class="card-info">
-              <div class="copy">
-                <h3>Hamlet</h3>
-                <p>Entre Shakespeare y la vida de actores con síndrome de Down, surge un poderoso Hamlet y el resultado
-                  es un espectáculo reflexivo e inquietante.</p>
-                <a class="more" href="obra-hamlet.html">Más información</a>
-              </div>
-              <div class="actions"><a class="ticket" href="obra-hamlet.html">Entradas</a><img class="wide-logo"
-                  src="assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png" alt="Adrienne Arsht Center" /></div>
-            </div>
-            <div class="dates">
-              <div><span>Sept</span><strong>24</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
-              <div><span>Sept</span><strong>25</strong><em>8:30 PM</em></div>
-              <div><span>Sept</span><strong>26</strong><em>8:30 PM</em></div>
-            </div>
-
-            <div class="image-carousel">
+                    <div class="play-card-wrapper red">
+            <article class="play-card">
+              <div class="image-carousel">
               <div class="carousel-track">
                 <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 1.webp" alt="hamlet photo"
                   loading="lazy" />
@@ -512,8 +507,27 @@
                   loading="lazy" />
               </div>
             </div>
-
-          </article>
+              <div class="card-content">
+                <div class="card-top">
+                  <span class="country-badge">Perú</span>
+                </div>
+                <div class="card-bottom">
+                  <div class="card-meta">
+                    <h3>Hamlet</h3>
+                    <div class="theatre-logos">
+                      <img src="assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png" alt="Logo teatro" />
+                    </div>
+                  </div>
+                  <a class="ticket-btn" href="obra-hamlet.html">Entradas</a>
+                </div>
+              </div>
+            </article>
+            <div class="dates">
+              <div><span>Sept</span><strong>24</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>25</strong><em>8:30 PM</em></div>
+              <div><span>Sept</span><strong>26</strong><em>8:30 PM</em></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
