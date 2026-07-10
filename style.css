@@ -1886,8 +1886,17 @@ section h2 {
 .hero-intro-img {
   transition: opacity 1.2s ease-in-out;
   z-index: 0;
-  object-fit: contain !important;
   background-color: #000;
+}
+
+.hero-intro-img img {
+  object-fit: contain !important;
+}
+
+@media (max-width: 768px) {
+  .hero-intro-img img {
+    object-fit: cover !important;
+  }
 }
 
 .hero-intro-img.fade-out {
