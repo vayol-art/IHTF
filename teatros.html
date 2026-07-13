@@ -18,6 +18,23 @@
       <img class="logo-color" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
     </a>
     <nav class="main-nav" aria-label="Menú principal">
+      <div class="lang-selector">
+        <button class="lang-btn" aria-label="Cambiar idioma" aria-expanded="false">
+          <svg class="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-text">Language</span>
+          <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="lang-dropdown">
+          <button class="lang-opt">English</button>
+          <button class="lang-opt">Spanish</button>
+        </div>
+      </div>
       <div class="nav-dropdown-wrapper">
         <a href="agenda.html" class="nav-dropdown-trigger">PROGRAMA</a>
         <div class="nav-submenu">
@@ -52,6 +69,23 @@
               hamburger.classList.remove("open");
               mainNav.classList.remove("open");
               hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        // Language Selector Dropdown logic
+        const langSelector = document.querySelector(".lang-selector");
+        const langBtn = document.querySelector(".lang-btn");
+        if (langSelector && langBtn) {
+          langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = langSelector.classList.toggle("open");
+            langBtn.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function (event) {
+            if (!langSelector.contains(event.target)) {
+              langSelector.classList.remove("open");
+              langBtn.setAttribute("aria-expanded", "false");
             }
           });
         }
