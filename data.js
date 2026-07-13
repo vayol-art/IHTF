@@ -116,9 +116,9 @@ const playsData = {
       "assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
     ],
     "dates": [
-      { "day": "17", "month": "Sept", "time": "8:30 PM" },
-      { "day": "18", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
-      { "day": "19", "month": "Sept", "time": "8:30 PM" }
+      { "day": "17", "month": "Sept", "time": "7:00 PM" },
+      { "day": "18", "month": "Sept", "time": "7:00 PM", "foro": "Foro después de la obra" },
+      { "day": "19", "month": "Sept", "time": "7:00 PM" }
     ]
   },
   "robinson-crusoe": {
