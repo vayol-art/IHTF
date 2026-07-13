@@ -273,10 +273,7 @@
   box-shadow: 0 8px 30px rgba(26, 120, 158, 0.12);
 }
 
-/* Header link adjustment for light background */
-.site-header:not(.scrolled) .main-nav a {
-  color: var(--blue, #1a789e); /* Navigation should be readable blue on the light page */
-}
+
 
 /* Responsive calendar adjustments */
 @media (max-width: 1024px) {
