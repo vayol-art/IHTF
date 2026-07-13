@@ -9,20 +9,25 @@
   --text: #17333d;
   --font-title: 'Cabinet Grotesk', 'Anton SC', 'Arial Black', system-ui, sans-serif;
   --font-body: 'General Sans', 'Inter', system-ui, sans-serif;
+
+  /* Custom colors matching the IHTF blue theme */
+  --avante-dark: #1a789e;
+  --avante-medium: #135d7c;
+  --avante-light: #f0f6f9;
 }
 
 body {
   margin: 0;
   background: #ffffff;
-  color: var(--text, #17333d);
+  color: var(--text);
   font-family: var(--font-body), sans-serif;
   overflow-x: hidden;
 }
 
-/* Subpage Hero Styles */
+/* Subpage Hero */
 .hero {
   min-height: 400px;
-  background: #1a789e;
+  background: var(--avante-dark);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -38,8 +43,8 @@ body {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url('assets/textura%20fondo.png') center/cover;
-  opacity: 0.1;
+  background: url('assets/Texturas/textura%20turquesa.png') center/cover;
+  opacity: 0.05;
   pointer-events: none;
 }
 
@@ -55,68 +60,397 @@ body {
   color: #fff;
 }
 
-/* Content Layout */
-.content-section {
-  padding: 80px 24px;
-  background: radial-gradient(circle at 50% 30%, #ffffff, #eff6f7 85%);
-  min-height: 50vh;
+/* Anchor padding for nav scroll link targets */
+.section-wrapper {
+  scroll-margin-top: 100px;
 }
 
-.content-container {
+/* Mission Box */
+.mission-section {
+  background: #f4f8fb;
+  background-image: url('assets/Texturas/textura%20turquesa.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--text);
+  padding: 60px 24px;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid rgba(26, 120, 158, 0.08);
+}
+
+.mission-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f4f8fb;
+  opacity: 0.95; /* Keep it light and subtle */
+  z-index: 1;
+}
+
+.mission-inner {
+  position: relative;
+  z-index: 2;
   max-width: 1000px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(26, 120, 158, 0.1);
-  border-radius: 24px;
-  padding: 48px;
-  box-shadow: 0 10px 40px rgba(26, 120, 158, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
-.content-container h2 {
+.mission-inner p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Teatro Avante Section */
+.teatro-section {
+  background: var(--avante-light);
+  padding: 90px 24px;
+}
+
+.teatro-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+}
+
+.directors-list {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+.directors-list h3 {
   font-family: var(--font-title);
-  font-size: clamp(24px, 4vw, 36px);
-  color: var(--blue);
-  margin-top: 0;
-  margin-bottom: 24px;
+  font-size: 26px;
   text-transform: uppercase;
-}
-
-.content-container p {
-  font-size: 18px;
-  line-height: 1.6;
+  margin-top: 0;
   margin-bottom: 20px;
-  color: #4a5d64;
+  color: var(--avante-dark);
+  border-bottom: 2px solid var(--orange);
+  padding-bottom: 10px;
 }
 
-.content-container ul {
-  margin-bottom: 20px;
-  padding-left: 20px;
+.directors-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.content-container li {
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: #4a5d64;
+.directors-list li {
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  color: var(--text);
 }
 
-/* Specific templates */
-.placeholder-msg {
-  text-align: center;
-  padding: 40px 0;
-  color: var(--blue);
+.directors-list li:last-child {
+  border-bottom: none;
 }
 
-.placeholder-icon {
+.directors-list li em {
+  display: block;
+  font-size: 13px;
+  color: #7a8d94;
+  margin-top: 2px;
+}
+
+.directors-list .note {
+  font-size: 12px;
+  color: #7a8d94;
+  margin-top: 20px;
+  display: block;
+}
+
+.teatro-history h2 {
+  font-family: var(--font-title);
   font-size: 48px;
-  margin-bottom: 20px;
-  opacity: 0.8;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: var(--avante-dark);
 }
 
-@media (max-width: 768px) {
-  .content-container {
-    padding: 30px 20px;
+.teatro-history p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #35444b;
+  margin-bottom: 24px;
+}
+
+/* Tribute Section (Mario Ernesto Sánchez) */
+.tribute-section {
+  background: var(--avante-medium);
+  background-image: url('assets/Texturas/textura%20turquesa.png');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 90px 24px;
+  position: relative;
+}
+
+.tribute-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--avante-medium);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.tribute-grid {
+  position: relative;
+  z-index: 2;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.tribute-photo {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  aspect-ratio: 1 / 1.15;
+}
+
+.tribute-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tribute-text h2 {
+  font-family: var(--font-title);
+  font-size: clamp(32px, 4vw, 48px);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.tribute-text .subtitle {
+  font-family: var(--font-title);
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 30px;
+  letter-spacing: 0.05em;
+}
+
+.tribute-paragraphs {
+  font-size: 17px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: justify;
+}
+
+.tribute-paragraphs p {
+  margin-bottom: 20px;
+}
+
+.tribute-signature {
+  margin-top: 30px;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* Staff Grid Section */
+.staff-section {
+  background: #ffffff;
+  padding: 90px 24px;
+}
+
+.staff-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.staff-inner h2 {
+  font-family: var(--font-title);
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: var(--avante-dark);
+  text-align: center;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.staff-col h3 {
+  font-family: var(--font-title);
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--avante-dark);
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.staff-col p {
+  font-size: 15px;
+  color: #63777f;
+  margin-top: 0;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.staff-col p strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.staff-note {
+  font-size: 13px;
+  color: #7a8d94;
+  margin-top: 40px;
+  text-align: center;
+  display: block;
+}
+
+/* Premios Section */
+.premios-section {
+  background: var(--avante-dark, #1a789e);
+  color: #ffffff;
+  padding: 90px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.premios-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/Texturas/textura%20turquesa.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05; /* 5% opacity texture */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.premios-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.premios-inner h2 {
+  font-family: var(--font-title);
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.premios-timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+/* Vertical line */
+.premios-timeline::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 15px;
+  width: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 99px;
+}
+
+.premio-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 20px;
+  padding-bottom: 35px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.premio-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dot on the timeline */
+.premio-item::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 8px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--orange, #e2831e);
+  border: 3px solid var(--avante-dark, #1a789e);
+  z-index: 2;
+  box-shadow: 0 0 0 3px rgba(226, 131, 30, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.premio-item:hover::before {
+  transform: scale(1.3);
+  background: #ffffff;
+}
+
+.premio-year {
+  font-family: var(--font-title);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--orange, #e2831e);
+  line-height: 1;
+  margin: 0;
+}
+
+.premio-details {
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.premio-name {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.premio-location {
+  opacity: 0.85;
+  font-size: 16px;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .teatro-grid, .tribute-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .directors-list, .tribute-photo {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .staff-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
