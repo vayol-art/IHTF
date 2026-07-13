@@ -43,8 +43,8 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 10%, rgba(255,255,255,.18), transparent 26%),
-              radial-gradient(circle at 80% 70%, rgba(226,131,30,.28), transparent 30%);
+  background: radial-gradient(circle at 20% 10%, rgba(255, 255, 255, .18), transparent 26%),
+    radial-gradient(circle at 80% 70%, rgba(226, 131, 30, .28), transparent 30%);
   opacity: .8;
   z-index: 1;
   pointer-events: none;
@@ -60,7 +60,7 @@ body {
   pointer-events: none;
 }
 
-.hero > * {
+.hero>* {
   position: relative;
   z-index: 3;
 }
@@ -78,7 +78,8 @@ body {
 .contact-section {
   position: relative;
   padding: 80px 24px;
-  background: #f4f8fb; /* Light pastel blue background */
+  background: #f4f8fb;
+  /* Light pastel blue background */
   overflow: hidden;
 }
 
@@ -90,7 +91,8 @@ body {
   background-image: url('assets/Texturas/textura%20turquesa.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.05; /* Subtle texture lines */
+  opacity: 0.05;
+  /* Subtle texture lines */
   z-index: 1;
   pointer-events: none;
 }
@@ -253,6 +255,7 @@ body {
     grid-template-columns: 1fr;
     gap: 50px;
   }
+
   .contact-form-wrap {
     padding: 30px 20px;
   }

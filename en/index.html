@@ -7,15 +7,15 @@
   <title>IHTF 40 | Festival Internacional de Teatro Hispano</title>
   <meta name="description"
     content="Programación del 40th International Hispanic Theatre Festival. Obras, fechas, teatros y entradas." />
-  <link rel="stylesheet" href="fonts.css" />
-  <link rel="stylesheet" href="style.css?v=1.0.6" />
+  <link rel="stylesheet" href="../fonts.css" />
+  <link rel="stylesheet" href="../style.css?v=1.0.6" />
 </head>
 
 <body>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="IHTF Inicio">
-      <img class="logo-white" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
-      <img class="logo-color" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+      <img class="logo-white" src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
     </a>
     <nav class="main-nav" aria-label="Menú principal">
       <div class="lang-selector">
@@ -36,27 +36,27 @@
         </div>
       </div>
       <div class="nav-dropdown-wrapper">
-        <a href="nosotros.html" class="nav-dropdown-trigger">SOBRE NOSOTROS</a>
+        <a href="nosotros.html" class="nav-dropdown-trigger">ABOUT US</a>
         <div class="nav-submenu">
-          <a href="nosotros.html#compania" class="submenu-item">La Compañía</a>
-          <a href="nosotros.html#personal" class="submenu-item">Personal</a>
-          <a href="nosotros.html#premios" class="submenu-item">Premios</a>
+          <a href="nosotros.html#compania" class="submenu-item">The Company</a>
+          <a href="nosotros.html#personal" class="submenu-item">Staff</a>
+          <a href="nosotros.html#premios" class="submenu-item">Awards</a>
         </div>
       </div>
       <div class="nav-dropdown-wrapper">
-        <a href="agenda.html" class="nav-dropdown-trigger">PROGRAMA</a>
+        <a href="agenda.html" class="nav-dropdown-trigger">PROGRAM</a>
         <div class="nav-submenu">
-          <a href="agenda.html" class="submenu-item">Programa de Mano</a>
-          <a href="calendario.html" class="submenu-item">Calendario</a>
-          <a href="eventos-adicionales.html" class="submenu-item">Eventos Adicionales</a>
+          <a href="agenda.html" class="submenu-item">Playbill</a>
+          <a href="calendario.html" class="submenu-item">Calendar</a>
+          <a href="eventos-adicionales.html" class="submenu-item">Additional Events</a>
           <div class="dropdown-divider"></div>
-          <a href="dia-internacional-del-nino.html" class="submenu-item">Día Internacional del Niño</a>
-          <a href="teatros.html" class="submenu-item">Teatros</a>
-          <a href="sponsors.html" class="submenu-item">Apoya IHTF</a>
+          <a href="dia-internacional-del-nino.html" class="submenu-item">International Children's Day</a>
+          <a href="teatros.html" class="submenu-item">Theaters</a>
+          <a href="sponsors.html" class="submenu-item">Support IHTF</a>
         </div>
       </div>
-      <a href="contactanos.html">CONTÁCTANOS</a>
-      <a href="#">INSCRIPCIONES 40° FESTIVAL</a>
+      <a href="contactanos.html">CONTACT US</a>
+      <a href="#">40th FESTIVAL REGISTRATIONS</a>
     </nav>
     <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
       <span></span>
@@ -104,12 +104,12 @@
         const langOpts = document.querySelectorAll(".lang-opt");
         if (langOpts.length >= 2) {
           langOpts[0].addEventListener("click", function() { // English
-            let filename = window.location.pathname.split("/").pop() || "index.html";
-            window.location.href = "en/" + filename;
-          });
-          langOpts[1].addEventListener("click", function() { // Spanish
             langSelector.classList.remove("open");
             langBtn.setAttribute("aria-expanded", "false");
+          });
+          langOpts[1].addEventListener("click", function() { // Spanish
+            let filename = window.location.pathname.split("/").pop() || "index.html";
+            window.location.href = "../" + filename;
           });
         }
 
@@ -271,13 +271,13 @@
       <div class="hero-sticky-container">
         <div id="hero-media-container" class="hero-bg"></div>
         <div class="hero-bg hero-intro-img">
-          <img src="assets/Copia%20de%20afiche_1.jpg" alt="Poster de IHTF"
+          <img src="../assets/Copia%20de%20afiche_1.jpg" alt="Poster de IHTF"
             style="width: 100%; height: 100%; -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 95%); mask-image: radial-gradient(ellipse at center, black 55%, transparent 95%);" />
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
 
         <div class="hero-sticky-logo">
-          <img class="hero-logo" src="assets/b4de7d1c8f7d8dc37146bf29408eb4bfc929497e.png"
+          <img class="hero-logo" src="../assets/b4de7d1c8f7d8dc37146bf29408eb4bfc929497e.png"
             alt="40th International Hispanic Theatre Festival" />
         </div>
 
@@ -285,52 +285,52 @@
           <div class="mouse-outline">
             <div class="mouse-arrow"></div>
           </div>
-          <span class="scroll-text">Desliza</span>
+          <span class="scroll-text">Scroll</span>
         </div>
       </div>
     </section>
 
     <section class="countdown-section" aria-label="Cuenta regresiva">
       <div class="section-inner">
-        <h2>IHTF comienza en</h2>
+        <h2>IHTF starts in</h2>
         <div class="countdown" id="countdown" data-target="2026-09-03T20:30:00">
-          <div class="time-box"><strong id="days">48</strong><span>Días</span></div>
-          <div class="time-box"><strong id="hours">12</strong><span>Horas</span></div>
-          <div class="time-box"><strong id="minutes">04</strong><span>Minutos</span></div>
-          <div class="time-box"><strong id="seconds">43</strong><span>Segundos</span></div>
+          <div class="time-box"><strong id="days">48</strong><span>Days</span></div>
+          <div class="time-box"><strong id="hours">12</strong><span>Hours</span></div>
+          <div class="time-box"><strong id="minutes">04</strong><span>Minutes</span></div>
+          <div class="time-box"><strong id="seconds">43</strong><span>Seconds</span></div>
         </div>
       </div>
     </section>
 
     <section class="expect-section" id="esperar">
       <div class="section-inner narrow">
-        <h2>Qué esperar</h2>
+        <h2>What to Expect</h2>
         <div class="stats-grid">
-          <article class="stat simple"><strong>9</strong><span>Producciones</span></article>
-          <article class="stat badge"><strong>+2</strong><span>Idiomas accesibles</span></article>
-          <article class="stat simple"><strong>4</strong><span>Teatros</span></article>
-          <article class="stat badge"><strong>+28</strong><span>Días en cartelera</span></article>
-          <article class="stat simple"><strong>6</strong><span>Países representados</span></article>
-          <article class="stat badge"><strong>+5</strong><span>Para todas las edades</span></article>
+          <article class="stat simple"><strong>9</strong><span>Productions</span></article>
+          <article class="stat badge"><strong>+2</strong><span>Accessible languages</span></article>
+          <article class="stat simple"><strong>+4</strong><span>Theaters</span></article>
+          <article class="stat badge"><strong>+28</strong><span>Days on billboard</span></article>
+          <article class="stat simple"><strong>6</strong><span>Represented countries</span></article>
+          <article class="stat badge"><strong>+5</strong><span>For all ages</span></article>
         </div>
-        <a class="primary-cta" href="agenda.html">Programa</a>
+        <a class="primary-cta" href="agenda.html">Program</a>
       </div>
     </section>
 
     <section class="program-section" id="programa">
       <div class="section-inner">
-        <h2>RESUMEN DEL PROGRAMA</h2>
+        <h2>PROGRAM SUMMARY</h2>
         <div class="program-grid">
           <div class="play-card-wrapper purple" onclick="window.location.href='obra-carrusel.html'" role="button"
             tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
                 <div class="carousel-track">
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/Carrusel-HiRes_Jun26-008.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/Carrusel-HiRes_Jun26-008.webp"
                     alt="carrusel photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/Carrusel-HiRes_Jun26-015.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/Carrusel-HiRes_Jun26-015.webp"
                     alt="carrusel photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/OSPS+TA_Carrusel-HiRes_Jun26-005.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/OSPS+TA_Carrusel-HiRes_Jun26-005.webp"
                     alt="carrusel photo" loading="lazy" />
                 </div>
               </div>
@@ -342,17 +342,17 @@
                   <div class="card-meta">
                     <h3>Carrusel</h3>
                     <div class="theatre-logos">
-                      <img src="assets/mcda.avif" alt="MDCA" />
-                      <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+                      <img src="../assets/mcda.avif" alt="MDCA" />
+                      <img src="../assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
                         alt="Westchester Cultural Arts Center" />
                     </div>
                   </div>
-                  <a class="ticket-btn" href="obra-carrusel.html">Entradas</a>
+                  <a class="ticket-btn" href="obra-carrusel.html">Tickets</a>
                 </div>
               </div>
             </article>
             <div class="dates">
-              <div><span>Sept</span><strong>3</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>3</strong><em>8:30 PM</em><small class="foro-label">Forum</small></div>
               <div><span>Sept</span><strong>4</strong><em>8:30 PM</em></div>
               <div><span>Sept</span><strong>5</strong><em>8:30 PM</em></div>
               <div><span>Sept</span><strong>6</strong><em>5:00 PM</em></div>
@@ -364,25 +364,25 @@
             <article class="play-card">
               <div class="image-carousel">
                 <div class="carousel-track">
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 1.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 1.webp"
                     alt="zombi-manifiesto photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 2(1).webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 2(1).webp"
                     alt="zombi-manifiesto photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 2.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 2.webp"
                     alt="zombi-manifiesto photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 3.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 3.webp"
                     alt="zombi-manifiesto photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 4.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 4.webp"
                     alt="zombi-manifiesto photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 5.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 5.webp"
                     alt="zombi-manifiesto photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 6.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 6.webp"
                     alt="zombi-manifiesto photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 7.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 7.webp"
                     alt="zombi-manifiesto photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 8.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 8.webp"
                     alt="zombi-manifiesto photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 9.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 9.webp"
                     alt="zombi-manifiesto photo" loading="lazy" />
                 </div>
               </div>
@@ -394,17 +394,17 @@
                   <div class="card-meta">
                     <h3>Zombi Manifiesto</h3>
                     <div class="theatre-logos">
-                      <img src="assets/mcda.avif" alt="MDCA" />
-                      <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+                      <img src="../assets/mcda.avif" alt="MDCA" />
+                      <img src="../assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
                         alt="Westchester Cultural Arts Center" />
                     </div>
                   </div>
-                  <a class="ticket-btn" href="obra-zombi-manifiesto.html">Entradas</a>
+                  <a class="ticket-btn" href="obra-zombi-manifiesto.html">Tickets</a>
                 </div>
               </div>
             </article>
             <div class="dates">
-              <div><span>Sept</span><strong>10</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>10</strong><em>8:30 PM</em><small class="foro-label">Forum</small></div>
               <div><span>Sept</span><strong>11</strong><em>8:30 PM</em></div>
               <div><span>Sept</span><strong>12</strong><em>8:30 PM</em></div>
             </div>
@@ -415,21 +415,21 @@
             <article class="play-card">
               <div class="image-carousel">
                 <div class="carousel-track">
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 1.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 1.webp"
                     alt="historia-de-un-jabali photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 2.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 2.webp"
                     alt="historia-de-un-jabali photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 3.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 3.webp"
                     alt="historia-de-un-jabali photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 4.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 4.webp"
                     alt="historia-de-un-jabali photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 5.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 5.webp"
                     alt="historia-de-un-jabali photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 7.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 7.webp"
                     alt="historia-de-un-jabali photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 8.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 8.webp"
                     alt="historia-de-un-jabali photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 9.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 9.webp"
                     alt="historia-de-un-jabali photo" loading="lazy" />
                 </div>
               </div>
@@ -441,15 +441,15 @@
                   <div class="card-meta">
                     <h3 style="font-size: 0.85em;">Historia de un jabalí<br>(o algo de Ricardo III)</h3>
                     <div class="theatre-logos">
-                      <img src="assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png" alt="Logo teatro" />
+                      <img src="../assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png" alt="Logo teatro" />
                     </div>
                   </div>
-                  <a class="ticket-btn" href="obra-historia-de-un-jabali.html">Entradas</a>
+                  <a class="ticket-btn" href="obra-historia-de-un-jabali.html">Tickets</a>
                 </div>
               </div>
             </article>
             <div class="dates">
-              <div><span>Sept</span><strong>11</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>11</strong><em>8:30 PM</em><small class="foro-label">Forum</small></div>
               <div><span>Sept</span><strong>12</strong><em>8:30 PM</em></div>
               <div><span>Sept</span><strong>13</strong><em>5:00 PM</em></div>
             </div>
@@ -460,39 +460,39 @@
             <article class="play-card">
               <div class="image-carousel">
                 <div class="carousel-track">
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 1.webp" alt="a-fuego photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 1.webp" alt="a-fuego photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 2.webp" alt="a-fuego photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 2.webp" alt="a-fuego photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 3.webp" alt="a-fuego photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 3.webp" alt="a-fuego photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 4.webp" alt="a-fuego photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 4.webp" alt="a-fuego photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 5.webp" alt="a-fuego photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 5.webp" alt="a-fuego photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 6.webp" alt="a-fuego photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 6.webp" alt="a-fuego photo"
                     loading="lazy" />
                 </div>
               </div>
               <div class="card-content">
                 <div class="card-top">
-                  <span class="country-badge">España</span>
+                  <span class="country-badge">Spain</span>
                 </div>
                 <div class="card-bottom">
                   <div class="card-meta">
                     <h3>A fuego</h3>
                     <div class="theatre-logos">
-                      <img src="assets/Logos teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
+                      <img src="../assets/Logos teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
                         alt="Koubek Center" />
                     </div>
                   </div>
-                  <a class="ticket-btn" href="obra-a-fuego.html">Entradas</a>
+                  <a class="ticket-btn" href="obra-a-fuego.html">Tickets</a>
                 </div>
               </div>
             </article>
             <div class="dates">
               <div><span>Sept</span><strong>11</strong><em>8:30 PM</em></div>
-              <div><span>Sept</span><strong>12</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>12</strong><em>8:30 PM</em><small class="foro-label">Forum</small></div>
               <div><span>Sept</span><strong>13</strong><em>5:00 PM</em></div>
             </div>
           </div>
@@ -502,11 +502,11 @@
             <article class="play-card">
               <div class="image-carousel">
                 <div class="carousel-track">
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 1.webp" alt="odd-man-out photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 1.webp" alt="odd-man-out photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 3.webp" alt="odd-man-out photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 3.webp" alt="odd-man-out photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 5.webp" alt="odd-man-out photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 5.webp" alt="odd-man-out photo"
                     loading="lazy" />
                 </div>
               </div>
@@ -518,17 +518,17 @@
                   <div class="card-meta">
                     <h3>Odd Man Out</h3>
                     <div class="theatre-logos">
-                      <img src="assets/mcda.avif" alt="MDCA" />
-                      <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+                      <img src="../assets/mcda.avif" alt="MDCA" />
+                      <img src="../assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
                         alt="Westchester Cultural Arts Center" />
                     </div>
                   </div>
-                  <a class="ticket-btn" href="obra-odd-man-out.html">Entradas</a>
+                  <a class="ticket-btn" href="obra-odd-man-out.html">Tickets</a>
                 </div>
               </div>
             </article>
             <div class="dates">
-              <div><span>Sept</span><strong>17</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>17</strong><em>8:30 PM</em><small class="foro-label">Forum</small></div>
               <div><span>Sept</span><strong>18</strong><em>8:30 PM</em></div>
               <div><span>Sept</span><strong>19</strong><em>8:30 PM</em></div>
             </div>
@@ -539,17 +539,17 @@
             <article class="play-card">
               <div class="image-carousel">
                 <div class="carousel-track">
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 1.webp" alt="sueno photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 1.webp" alt="sueno photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 2.webp" alt="sueno photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 2.webp" alt="sueno photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 3.webp" alt="sueno photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 3.webp" alt="sueno photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 4.webp" alt="sueno photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 4.webp" alt="sueno photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 5.webp" alt="sueno photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 5.webp" alt="sueno photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 6.webp" alt="sueno photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 6.webp" alt="sueno photo"
                     loading="lazy" />
                 </div>
               </div>
@@ -561,17 +561,17 @@
                   <div class="card-meta">
                     <h3>Sueño</h3>
                     <div class="theatre-logos">
-                      <img src="assets/Logos teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
+                      <img src="../assets/Logos teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
                         alt="Koubek Center" />
                     </div>
                   </div>
-                  <a class="ticket-btn" href="obra-sueno.html">Entradas</a>
+                  <a class="ticket-btn" href="obra-sueno.html">Tickets</a>
                 </div>
               </div>
             </article>
             <div class="dates">
               <div><span>Sept</span><strong>17</strong><em>7:00 PM</em></div>
-              <div><span>Sept</span><strong>18</strong><em>7:00 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>18</strong><em>7:00 PM</em><small class="foro-label">Forum</small></div>
               <div><span>Sept</span><strong>19</strong><em>7:00 PM</em></div>
             </div>
           </div>
@@ -583,34 +583,34 @@
             <article class="play-card">
               <div class="image-carousel">
                 <div class="carousel-track">
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 1.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 1.webp"
                     alt="robinson-crusoe photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 2.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 2.webp"
                     alt="robinson-crusoe photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 3.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 3.webp"
                     alt="robinson-crusoe photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 4.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 4.webp"
                     alt="robinson-crusoe photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 5.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 5.webp"
                     alt="robinson-crusoe photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 6.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 6.webp"
                     alt="robinson-crusoe photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 7.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 7.webp"
                     alt="robinson-crusoe photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 8.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 8.webp"
                     alt="robinson-crusoe photo" loading="lazy" />
                 </div>
               </div>
               <div class="card-content">
                 <div class="card-top">
                   <span class="country-badge">USA</span>
-                  <span class="kids-badge">Día Internacional del Niño</span>
+                  <span class="kids-badge">International Children's Day</span>
                 </div>
                 <div class="card-bottom">
                   <div class="card-meta">
                     <h3>Las asombrosas aventuras de Robinson Crusoe</h3>
                   </div>
-                  <a class="ticket-btn" href="obra-robinson-crusoe.html">Reservar</a>
+                  <a class="ticket-btn" href="obra-robinson-crusoe.html">Reserve</a>
                 </div>
               </div>
             </article>
@@ -620,7 +620,7 @@
                 <div style="background: transparent; padding: 0;"><span>Sept</span><strong>19</strong><em>5:00
                     PM</em><small class="foro-label" style="visibility: hidden;">Foro</small>
                 </div>
-                <img src="assets/Logos%20teatros/Copia%20de%206a17e343778e61a102967a29_Village_Biscayne.png"
+                <img src="../assets/Logos%20teatros/Copia%20de%206a17e343778e61a102967a29_Village_Biscayne.png"
                   alt="Key Biscayne" style="height: 28px; width: auto;" />
               </div>
               <div
@@ -628,9 +628,9 @@
                 <div style="background: transparent; padding: 0;"><span>Sept</span><strong>20</strong><em>5:00 PM</em>
                 </div>
                 <div style="display: flex; align-items: center; gap: 8px;">
-                  <img src="assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png" alt="MDCA"
+                  <img src="../assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png" alt="MDCA"
                     style="height: 24px; width: auto;" />
-                  <img src="assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
+                  <img src="../assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
                     alt="Koubek Center" style="height: 20px; width: auto;" />
                 </div>
               </div>
@@ -642,47 +642,47 @@
             <article class="play-card">
               <div class="image-carousel">
                 <div class="carousel-track">
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 1.webp" alt="hamlet photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 1.webp" alt="hamlet photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 10.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 10.webp"
                     alt="hamlet photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 11.webp"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 11.webp"
                     alt="hamlet photo" loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 2.webp" alt="hamlet photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 2.webp" alt="hamlet photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 3.webp" alt="hamlet photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 3.webp" alt="hamlet photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 4.webp" alt="hamlet photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 4.webp" alt="hamlet photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 5.webp" alt="hamlet photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 5.webp" alt="hamlet photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 6.webp" alt="hamlet photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 6.webp" alt="hamlet photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 7.webp" alt="hamlet photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 7.webp" alt="hamlet photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 8.webp" alt="hamlet photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 8.webp" alt="hamlet photo"
                     loading="lazy" />
-                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 9.webp" alt="hamlet photo"
+                  <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 9.webp" alt="hamlet photo"
                     loading="lazy" />
                 </div>
               </div>
               <div class="card-content">
                 <div class="card-top">
-                  <span class="country-badge">Perú</span>
+                  <span class="country-badge">Peru</span>
                 </div>
                 <div class="card-bottom">
                   <div class="card-meta">
                     <h3>Hamlet</h3>
                     <div class="theatre-logos">
-                      <img src="assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png" alt="Logo teatro" />
+                      <img src="../assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png" alt="Logo teatro" />
                     </div>
                   </div>
-                  <a class="ticket-btn" href="obra-hamlet.html">Entradas</a>
+                  <a class="ticket-btn" href="obra-hamlet.html">Tickets</a>
                 </div>
               </div>
             </article>
             <div class="dates">
-              <div><span>Sept</span><strong>24</strong><em>8:30 PM</em><small class="foro-label">Foro</small></div>
+              <div><span>Sept</span><strong>24</strong><em>8:30 PM</em><small class="foro-label">Forum</small></div>
               <div><span>Sept</span><strong>25</strong><em>8:30 PM</em></div>
               <div><span>Sept</span><strong>26</strong><em>8:30 PM</em></div>
             </div>
@@ -696,18 +696,18 @@
   <div class="footer-wrapper">
     <section class="newsletter" id="newsletter">
       <div class="section-inner narrow">
-        <h2>Suscríbete a nuestro Newsletter</h2>
-        <p>Recibe información actualizada sobre el IHTF</p>
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Receive updated information about IHTF</p>
         <form class="signup">
-          <input type="email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" />
-          <button type="submit">Enviar &rarr;</button>
+          <input type="email" placeholder="Enter your email" aria-label="Enter your email" />
+          <button type="submit">Submit &rarr;</button>
         </form>
       </div>
     </section>
     <footer class="site-footer">
-      <div><img src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
+      <div><img src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
           class="footer-logo" /></div>
-      <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
+      <nav><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></nav>
     </footer>
   </div>
 

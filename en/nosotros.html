@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre Nosotros | Festival Internacional de Teatro Hispano (IHTF 40)</title>
   <meta name="description" content="Conozca sobre la Compañía, el Personal y los Premios del Festival Internacional de Teatro Hispano de Miami." />
-  <link rel="stylesheet" href="fonts.css" />
-  <link rel="stylesheet" href="style.css?v=1.0.6" />
-  <link rel="stylesheet" href="nosotros.css?v=1.0.1" />
+  <link rel="stylesheet" href="../fonts.css" />
+  <link rel="stylesheet" href="../style.css?v=1.0.6" />
+  <link rel="stylesheet" href="../nosotros.css?v=1.0.1" />
 </head>
 
 <body>
   <header class="site-header">
     <a class="brand" href="index.html#inicio" aria-label="IHTF Inicio">
-      <img class="logo-white" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
-      <img class="logo-color" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+      <img class="logo-white" src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
     </a>
     <nav class="main-nav" aria-label="Menú principal">
       <div class="lang-selector">
@@ -36,27 +36,27 @@
         </div>
       </div>
       <div class="nav-dropdown-wrapper">
-        <a href="nosotros.html" class="nav-dropdown-trigger">SOBRE NOSOTROS</a>
+        <a href="nosotros.html" class="nav-dropdown-trigger">ABOUT US</a>
         <div class="nav-submenu">
-          <a href="nosotros.html#compania" class="submenu-item">La Compañía</a>
-          <a href="nosotros.html#personal" class="submenu-item">Personal</a>
-          <a href="nosotros.html#premios" class="submenu-item">Premios</a>
+          <a href="nosotros.html#compania" class="submenu-item">The Company</a>
+          <a href="nosotros.html#personal" class="submenu-item">Staff</a>
+          <a href="nosotros.html#premios" class="submenu-item">Awards</a>
         </div>
       </div>
       <div class="nav-dropdown-wrapper">
-        <a href="agenda.html" class="nav-dropdown-trigger">PROGRAMA</a>
+        <a href="agenda.html" class="nav-dropdown-trigger">PROGRAM</a>
         <div class="nav-submenu">
-          <a href="agenda.html" class="submenu-item">Programa de Mano</a>
-          <a href="calendario.html" class="submenu-item">Calendario</a>
-          <a href="eventos-adicionales.html" class="submenu-item">Eventos Adicionales</a>
+          <a href="agenda.html" class="submenu-item">Playbill</a>
+          <a href="calendario.html" class="submenu-item">Calendar</a>
+          <a href="eventos-adicionales.html" class="submenu-item">Additional Events</a>
           <div class="dropdown-divider"></div>
-          <a href="dia-internacional-del-nino.html" class="submenu-item">Día Internacional del Niño</a>
-          <a href="teatros.html" class="submenu-item">Teatros</a>
-          <a href="sponsors.html" class="submenu-item">Apoya IHTF</a>
+          <a href="dia-internacional-del-nino.html" class="submenu-item">International Children's Day</a>
+          <a href="teatros.html" class="submenu-item">Theaters</a>
+          <a href="sponsors.html" class="submenu-item">Support IHTF</a>
         </div>
       </div>
-      <a href="contactanos.html">CONTÁCTANOS</a>
-      <a href="#">INSCRIPCIONES 40° FESTIVAL</a>
+      <a href="contactanos.html">CONTACT US</a>
+      <a href="#">40th FESTIVAL REGISTRATIONS</a>
     </nav>
     <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
       <span></span>
@@ -104,12 +104,12 @@
         const langOpts = document.querySelectorAll(".lang-opt");
         if (langOpts.length >= 2) {
           langOpts[0].addEventListener("click", function() { // English
-            let filename = window.location.pathname.split("/").pop() || "index.html";
-            window.location.href = "en/" + filename;
-          });
-          langOpts[1].addEventListener("click", function() { // Spanish
             langSelector.classList.remove("open");
             langBtn.setAttribute("aria-expanded", "false");
+          });
+          langOpts[1].addEventListener("click", function() { // Spanish
+            let filename = window.location.pathname.split("/").pop() || "index.html";
+            window.location.href = "../" + filename;
           });
         }
       });
@@ -118,7 +118,7 @@
 
   <main>
     <section class="hero">
-      <h1>Sobre Nosotros</h1>
+      <h1>About Us</h1>
     </section>
 
     <!-- Compañía Section wrapper -->
@@ -126,7 +126,7 @@
       <!-- Misión Block -->
       <section class="mission-section">
         <div class="mission-inner">
-          <p>"Preservar, desarrollar y enriquecer nuestra herencia cultural hispana a través de la creación y presentación del teatro universal y programas educativos, y participar en el crecimiento artístico y la expansión del teatro mundial al presentar algunas de las mejores compañías teatrales del mundo en el galardonado Festival Internacional de Teatro Hispano de Miami, presentado por Avante."</p>
+          <p>"To preserve, develop, and enrich our Hispanic cultural heritage through the creation and presentation of universal theater and educational programs, and to participate in the artistic growth and expansion of world theater by presenting some of the world's finest theater companies in the award-winning International Hispanic Theatre Festival of Miami, presented by Avante."</p>
         </div>
       </section>
 
@@ -134,11 +134,11 @@
       <section class="teatro-section">
         <div class="teatro-grid">
           <aside class="directors-list">
-            <h3>Directores</h3>
+            <h3>Directors</h3>
             <ul>
-              <li>Verónica Sánchez <em>Presidente</em></li>
-              <li>Edna Schwab <em>Tesorera</em></li>
-              <li>Beatriz J. Rizk <em>Secretaria</em></li>
+              <li>Verónica Sánchez <em>President</em></li>
+              <li>Edna Schwab <em>Treasurer</em></li>
+              <li>Beatriz J. Rizk <em>Secretary</em></li>
               <li>Marilyn Borroto</li>
               <li>Wilfredo Borroto, A.I.A.</li>
               <li>Conchi Bretos</li>
@@ -150,17 +150,17 @@
               <li>Teresa María Rojas</li>
               <li>Mario Ernesto Sánchez* <em>Emeritus Producing Artistic Director &amp; Festival Director</em></li>
             </ul>
-            <span class="note">*Fallecido</span>
+            <span class="note">*Deceased</span>
           </aside>
 
           <article class="teatro-history">
             <h2>Teatro Avante</h2>
-            <p>Fundada en 1979, Teatro Avante es una organización cultural sin fines de lucro y exenta de impuestos cuyo objetivo esencial es la preservación de la herencia cultural hispana.</p>
-            <p>El grupo ha representado a Estados Unidos en México, Costa Rica, España, Japón, Francia, Colombia, República Dominicana, Guatemala, Portugal, Perú, Brasil, Venezuela, Argentina, Puerto Rico y Eslovenia, además de, en Estados Unidos, Nueva York, Albuquerque, Los Ángeles, El Paso y Buffalo.</p>
-            <p>Ha llevado a la escena textos de Albee, Alomá, Ariza, Assad, Cabrujas, Cocteau, Ferrer, García Lorca, Manet, Matas, Pinto, Piñera, Reguera Saumell, Santana, Triana, Valle-Inclán, Williams, Orwell y Shakespeare, entre otros.</p>
-            <p>En 1994, las Olimpiadas Culturales del Comité Olímpico de Atlanta honraron a Teatro Avante con el Premio Regional de las Artes.</p>
-            <p>Ese mismo año recibió el premio Ollantay en Madrid; en 1995, el Federico García Lorca en Fuente Vaqueros, España; en 2004 el Kusillo en La Paz; en 2009 el FIT de Cádiz-Atahualpa del Cioppo en Cádiz; y en 2012 el de la Universidad Científica del Sur (UCSUR) en Lima.</p>
-            <p>Teatro Avante produce y presenta el galardonado Festival Internacional de Teatro Hispano de Miami.</p>
+            <p>Founded in 1979, Teatro Avante is a non-profit, tax-exempt cultural organization whose primary goal is the preservation of Hispanic cultural heritage.</p>
+            <p>The group has represented the United States in Mexico, Costa Rica, Spain, Japan, France, Colombia, Dominican Republic, Guatemala, Portugal, Peru, Brazil, Venezuela, Argentina, Puerto Rico, and Slovenia, as well as, within the United States, New York, Albuquerque, Los Angeles, El Paso, and Buffalo.</p>
+            <p>It has staged plays by Albee, Alomá, Ariza, Assad, Cabrujas, Cocteau, Ferrer, García Lorca, Manet, Matas, Pinto, Piñera, Reguera Saumell, Santana, Triana, Valle-Inclán, Williams, Orwell, and Shakespeare, among others.</p>
+            <p>In 1994, the Cultural Olympiad of the Atlanta Olympic Committee honored Teatro Avante with the Regional Arts Award.</p>
+            <p>That same year it received the Ollantay Award in Madrid; in 1995, the Federico García Lorca Award in Fuente Vaqueros, Spain; in 2004 the Kusillo Award in La Paz; in 2009 the FIT of Cádiz-Atahualpa del Cioppo in Cádiz; and in 2012 that of the Universidad Científica del Sur (UCSUR) in Lima.</p>
+            <p>Teatro Avante produces and presents the award-winning International Hispanic Theatre Festival of Miami.</p>
           </article>
         </div>
       </section>
@@ -173,16 +173,16 @@
         <div class="tribute-grid">
           <div class="tribute-photo">
             <!-- Reference the image path. User can copy their photo of Mario Ernesto Sánchez to assets/mario-ernesto-sanchez.png -->
-            <img src="assets/mario-ernesto-sanchez.png" alt="Mario Ernesto Sánchez" onerror="this.src='assets/olga-garay.png'; this.style.filter='grayscale(100%)';">
+            <img src="../assets/mario-ernesto-sanchez.png" alt="Mario Ernesto Sánchez" onerror="this.src='assets/olga-garay.png'; this.style.filter='grayscale(100%)';">
           </div>
           <div class="tribute-text">
             <h2>Mario Ernesto Sánchez (1947-2025)</h2>
-            <div class="subtitle">Un gigante de las tablas</div>
+            <div class="subtitle">A Giant of the Stage</div>
             <div class="tribute-paragraphs">
-              <p>En 2009 cuando el Festival Iberoamericano de Teatro de Cádiz le otorgó el premio Atahualpa del Cioppo al Festival Internacional de Teatro Hispano de Miami, afirmaba que el festival tenía nombre propio, se llamaba Mario Ernesto Sánchez. Solamente el empeño de este gigante de las tablas (y no me refiero sólo a su tamaño natural), fue capaz de llevar a cabo la ardua labor que se había impuesto desde hacía ya varias décadas, la de preservar la cultura hispana en Estados Unidos, "que tanto contribuye a la calidad de vida de todos," como afirmó una vez. La historia del uno fue y sigue siendo inseparable de la del otro. Desde un principio no se perfilaba como una tarea sencilla de concretar; sin embargo, su manifiesta tenacidad y obstinación estarían de su parte, características que con toda seguridad trajo consigo desde su ciudad natal San Antonio de las Vegas, en Cuba.</p>
-              <p>Ya ha pasado mucha agua bajo el puente desde que un grupo de teatristas y activistas de la cultura de Miami se juntara en 1986, bajo el nombre de Acting Together (Actuando en Conjunto) y presentara lo que se llamó el Primer Festival Anual de Teatro Hispano con producciones locales. No es coincidencia, de paso, que este año le estemos otorgando el premio Una Vida de Dedicación a las Artes Escénicas a Olga Garay-English quien fuera parte de ese primer contingente artístico que se preocupó, y sigue preocupándose, por fomentar un arte teatral significativo que pueda generar placer en un público a la vez que reflexión y entendimiento humano sobre temas relevantes. Ya para el año 1989, el festival se había internacionalizado invitando grupos de fuera, como sucedió al incorporarse España, Colombia, Puerto Rico y Costa Rica a la programación, sino que la gestión pasó enteramente a manos de Mario Ernesto. Y el resto, como dice el refrán, ya es historia. Han pasado por las salas del festival innumerables espectáculos del mundo ibérico e iberoamericano, y de alguno que otro país que se aventuró a montar obras de autores de origen hispano, el único requisito del festival, como pasó con las compañías Lasenkan Theatre de Japón (2003), Insightout de Dinamarca (2005), y el grupo esloveno Ljubijana City Theatre (2008). Aprovechamos esta instancia para darle la bienvenida a las nueve compañías, locales, nacionales e internacionales, que nos honran con su presencia en esta ocasión.</p>
-              <p>Su otro gran logro fue indiscutiblemente la fundación de su compañía Teatro Avante. Se inició en 1978, co-fundada con Teresa María Rojas y Alina Interián, bajo el nombre de RAS Community Theatre. La obra Electra Garrigó, de Virgilio Piñera (1912-79), se escogió para su estreno trayendo para dirigirla al legendario Francisco Morín (1918- 2017), quien fuera el que la montó en La Habana en 1948, considerado por varios críticos como la introducción a la modernidad del teatro Latino Americanico. Ya bajo el nombre de Avante, que nos acompaña hasta hoy, Mario Ernesto supo rodearse de un equipo estable de talentosos actores que sería difícil de listar sin omitir algunos de los que sin duda han contribuido enormemente al éxito de sus montajes. Por otra parte, entre sus colaboradores más asiduos tras bastidores se hace imposible no mencionar a Ernesto Padilla, Irene Olivera, Leiter Padilla, Gabriel Cutiño, Asela Torres, los diseñadores Pedro Balmaseda y Jorge Noa, y en no pocas ocasiones al compositor Mike Porcel. Trabajó con innumerables autores clásicos y contemporáneos entre los que sobresalen el mismo Piñera, cuyas obras llevó a la escena en ocho ocasiones, y a Abel González Melo, quien devino "dramaturgo en residencia" durante los últimos años. Como asistentes de cabecera en su empeño de llevar adelante el Festival contó con los miembros más allegados de su familia, con Verónica y Gastón en primera línea, así como la autora de estas líneas quien ha estado a cargo del Componente Educativo desde 1994. El festival, en esta nueva etapa que comienza, no puede haber quedado en mejores manos que las de Melissa Messulam y Néher Jacqueline Briceño, allegadas colaboradoras y colegas, a quienes Mario Ernesto designó como sucesoras al frente de las instituciones que fueron parte de su múltiple legado.</p>
-              <p>No hay duda de que su partida deja un vacío enorme que será casi imposible de superar, abandonándonos antes de llegar a la codiciada fecha de los cuarenta que cumplirá el festival el año entrante. En su memoria, aun en los difíciles momentos en que vivimos, se hará lo imposible por continuar su inmensa labor en nombre también de nuestra tradición, valores y patrimonio cultural que, como él indicaba, nos hace la vida más llevadera.</p>
+              <p>In 2009, when the Ibero-American Theater Festival of Cádiz awarded the Atahualpa del Cioppo Prize to the International Hispanic Theatre Festival of Miami, it stated that the festival had its own name, and it was Mario Ernesto Sánchez. Only the dedication of this stage giant (and I do not only refer to his natural size) was capable of carrying out the arduous work he had set for himself for several decades: to preserve Hispanic culture in the United States, "which contributes so much to the quality of life of all," as he once stated. The history of the one was and remains inseparable from that of the other. From the beginning, it did not shape up to be an easy task to realize; however, his manifest tenacity and obstinacy would be on his side, characteristics that he surely brought with him from his hometown of San Antonio de las Vegas, in Cuba.</p>
+              <p>A lot of water has run under the bridge since a group of theater makers and cultural activists from Miami gathered in 1986 under the name Acting Together and presented what was called the First Annual Hispanic Theatre Festival with local productions. It is no coincidence, by the way, that this year we are presenting the Lifetime Dedication to the Performing Arts Award to Olga Garay-English, who was part of that first artistic contingent that cared, and continues to care, about promoting significant theatrical art that can generate pleasure in an audience while encouraging reflection and human understanding on relevant issues. By 1989, the festival had internationalized, inviting groups from abroad, as occurred when Spain, Colombia, Puerto Rico, and Costa Rica joined the program, and management passed entirely into the hands of Mario Ernesto. And the rest, as the saying goes, is history. Countless shows from the Iberian and Ibero-American world have passed through the festival's venues, along with a few from other countries that ventured to stage plays by authors of Hispanic origin—the festival's only requirement—as occurred with the companies Lasenkan Theatre from Japan (2003), Insightout from Denmark (2005), and the Slovenian group Ljubljana City Theatre (2008). We take this opportunity to welcome the nine local, national, and international companies that honor us with their presence on this occasion.</p>
+              <p>His other great achievement was indisputably the founding of his company Teatro Avante. It began in 1978, co-founded with Teresa María Rojas and Alina Interián, under the name RAS Community Theatre. The play Electra Garrigó, by Virgilio Piñera (1912-79), was chosen for its premiere, bringing the legendary Francisco Morín (1918-2017) to direct it, who was the one who staged it in Havana in 1948, considered by several critics as the introduction of modernity to Latin American theater. Already under the name Avante, which accompanies us to this day, Mario Ernesto knew how to surround himself with a stable team of talented actors who would be difficult to list without omitting some of those who have undoubtedly contributed enormously to the success of his stagings. On the other hand, among his most frequent collaborators behind the scenes, it is impossible not to mention Ernesto Padilla, Irene Olivera, Leiter Padilla, Gabriel Cutiño, Asela Torres, designers Pedro Balmaseda and Jorge Noa, and on not a few occasions the composer Mike Porcel. He worked with countless classical and contemporary authors, among whom Piñera stands out, whose plays he brought to the stage on eight occasions, and Abel González Melo, who became a "playwright in residence" during recent years. As chief assistants in his effort to carry out the Festival, he counted on the closest members of his family, with Verónica and Gastón in the front line, as well as the author of these lines, who has been in charge of the Educational Component since 1994. The festival, in this new stage that begins, could not have been left in better hands than those of Melissa Messulam and Néher Jacqueline Briceño, close collaborators and colleagues, whom Mario Ernesto designated as successors at the head of the institutions that were part of his multiple legacy.</p>
+              <p>There is no doubt that his departure leaves a huge void that will be almost impossible to overcome, leaving us before reaching the coveted date of the fortieth anniversary that the festival will celebrate next year. In his memory, even in the difficult times in which we live, the impossible will be done to continue his immense work also in the name of our tradition, values, and cultural heritage which, as he indicated, makes life more bearable.</p>
             </div>
             <div class="tribute-signature">- Beatriz J. Rizk</div>
           </div>
@@ -192,60 +192,60 @@
       <!-- Personal y Colaboradores Staff Grid -->
       <section class="staff-section">
         <div class="staff-inner">
-          <h2>Personal y Colaboradores</h2>
+          <h2>Staff and Collaborators</h2>
           <div class="staff-grid">
             <div class="staff-col">
               <h3>Mario Ernesto Sánchez*</h3>
-              <p>Director emérito artístico de producción y director de festivales</p>
+              <p>Emeritus Producing Artistic Director & Festival Director</p>
 
               <h3>Neher Jacqueline Briceño</h3>
-              <p>Directora artística del festival<br><strong>Conecta Miami Arts</strong></p>
+              <p>Festival Artistic Director<br><strong>Conecta Miami Arts</strong></p>
 
               <h3>Melissa Messulam</h3>
-              <p>Directora ejecutiva del festival<br><strong>Conecta Miami Arts</strong></p>
+              <p>Festival Executive Director<br><strong>Conecta Miami Arts</strong></p>
 
               <h3>Beatriz J. Rizk, Ph.D.</h3>
-              <p>Directora del Programa Educativo y Consultora Literaria</p>
+              <p>Educational Program Director & Literary Consultant</p>
 
               <h3>Francisco Morín*</h3>
-              <p>Director emérito</p>
+              <p>Emeritus Director</p>
             </div>
 
             <div class="staff-col">
               <h3>Belen Castres White</h3>
-              <p>Gerente de producción</p>
+              <p>Production Manager</p>
 
               <h3>Ernesto Padilla</h3>
-              <p>Director Técnico</p>
+              <p>Technical Director</p>
 
               <h3>Verónica Lucía Sánchez</h3>
-              <p>Gerente de Marketing y Taquilla</p>
+              <p>Marketing & Box Office Manager</p>
 
               <h3>Beatriz Urgelles</h3>
               <p>Marketing</p>
 
               <h3>Juan Carlos León</h3>
-              <p>Editor de sitio web y diseñador de redes sociales</p>
+              <p>Website Editor & Social Media Designer</p>
 
               <h3>Assad Mardelli</h3>
-              <p>Gerente de redes sociales</p>
+              <p>Social Media Manager</p>
             </div>
 
             <div class="staff-col">
               <h3>Jorge Noa &amp; Pedro Balmaseda (Nobarte)</h3>
-              <p>Diseñadores de escenografía, vestuario y utilería</p>
+              <p>Scenic, Costume & Prop Designers</p>
 
               <h3>Conecta Miami Arts</h3>
-              <p>Coordinadores del Día Internacional del Niño</p>
+              <p>International Children's Day Coordinators</p>
 
               <h3>Christine Jacobus</h3>
-              <p>Diseñadora Gráfica</p>
+              <p>Graphic Designer</p>
 
               <h3>Gabriel Cutiño</h3>
-              <p>Videógrafo</p>
+              <p>Videographer</p>
             </div>
           </div>
-          <span class="staff-note">* Fallecido</span>
+          <span class="staff-note">* Deceased</span>
         </div>
       </section>
     </div>
@@ -254,7 +254,7 @@
     <div id="premios" class="section-wrapper">
       <section class="premios-section">
         <div class="premios-inner">
-          <h2>Premios</h2>
+          <h2>Awards</h2>
           <div class="premios-timeline">
             <div class="premio-item">
               <span class="premio-year">1990</span>
@@ -265,25 +265,25 @@
             <div class="premio-item">
               <span class="premio-year">1994</span>
               <div class="premio-details">
-                <span class="premio-name">Premio Regional de las Artes &mdash; Olimpiadas Culturales del Comité Olímpico</span> &mdash; <span class="premio-location">Atlanta (United States)</span>
+                <span class="premio-name">Regional Arts Award &mdash; Olympic Committee Cultural Olympiad</span> &mdash; <span class="premio-location">Atlanta (United States)</span>
               </div>
             </div>
             <div class="premio-item">
               <span class="premio-year">1994</span>
               <div class="premio-details">
-                <span class="premio-name">Premio Ollantay</span> &mdash; <span class="premio-location">Madrid (Spain)</span>
+                <span class="premio-name">Ollantay Award</span> &mdash; <span class="premio-location">Madrid (Spain)</span>
               </div>
             </div>
             <div class="premio-item">
               <span class="premio-year">1995</span>
               <div class="premio-details">
-                <span class="premio-name">Premio Federico García Lorca</span> &mdash; <span class="premio-location">Fuente Vaqueros (Spain)</span>
+                <span class="premio-name">Federico García Lorca Award</span> &mdash; <span class="premio-location">Fuente Vaqueros (Spain)</span>
               </div>
             </div>
             <div class="premio-item">
               <span class="premio-year">2004</span>
               <div class="premio-details">
-                <span class="premio-name">Premio Kusillo</span> &mdash; <span class="premio-location">La Paz (Bolivia)</span>
+                <span class="premio-name">Kusillo Award</span> &mdash; <span class="premio-location">La Paz (Bolivia)</span>
               </div>
             </div>
             <div class="premio-item">
@@ -295,19 +295,19 @@
             <div class="premio-item">
               <span class="premio-year">2009</span>
               <div class="premio-details">
-                <span class="premio-name">FIT de Cádiz &mdash; Atahualpa del Cioppo</span> &mdash; <span class="premio-location">Cádiz (Spain)</span>
+                <span class="premio-name">FIT of Cádiz &mdash; Atahualpa del Cioppo</span> &mdash; <span class="premio-location">Cádiz (Spain)</span>
               </div>
             </div>
             <div class="premio-item">
               <span class="premio-year">2010</span>
               <div class="premio-details">
-                <span class="premio-name">Premio Baco</span> &mdash; <span class="premio-location">Miami (United States)</span>
+                <span class="premio-name">Baco Award</span> &mdash; <span class="premio-location">Miami (United States)</span>
               </div>
             </div>
             <div class="premio-item">
               <span class="premio-year">2012</span>
               <div class="premio-details">
-                <span class="premio-name">Premio UCSUR</span> &mdash; <span class="premio-location">Lima (Peru)</span>
+                <span class="premio-name">UCSUR Award</span> &mdash; <span class="premio-location">Lima (Peru)</span>
               </div>
             </div>
             <div class="premio-item">
@@ -337,18 +337,18 @@
   <div class="footer-wrapper">
     <section class="newsletter" id="newsletter">
       <div class="section-inner narrow">
-        <h2>Suscríbete a nuestro Newsletter</h2>
-        <p>Recibe información actualizada sobre el IHTF</p>
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Receive updated information about IHTF</p>
         <form class="signup">
-          <input type="email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" />
-          <button type="submit">Enviar &rarr;</button>
+          <input type="email" placeholder="Enter your email" aria-label="Enter your email" />
+          <button type="submit">Submit &rarr;</button>
         </form>
       </div>
     </section>
     <footer class="site-footer">
-      <div><img src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
+      <div><img src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
           class="footer-logo" /></div>
-      <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
+      <nav><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></nav>
     </footer>
   </div>
 

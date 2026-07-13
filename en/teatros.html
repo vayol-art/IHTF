@@ -7,15 +7,15 @@
   <title>Teatros | Festival Internacional de Teatro Hispano (IHTF 40)</title>
   <meta name="description"
     content="Salas de teatro, ubicaciones, precios de entradas y detalles de estacionamiento para el IHTF 40." />
-  <link rel="stylesheet" href="fonts.css" />
-  <link rel="stylesheet" href="teatros.css" />
+  <link rel="stylesheet" href="../fonts.css" />
+  <link rel="stylesheet" href="../teatros.css" />
 </head>
 
 <body>
   <header class="site-header">
     <a class="brand" href="index.html#inicio" aria-label="IHTF Inicio">
-      <img class="logo-white" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
-      <img class="logo-color" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+      <img class="logo-white" src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
     </a>
     <nav class="main-nav" aria-label="Menú principal">
       <div class="lang-selector">
@@ -36,27 +36,27 @@
         </div>
       </div>
       <div class="nav-dropdown-wrapper">
-        <a href="nosotros.html" class="nav-dropdown-trigger">SOBRE NOSOTROS</a>
+        <a href="nosotros.html" class="nav-dropdown-trigger">ABOUT US</a>
         <div class="nav-submenu">
-          <a href="nosotros.html#compania" class="submenu-item">La Compañía</a>
-          <a href="nosotros.html#personal" class="submenu-item">Personal</a>
-          <a href="nosotros.html#premios" class="submenu-item">Premios</a>
+          <a href="nosotros.html#compania" class="submenu-item">The Company</a>
+          <a href="nosotros.html#personal" class="submenu-item">Staff</a>
+          <a href="nosotros.html#premios" class="submenu-item">Awards</a>
         </div>
       </div>
       <div class="nav-dropdown-wrapper">
-        <a href="agenda.html" class="nav-dropdown-trigger">PROGRAMA</a>
+        <a href="agenda.html" class="nav-dropdown-trigger">PROGRAM</a>
         <div class="nav-submenu">
-          <a href="agenda.html" class="submenu-item">Programa de Mano</a>
-          <a href="calendario.html" class="submenu-item">Calendario</a>
-          <a href="eventos-adicionales.html" class="submenu-item">Eventos Adicionales</a>
+          <a href="agenda.html" class="submenu-item">Playbill</a>
+          <a href="calendario.html" class="submenu-item">Calendar</a>
+          <a href="eventos-adicionales.html" class="submenu-item">Additional Events</a>
           <div class="dropdown-divider"></div>
-          <a href="dia-internacional-del-nino.html" class="submenu-item">Día Internacional del Niño</a>
-          <a href="teatros.html" class="submenu-item">Teatros</a>
-          <a href="sponsors.html" class="submenu-item">Apoya IHTF</a>
+          <a href="dia-internacional-del-nino.html" class="submenu-item">International Children's Day</a>
+          <a href="teatros.html" class="submenu-item">Theaters</a>
+          <a href="sponsors.html" class="submenu-item">Support IHTF</a>
         </div>
       </div>
-      <a href="contactanos.html">CONTÁCTANOS</a>
-      <a href="#">INSCRIPCIONES 40° FESTIVAL</a>
+      <a href="contactanos.html">CONTACT US</a>
+      <a href="#">40th FESTIVAL REGISTRATIONS</a>
     </nav>
     <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
       <span></span>
@@ -104,12 +104,12 @@
         const langOpts = document.querySelectorAll(".lang-opt");
         if (langOpts.length >= 2) {
           langOpts[0].addEventListener("click", function() { // English
-            let filename = window.location.pathname.split("/").pop() || "index.html";
-            window.location.href = "en/" + filename;
-          });
-          langOpts[1].addEventListener("click", function() { // Spanish
             langSelector.classList.remove("open");
             langBtn.setAttribute("aria-expanded", "false");
+          });
+          langOpts[1].addEventListener("click", function() { // Spanish
+            let filename = window.location.pathname.split("/").pop() || "index.html";
+            window.location.href = "../" + filename;
           });
         }
 
@@ -142,7 +142,7 @@
 
   <main class="site">
     <section class="hero">
-      <h1>TEATROS</h1>
+      <h1>THEATERS</h1>
     </section>
 
     <div class="venues-stack">
@@ -154,14 +154,14 @@
           <div class="venue-bg-texture"></div>
           <div class="venue-body-container">
             <div class="venue-photo">
-              <img src="assets/westchester.png" alt="Westchester Cultural Arts Center">
+              <img src="../assets/westchester.png" alt="Westchester Cultural Arts Center">
             </div>
             <div class="venue-info">
               <p class="address">7930 S.W. 40th Street<br>(Tropical Park) Miami 33155<br>305.226.0030</p>
               <div class="details">
-                <p>Entradas: <strong>$30.00</strong></p>
-                <p>Personas mayores de 65 años, estudiantes y<br>personas especiales: <strong>$25.00</strong></p>
-                <p><strong>Estacionamiento gratis</strong></p>
+                <p>Tickets: <strong>$30.00</strong></p>
+                <p>Seniors over 65, students, and guests<br>with disabilities: <strong>$25.00</strong></p>
+                <p><strong>Free parking</strong></p>
               </div>
               <a class="venue-btn" href="https://www.westchesterculturalartscenter.com/" target="_blank"
                 rel="noopener">www.westchesterculturalartscenter.com</a>
@@ -178,15 +178,15 @@
           <div class="venue-bg-texture"></div>
           <div class="venue-body-container">
             <div class="venue-photo">
-              <img src="assets/adrienne-arsht.png" alt="Adrienne Arsht Center">
+              <img src="../assets/adrienne-arsht.png" alt="Adrienne Arsht Center">
             </div>
             <div class="venue-info">
               <p class="address">1300 Biscayne Boulevard, Miami 33132<br>305.949.6722</p>
               <div class="details">
-                <p>Entradas: <strong>$30.00</strong></p>
-                <p>Personas mayores de 65 años, estudiantes y<br>personas especiales: <strong>$25.00</strong><br>(No
-                  incluye 17% handling fee)</p>
-                <p><strong>Estacionamiento: www.arshtcenter.org/parking<br>305.949.6722.</strong></p>
+                <p>Tickets: <strong>$30.00</strong></p>
+                <p>Seniors over 65, students, and guests<br>with disabilities: <strong>$25.00</strong><br>(Does not
+                  include 17% handling fee)</p>
+                <p><strong>Parking: www.arshtcenter.org/parking<br>305.949.6722.</strong></p>
               </div>
               <a class="venue-btn" href="https://www.arshtcenter.org/" target="_blank"
                 rel="noopener">www.arshtcenter.org</a>
@@ -203,14 +203,14 @@
           <div class="venue-bg-texture"></div>
           <div class="venue-body-container">
             <div class="venue-photo">
-              <img src="assets/koubek.png" alt="Koubek Center - Miami Dade College">
+              <img src="../assets/koubek.png" alt="Koubek Center - Miami Dade College">
             </div>
             <div class="venue-info">
               <p class="address">2705 SW 3rd Street, Miami 33135<br>305.237.7750</p>
               <div class="details">
-                <p>Entradas: <strong>$30.00</strong></p>
-                <p>Personas mayores de 65 años, estudiantes<br>y personas especiales: <strong>$25.00</strong></p>
-                <p><strong>Estacionamiento valet gratis</strong></p>
+                <p>Tickets: <strong>$30.00</strong></p>
+                <p>Seniors over 65, students,<br>and guests with disabilities: <strong>$25.00</strong></p>
+                <p><strong>Free valet parking</strong></p>
               </div>
               <a class="venue-btn" href="https://www.koubekcenter.org/" target="_blank"
                 rel="noopener">www.koubekcenter.org</a>
@@ -227,7 +227,7 @@
           <div class="venue-bg-texture"></div>
           <div class="venue-body-container">
             <div class="venue-photo">
-              <img src="assets/key-biscayne.png" alt="Key Biscayne Community Center">
+              <img src="../assets/key-biscayne.png" alt="Key Biscayne Community Center">
             </div>
             <div class="venue-info">
               <p class="address">10 Village Green Way, Key Biscayne 33149<br>305.365.8900</p>
@@ -246,18 +246,18 @@
   <div class="footer-wrapper">
     <section class="newsletter" id="newsletter">
       <div class="section-inner narrow">
-        <h2>Suscríbete a nuestro Newsletter</h2>
-        <p>Recibe información actualizada sobre el IHTF</p>
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Receive updated information about IHTF</p>
         <form class="signup">
-          <input type="email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" />
-          <button type="submit">Enviar &rarr;</button>
+          <input type="email" placeholder="Enter your email" aria-label="Enter your email" />
+          <button type="submit">Submit &rarr;</button>
         </form>
       </div>
     </section>
     <footer class="site-footer">
-      <div><img src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
+      <div><img src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
           class="footer-logo" /></div>
-      <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
+      <nav><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></nav>
     </footer>
   </div>
 

@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contáctenos | Festival Internacional de Teatro Hispano (IHTF 40)</title>
   <meta name="description" content="Póngase en contacto con el IHTF de Miami para consultas generales y de medios." />
-  <link rel="stylesheet" href="fonts.css" />
-  <link rel="stylesheet" href="style.css?v=1.0.6" />
-  <link rel="stylesheet" href="contactanos.css?v=1.0.1" />
+  <link rel="stylesheet" href="../fonts.css" />
+  <link rel="stylesheet" href="../style.css?v=1.0.6" />
+  <link rel="stylesheet" href="../contactanos.css?v=1.0.1" />
 </head>
 
 <body>
   <header class="site-header">
     <a class="brand" href="index.html#inicio" aria-label="IHTF Inicio">
-      <img class="logo-white" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
-      <img class="logo-color" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+      <img class="logo-white" src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
     </a>
     <nav class="main-nav" aria-label="Menú principal">
       <div class="lang-selector">
@@ -36,27 +36,27 @@
         </div>
       </div>
       <div class="nav-dropdown-wrapper">
-        <a href="nosotros.html" class="nav-dropdown-trigger">SOBRE NOSOTROS</a>
+        <a href="nosotros.html" class="nav-dropdown-trigger">ABOUT US</a>
         <div class="nav-submenu">
-          <a href="nosotros.html#compania" class="submenu-item">La Compañía</a>
-          <a href="nosotros.html#personal" class="submenu-item">Personal</a>
-          <a href="nosotros.html#premios" class="submenu-item">Premios</a>
+          <a href="nosotros.html#compania" class="submenu-item">The Company</a>
+          <a href="nosotros.html#personal" class="submenu-item">Staff</a>
+          <a href="nosotros.html#premios" class="submenu-item">Awards</a>
         </div>
       </div>
       <div class="nav-dropdown-wrapper">
-        <a href="agenda.html" class="nav-dropdown-trigger">PROGRAMA</a>
+        <a href="agenda.html" class="nav-dropdown-trigger">PROGRAM</a>
         <div class="nav-submenu">
-          <a href="agenda.html" class="submenu-item">Programa de Mano</a>
-          <a href="calendario.html" class="submenu-item">Calendario</a>
-          <a href="eventos-adicionales.html" class="submenu-item">Eventos Adicionales</a>
+          <a href="agenda.html" class="submenu-item">Playbill</a>
+          <a href="calendario.html" class="submenu-item">Calendar</a>
+          <a href="eventos-adicionales.html" class="submenu-item">Additional Events</a>
           <div class="dropdown-divider"></div>
-          <a href="dia-internacional-del-nino.html" class="submenu-item">Día Internacional del Niño</a>
-          <a href="teatros.html" class="submenu-item">Teatros</a>
-          <a href="sponsors.html" class="submenu-item">Apoya IHTF</a>
+          <a href="dia-internacional-del-nino.html" class="submenu-item">International Children's Day</a>
+          <a href="teatros.html" class="submenu-item">Theaters</a>
+          <a href="sponsors.html" class="submenu-item">Support IHTF</a>
         </div>
       </div>
-      <a href="contactanos.html">CONTÁCTANOS</a>
-      <a href="#">INSCRIPCIONES 40° FESTIVAL</a>
+      <a href="contactanos.html">CONTACT US</a>
+      <a href="#">40th FESTIVAL REGISTRATIONS</a>
     </nav>
     <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
       <span></span>
@@ -104,12 +104,12 @@
         const langOpts = document.querySelectorAll(".lang-opt");
         if (langOpts.length >= 2) {
           langOpts[0].addEventListener("click", function() { // English
-            let filename = window.location.pathname.split("/").pop() || "index.html";
-            window.location.href = "en/" + filename;
-          });
-          langOpts[1].addEventListener("click", function() { // Spanish
             langSelector.classList.remove("open");
             langBtn.setAttribute("aria-expanded", "false");
+          });
+          langOpts[1].addEventListener("click", function() { // Spanish
+            let filename = window.location.pathname.split("/").pop() || "index.html";
+            window.location.href = "../" + filename;
           });
         }
       });
@@ -118,7 +118,7 @@
 
   <main>
     <section class="hero">
-      <h1>Contáctanos</h1>
+      <h1>Contact Us</h1>
     </section>
 
     <section class="contact-section">
@@ -126,12 +126,12 @@
         <!-- Left Side: Contact details -->
         <div class="contact-info">
           <div>
-            <h2>Contáctanos</h2>
+            <h2>Contact Us</h2>
           </div>
 
           <!-- Media Inquiries -->
           <div class="info-block">
-            <h3>Consultas de Medios</h3>
+            <h3>Media Inquiries</h3>
             <div class="info-details">
               <div class="info-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -152,7 +152,7 @@
 
           <!-- General Inquiries -->
           <div class="info-block">
-            <h3>Consultas Generales</h3>
+            <h3>General Inquiries</h3>
             <div class="info-details">
               <div class="info-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -180,20 +180,20 @@
 
         <!-- Right Side: Form -->
         <div class="contact-form-wrap">
-          <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Mensaje enviado exitosamente');">
+          <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully');">
             <div class="form-group">
-              <input type="text" placeholder="Nombre*" aria-label="Nombre" required />
+              <input type="text" placeholder="Name*" aria-label="Name" required />
             </div>
             <div class="form-group">
               <input type="email" placeholder="Email *" aria-label="Email" required />
             </div>
             <div class="form-group">
-              <input type="text" placeholder="Asunto" aria-label="Asunto" />
+              <input type="text" placeholder="Subject" aria-label="Subject" />
             </div>
             <div class="form-group">
-              <textarea placeholder="Mensaje" aria-label="Mensaje"></textarea>
+              <textarea placeholder="Message" aria-label="Message"></textarea>
             </div>
-            <button type="submit" class="btn-submit">Enviar</button>
+            <button type="submit" class="btn-submit">Submit</button>
           </form>
         </div>
       </div>
@@ -203,18 +203,18 @@
   <div class="footer-wrapper">
     <section class="newsletter" id="newsletter">
       <div class="section-inner narrow">
-        <h2>Suscríbete a nuestro Newsletter</h2>
-        <p>Recibe información actualizada sobre el IHTF</p>
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Receive updated information about IHTF</p>
         <form class="signup">
-          <input type="email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" />
-          <button type="submit">Enviar &rarr;</button>
+          <input type="email" placeholder="Enter your email" aria-label="Enter your email" />
+          <button type="submit">Submit &rarr;</button>
         </form>
       </div>
     </section>
     <footer class="site-footer">
-      <div><img src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
+      <div><img src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
           class="footer-logo" /></div>
-      <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
+      <nav><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></nav>
     </footer>
   </div>
 

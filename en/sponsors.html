@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apoya IHTF | Festival Internacional de Teatro Hispano (IHTF 40)</title>
   <meta name="description" content="Únase como sponsor o donante y apoye el 40° Festival Internacional de Teatro Hispano de Miami." />
-  <link rel="stylesheet" href="fonts.css" />
-  <link rel="stylesheet" href="style.css?v=1.0.6" />
-  <link rel="stylesheet" href="sponsors.css?v=1.0.1" />
+  <link rel="stylesheet" href="../fonts.css" />
+  <link rel="stylesheet" href="../style.css?v=1.0.6" />
+  <link rel="stylesheet" href="../sponsors.css?v=1.0.1" />
 </head>
 
 <body>
   <header class="site-header">
     <a class="brand" href="index.html#inicio" aria-label="IHTF Inicio">
-      <img class="logo-white" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
-      <img class="logo-color" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+      <img class="logo-white" src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
     </a>
     <nav class="main-nav" aria-label="Menú principal">
       <div class="lang-selector">
@@ -36,27 +36,27 @@
         </div>
       </div>
       <div class="nav-dropdown-wrapper">
-        <a href="nosotros.html" class="nav-dropdown-trigger">SOBRE NOSOTROS</a>
+        <a href="nosotros.html" class="nav-dropdown-trigger">ABOUT US</a>
         <div class="nav-submenu">
-          <a href="nosotros.html#compania" class="submenu-item">La Compañía</a>
-          <a href="nosotros.html#personal" class="submenu-item">Personal</a>
-          <a href="nosotros.html#premios" class="submenu-item">Premios</a>
+          <a href="nosotros.html#compania" class="submenu-item">The Company</a>
+          <a href="nosotros.html#personal" class="submenu-item">Staff</a>
+          <a href="nosotros.html#premios" class="submenu-item">Awards</a>
         </div>
       </div>
       <div class="nav-dropdown-wrapper">
-        <a href="agenda.html" class="nav-dropdown-trigger">PROGRAMA</a>
+        <a href="agenda.html" class="nav-dropdown-trigger">PROGRAM</a>
         <div class="nav-submenu">
-          <a href="agenda.html" class="submenu-item">Programa de Mano</a>
-          <a href="calendario.html" class="submenu-item">Calendario</a>
-          <a href="eventos-adicionales.html" class="submenu-item">Eventos Adicionales</a>
+          <a href="agenda.html" class="submenu-item">Playbill</a>
+          <a href="calendario.html" class="submenu-item">Calendar</a>
+          <a href="eventos-adicionales.html" class="submenu-item">Additional Events</a>
           <div class="dropdown-divider"></div>
-          <a href="dia-internacional-del-nino.html" class="submenu-item">Día Internacional del Niño</a>
-          <a href="teatros.html" class="submenu-item">Teatros</a>
-          <a href="sponsors.html" class="submenu-item">Apoya IHTF</a>
+          <a href="dia-internacional-del-nino.html" class="submenu-item">International Children's Day</a>
+          <a href="teatros.html" class="submenu-item">Theaters</a>
+          <a href="sponsors.html" class="submenu-item">Support IHTF</a>
         </div>
       </div>
-      <a href="contactanos.html">CONTÁCTANOS</a>
-      <a href="#">INSCRIPCIONES 40° FESTIVAL</a>
+      <a href="contactanos.html">CONTACT US</a>
+      <a href="#">40th FESTIVAL REGISTRATIONS</a>
     </nav>
     <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
       <span></span>
@@ -104,12 +104,12 @@
         const langOpts = document.querySelectorAll(".lang-opt");
         if (langOpts.length >= 2) {
           langOpts[0].addEventListener("click", function() { // English
-            let filename = window.location.pathname.split("/").pop() || "index.html";
-            window.location.href = "en/" + filename;
-          });
-          langOpts[1].addEventListener("click", function() { // Spanish
             langSelector.classList.remove("open");
             langBtn.setAttribute("aria-expanded", "false");
+          });
+          langOpts[1].addEventListener("click", function() { // Spanish
+            let filename = window.location.pathname.split("/").pop() || "index.html";
+            window.location.href = "../" + filename;
           });
         }
       });
@@ -118,7 +118,7 @@
 
   <main>
     <section class="hero">
-      <h1>Apoya IHTF</h1>
+      <h1>Support IHTF</h1>
     </section>
 
     <!-- Support levels section -->
@@ -128,13 +128,13 @@
           <!-- Amigo -->
           <article class="support-card amigo">
             <div class="card-top">
-              <h3>Amigo del Festival</h3>
-              <div class="price">Todos los aportes son bienvenidos</div>
+              <h3>Friend of the Festival</h3>
+              <div class="price">All contributions are welcome</div>
               <ul>
-                <li>Mención en el programa</li>
+                <li>Mention in the playbill</li>
               </ul>
             </div>
-            <a href="#" class="btn-donate solid" onclick="event.preventDefault(); alert('Gracias por su interés en donar');">Donar</a>
+            <a href="#" class="btn-donate solid" onclick="event.preventDefault(); alert('Thank you for your interest in donating');">Donate</a>
           </article>
 
           <!-- Actor -->
@@ -143,24 +143,24 @@
               <h3>Actor</h3>
               <div class="price">$500 - $999</div>
               <ul>
-                <li>Mención en el programa y reconocimiento digital</li>
-                <li>4 entradas para funciones por festival</li>
+                <li>Mention in the playbill and digital recognition</li>
+                <li>4 tickets for performances per festival</li>
               </ul>
             </div>
-            <a href="#" class="btn-donate solid" onclick="event.preventDefault(); alert('Gracias por su interés en donar');">Donar</a>
+            <a href="#" class="btn-donate solid" onclick="event.preventDefault(); alert('Thank you for your interest in donating');">Donate</a>
           </article>
 
           <!-- Dramaturgo -->
           <article class="support-card dramaturgo">
             <div class="card-top">
-              <h3>Dramaturgo</h3>
+              <h3>Playwright</h3>
               <div class="price">$1,000 - $2,499</div>
               <ul>
-                <li>Reconocimiento con nombre y logo en el sitio web y en el programa</li>
-                <li>6 entradas para funciones por festival</li>
+                <li>Recognition with name and logo on the website and in the playbill</li>
+                <li>6 tickets for performances per festival</li>
               </ul>
             </div>
-            <a href="#" class="btn-donate outline" onclick="event.preventDefault(); alert('Gracias por su interés en donar');">Donar</a>
+            <a href="#" class="btn-donate outline" onclick="event.preventDefault(); alert('Thank you for your interest in donating');">Donate</a>
           </article>
 
           <!-- Director -->
@@ -169,27 +169,27 @@
               <h3>Director</h3>
               <div class="price">$2,500 - $4,999</div>
               <ul>
-                <li>Reconocimiento destacado en el sitio web y en el programa</li>
-                <li>Reconocimiento en redes sociales</li>
-                <li>10 entradas para funciones con asientos reservados</li>
+                <li>Prominent recognition on the website and in the playbill</li>
+                <li>Social media recognition</li>
+                <li>10 tickets for performances with reserved seating</li>
               </ul>
             </div>
-            <a href="#" class="btn-donate solid" onclick="event.preventDefault(); alert('Gracias por su interés en donar');">Donar</a>
+            <a href="#" class="btn-donate solid" onclick="event.preventDefault(); alert('Thank you for your interest in donating');">Donate</a>
           </article>
 
           <!-- Productor -->
           <article class="support-card productor">
             <div class="card-top">
-              <h3>Productor</h3>
+              <h3>Producer</h3>
               <div class="price">$5,000 +</div>
               <ul>
-                <li>Reconocimiento destacado en el sitio web y en el programa</li>
-                <li>Reconocimiento en redes sociales</li>
-                <li>Anuncio publicitario en el programa del festival</li>
-                <li>20 entradas para funciones con asientos reservados</li>
+                <li>Prominent recognition on the website and in the playbill</li>
+                <li>Social media recognition</li>
+                <li>Advertisement in the festival playbill</li>
+                <li>20 tickets for performances with reserved seating</li>
               </ul>
             </div>
-            <a href="#" class="btn-donate outline" onclick="event.preventDefault(); alert('Gracias por su interés en donar');">Donar</a>
+            <a href="#" class="btn-donate outline" onclick="event.preventDefault(); alert('Thank you for your interest in donating');">Donate</a>
           </article>
         </div>
       </div>
@@ -199,27 +199,27 @@
     <section class="sponsors-section">
       <div class="sponsors-container">
         <div class="sponsors-grid">
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 1.avif" alt="Sponsor 1" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 2.avif" alt="Sponsor 2" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 3.avif" alt="Sponsor 3" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 4.avif" alt="Sponsor 4" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 5.avif" alt="Sponsor 5" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 6.avif" alt="Sponsor 6" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 7.avif" alt="Sponsor 7" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 8.avif" alt="Sponsor 8" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 9.avif" alt="Sponsor 9" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 10.avif" alt="Sponsor 10" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 11.avif" alt="Sponsor 11" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 12.avif" alt="Sponsor 12" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 13.avif" alt="Sponsor 13" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 14.avif" alt="Sponsor 14" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 15.avif" alt="Sponsor 15" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 16.avif" alt="Sponsor 16" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 17.avif" alt="Sponsor 17" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 18.avif" alt="Sponsor 18" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 19.avif" alt="Sponsor 19" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 20.avif" alt="Sponsor 20" loading="lazy" /></div>
-          <div class="sponsor-logo-card"><img src="assets/logos sponsors/sponsor 21.avif" alt="Sponsor 21" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 1.avif" alt="Sponsor 1" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 2.avif" alt="Sponsor 2" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 3.avif" alt="Sponsor 3" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 4.avif" alt="Sponsor 4" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 5.avif" alt="Sponsor 5" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 6.avif" alt="Sponsor 6" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 7.avif" alt="Sponsor 7" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 8.avif" alt="Sponsor 8" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 9.avif" alt="Sponsor 9" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 10.avif" alt="Sponsor 10" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 11.avif" alt="Sponsor 11" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 12.avif" alt="Sponsor 12" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 13.avif" alt="Sponsor 13" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 14.avif" alt="Sponsor 14" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 15.avif" alt="Sponsor 15" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 16.avif" alt="Sponsor 16" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 17.avif" alt="Sponsor 17" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 18.avif" alt="Sponsor 18" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 19.avif" alt="Sponsor 19" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 20.avif" alt="Sponsor 20" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../assets/logos sponsors/sponsor 21.avif" alt="Sponsor 21" loading="lazy" /></div>
         </div>
       </div>
     </section>
@@ -228,18 +228,18 @@
   <div class="footer-wrapper">
     <section class="newsletter" id="newsletter">
       <div class="section-inner narrow">
-        <h2>Suscríbete a nuestro Newsletter</h2>
-        <p>Recibe información actualizada sobre el IHTF</p>
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Receive updated information about IHTF</p>
         <form class="signup">
-          <input type="email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" />
-          <button type="submit">Enviar &rarr;</button>
+          <input type="email" placeholder="Enter your email" aria-label="Enter your email" />
+          <button type="submit">Submit &rarr;</button>
         </form>
       </div>
     </section>
     <footer class="site-footer">
-      <div><img src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
+      <div><img src="../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
           class="footer-logo" /></div>
-      <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
+      <nav><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></nav>
     </footer>
   </div>
 
