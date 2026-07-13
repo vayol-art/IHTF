@@ -9,12 +9,18 @@
   --text: #17333d;
   --font-title: 'Cabinet Grotesk', 'Anton SC', 'Arial Black', system-ui, sans-serif;
   --font-body: 'General Sans', 'Inter', system-ui, sans-serif;
+
+  /* Custom blue shades matching the #1a789e color theme */
+  --avante-dark: #1a789e;
+  --avante-medium: #135d7c;
+  --avante-light: #208dbb;
+  --avante-charcoal: #0e455c;
 }
 
 body {
   margin: 0;
   background: #ffffff;
-  color: var(--text, #17333d);
+  color: var(--text);
   font-family: var(--font-body), sans-serif;
   overflow-x: hidden;
 }
@@ -22,7 +28,7 @@ body {
 /* Subpage Hero Styles */
 .hero {
   min-height: 400px;
-  background: #1a789e;
+  background: var(--blue);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -69,68 +75,231 @@ body {
   letter-spacing: -0.03em;
 }
 
-/* Content Layout */
-.content-section {
-  padding: 80px 24px;
-  background: radial-gradient(circle at 50% 30%, #ffffff, #eff6f7 85%);
-  min-height: 50vh;
+/* Support Cards Section */
+.support-section {
+  padding: 90px 24px;
+  background: #ffffff;
 }
 
-.content-container {
-  max-width: 1000px;
+.support-container {
+  max-width: 1200px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(26, 120, 158, 0.1);
-  border-radius: 24px;
-  padding: 48px;
-  box-shadow: 0 10px 40px rgba(26, 120, 158, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
-.content-container h2 {
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.support-card {
+  border-radius: 20px;
+  padding: 40px 30px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.support-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(26, 120, 158, 0.15);
+}
+
+/* Specific background colors matching the mockup layout (using Blue shades) */
+.support-card.amigo {
+  background: var(--avante-charcoal);
+  grid-column: 1;
+}
+
+.support-card.actor {
+  background: var(--avante-medium);
+  grid-column: 2;
+}
+
+.support-card.dramaturgo {
+  background: var(--avante-dark);
+  grid-column: 3;
+}
+
+.support-card.director {
+  background: var(--avante-dark);
+  grid-column: 1;
+}
+
+.support-card.productor {
+  background: var(--avante-light);
+  grid-column: 2 / span 2;
+}
+
+.support-card .card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.card-top h3 {
   font-family: var(--font-title);
-  font-size: clamp(24px, 4vw, 36px);
-  color: var(--blue);
-  margin-top: 0;
-  margin-bottom: 24px;
+  font-size: 28px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 5px;
+  letter-spacing: 0.02em;
 }
 
-.content-container p {
+.card-top .price {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.card-top ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.card-top li {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.card-top li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--orange);
   font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #4a5d64;
 }
 
-.content-container ul {
-  margin-bottom: 20px;
-  padding-left: 20px;
-}
-
-.content-container li {
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: #4a5d64;
-}
-
-/* Specific templates */
-.placeholder-msg {
+.btn-donate {
+  width: 100%;
+  padding: 14px;
+  border-radius: 99px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
   text-align: center;
-  padding: 40px 0;
-  color: var(--blue);
+  transition: all 0.2s;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-.placeholder-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-  opacity: 0.8;
+/* Crimson solid button */
+.btn-donate.solid {
+  background: var(--orange);
+  color: #ffffff;
+  border: 1px solid var(--orange);
 }
 
-@media (max-width: 768px) {
-  .content-container {
-    padding: 30px 20px;
+.btn-donate.solid:hover {
+  background: #c77215;
+  border-color: #c77215;
+}
+
+/* White background / outline button */
+.btn-donate.outline {
+  background: #ffffff;
+  color: var(--avante-dark);
+  border: 1px solid #ffffff;
+}
+
+.btn-donate.outline:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Sponsor Logos Section: Solid Blue Background with texture */
+.sponsors-section {
+  padding: 80px 24px;
+  background: var(--avante-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.sponsors-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/Texturas/textura%20turquesa.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05; /* 5% opacity for textures/tramas */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sponsors-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.sponsor-logo-card {
+  width: 100%;
+  max-width: 140px;
+  height: 80px;
+  background: #ffffff; /* Solid card background inside the blue section */
+  border-radius: 12px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.sponsor-logo-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.7);
+  transition: all 0.3s;
+}
+
+.sponsor-logo-card:hover {
+  transform: translateY(-3px);
+}
+
+.sponsor-logo-card:hover img {
+  filter: grayscale(0%) opacity(1);
+}
+
+@media (max-width: 900px) {
+  .support-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .support-card.amigo,
+  .support-card.actor,
+  .support-card.dramaturgo,
+  .support-card.director,
+  .support-card.productor {
+    grid-column: auto;
+  }
+  .sponsors-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
   }
 }
