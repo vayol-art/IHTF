@@ -110,26 +110,29 @@
 
         // Hero Media Sequencer
         const mediaSequence = [
-          { type: 'image', sources: [
+          {
+            type: 'image', sources: [
               "assets/videos loops/1. carrusel/Carrusel-HiRes_Jun26-008.webp",
               "assets/videos loops/1. carrusel/Carrusel-HiRes_Jun26-015.webp",
               "assets/videos loops/1. carrusel/OSPS+TA_Carrusel-HiRes_Jun26-005.webp"
-            ] 
+            ]
           },
           { type: 'video', src: "assets/videos loops/2. zombi_manifiesto (1080p)-001.mp4" },
-          { type: 'image', sources: [
+          {
+            type: 'image', sources: [
               "assets/videos loops/3. historia-de-un-jabali/Copia de JABALI FOTO 3.webp",
               "assets/videos loops/3. historia-de-un-jabali/Copia de JABALI FOTO 4.webp",
               "assets/videos loops/3. historia-de-un-jabali/Copia de JABALI FOTO 5.webp",
               "assets/videos loops/3. historia-de-un-jabali/JABALI FOTO 8.webp"
-            ] 
+            ]
           },
           { type: 'video', src: "assets/videos loops/4. a_fuego (720p).mp4" },
-          { type: 'image', sources: [
+          {
+            type: 'image', sources: [
               "assets/videos loops/5. odd-man-out/OMO FOTO 1.webp",
               "assets/videos loops/5. odd-man-out/OMO FOTO 3.webp",
               "assets/videos loops/5. odd-man-out/OMO FOTO 5.webp"
-            ] 
+            ]
           },
           { type: 'video', src: "assets/videos loops/6. SUEÑO completo.mp4" },
           { type: 'video', src: "assets/videos loops/7. Las Asombrosas Aventuras de Robinson Crusoe.mp4" },
@@ -146,7 +149,7 @@
             const item = mediaSequence[currentSeqIndex];
             const nextElement = document.createElement(item.type === 'video' ? 'video' : 'img');
             nextElement.className = 'media-slide';
-            
+
             if (item.type === 'video') {
               nextElement.src = item.src;
               nextElement.muted = true;
@@ -155,7 +158,7 @@
                 currentSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
                 playNextMedia();
               };
-              
+
               nextElement.play().catch(e => {
                 console.error("Video play failed:", e);
                 currentSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
@@ -165,10 +168,10 @@
               // Image logic
               nextElement.src = item.sources[0];
               nextElement.classList.add('zoom-effect');
-              
+
               currentImageIndex = 0;
               const imageDuration = 2000; // 2 seconds per image slide
-              
+
               const slideImages = () => {
                 currentImageIndex++;
                 if (currentImageIndex < item.sources.length) {
@@ -176,11 +179,11 @@
                   nextImg.className = 'media-slide zoom-effect';
                   nextImg.src = item.sources[currentImageIndex];
                   mediaContainer.appendChild(nextImg);
-                  
+
                   // Trigger reflow
                   void nextImg.offsetWidth;
                   nextImg.classList.add('active');
-                  
+
                   const oldImg = activeElement;
                   if (oldImg) {
                     oldImg.classList.remove('active');
@@ -190,7 +193,7 @@
                       }
                     }, 1000); // Wait for CSS transition
                   }
-                  
+
                   activeElement = nextImg;
                   setTimeout(slideImages, imageDuration);
                 } else {
@@ -198,7 +201,7 @@
                   playNextMedia();
                 }
               };
-              
+
               setTimeout(slideImages, imageDuration);
             }
 
@@ -211,7 +214,7 @@
               const oldElement = activeElement;
               oldElement.classList.remove('active');
               setTimeout(() => {
-                if(oldElement && mediaContainer.contains(oldElement)) {
+                if (oldElement && mediaContainer.contains(oldElement)) {
                   mediaContainer.removeChild(oldElement);
                 }
               }, 1000);
@@ -255,7 +258,8 @@
       <div class="hero-sticky-container">
         <div id="hero-media-container" class="hero-bg"></div>
         <div class="hero-bg hero-intro-img">
-          <img src="assets/Copia%20de%20afiche_1.jpg" alt="Poster de IHTF" style="width: 100%; height: 100%; -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 95%); mask-image: radial-gradient(ellipse at center, black 55%, transparent 95%);" />
+          <img src="assets/Copia%20de%20afiche_1.jpg" alt="Poster de IHTF"
+            style="width: 100%; height: 100%; -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 95%); mask-image: radial-gradient(ellipse at center, black 55%, transparent 95%);" />
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
 
@@ -304,18 +308,19 @@
       <div class="section-inner">
         <h2>RESUMEN DEL PROGRAMA</h2>
         <div class="program-grid">
-                    <div class="play-card-wrapper purple" onclick="window.location.href='obra-carrusel.html'" role="button" tabindex="0">
+          <div class="play-card-wrapper purple" onclick="window.location.href='obra-carrusel.html'" role="button"
+            tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
-              <div class="carousel-track">
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/Carrusel-HiRes_Jun26-008.webp"
-                  alt="carrusel photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/Carrusel-HiRes_Jun26-015.webp"
-                  alt="carrusel photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/OSPS+TA_Carrusel-HiRes_Jun26-005.webp"
-                  alt="carrusel photo" loading="lazy" />
+                <div class="carousel-track">
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/Carrusel-HiRes_Jun26-008.webp"
+                    alt="carrusel photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/Carrusel-HiRes_Jun26-015.webp"
+                    alt="carrusel photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-carrusel/OSPS+TA_Carrusel-HiRes_Jun26-005.webp"
+                    alt="carrusel photo" loading="lazy" />
+                </div>
               </div>
-            </div>
               <div class="card-content">
                 <div class="card-top">
                   <span class="country-badge">USA</span>
@@ -325,8 +330,8 @@
                     <h3>Carrusel</h3>
                     <div class="theatre-logos">
                       <img src="assets/mcda.avif" alt="MDCA" />
-                  <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
-                    alt="Westchester Cultural Arts Center" />
+                      <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+                        alt="Westchester Cultural Arts Center" />
                     </div>
                   </div>
                   <a class="ticket-btn" href="obra-carrusel.html">Entradas</a>
@@ -341,32 +346,33 @@
             </div>
           </div>
 
-                    <div class="play-card-wrapper purple" onclick="window.location.href='obra-zombi-manifiesto.html'" role="button" tabindex="0">
+          <div class="play-card-wrapper purple" onclick="window.location.href='obra-zombi-manifiesto.html'"
+            role="button" tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
-              <div class="carousel-track">
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 1.webp"
-                  alt="zombi-manifiesto photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 2(1).webp"
-                  alt="zombi-manifiesto photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 2.webp"
-                  alt="zombi-manifiesto photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 3.webp"
-                  alt="zombi-manifiesto photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 4.webp"
-                  alt="zombi-manifiesto photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 5.webp"
-                  alt="zombi-manifiesto photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 6.webp"
-                  alt="zombi-manifiesto photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 7.webp"
-                  alt="zombi-manifiesto photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 8.webp"
-                  alt="zombi-manifiesto photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 9.webp"
-                  alt="zombi-manifiesto photo" loading="lazy" />
+                <div class="carousel-track">
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 1.webp"
+                    alt="zombi-manifiesto photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 2(1).webp"
+                    alt="zombi-manifiesto photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 2.webp"
+                    alt="zombi-manifiesto photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 3.webp"
+                    alt="zombi-manifiesto photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 4.webp"
+                    alt="zombi-manifiesto photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 5.webp"
+                    alt="zombi-manifiesto photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 6.webp"
+                    alt="zombi-manifiesto photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 7.webp"
+                    alt="zombi-manifiesto photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 8.webp"
+                    alt="zombi-manifiesto photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-zombi-manifiesto/Copia de ZOMBI FOTO 9.webp"
+                    alt="zombi-manifiesto photo" loading="lazy" />
+                </div>
               </div>
-            </div>
               <div class="card-content">
                 <div class="card-top">
                   <span class="country-badge">Uruguay</span>
@@ -376,8 +382,8 @@
                     <h3>Zombi Manifiesto</h3>
                     <div class="theatre-logos">
                       <img src="assets/mcda.avif" alt="MDCA" />
-                  <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
-                    alt="Westchester Cultural Arts Center" />
+                      <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+                        alt="Westchester Cultural Arts Center" />
                     </div>
                   </div>
                   <a class="ticket-btn" href="obra-zombi-manifiesto.html">Entradas</a>
@@ -391,28 +397,29 @@
             </div>
           </div>
 
-                    <div class="play-card-wrapper red" onclick="window.location.href='obra-historia-de-un-jabali.html'" role="button" tabindex="0">
+          <div class="play-card-wrapper red" onclick="window.location.href='obra-historia-de-un-jabali.html'"
+            role="button" tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
-              <div class="carousel-track">
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 1.webp"
-                  alt="historia-de-un-jabali photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 2.webp"
-                  alt="historia-de-un-jabali photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 3.webp"
-                  alt="historia-de-un-jabali photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 4.webp"
-                  alt="historia-de-un-jabali photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 5.webp"
-                  alt="historia-de-un-jabali photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 7.webp"
-                  alt="historia-de-un-jabali photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 8.webp"
-                  alt="historia-de-un-jabali photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 9.webp"
-                  alt="historia-de-un-jabali photo" loading="lazy" />
+                <div class="carousel-track">
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 1.webp"
+                    alt="historia-de-un-jabali photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 2.webp"
+                    alt="historia-de-un-jabali photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 3.webp"
+                    alt="historia-de-un-jabali photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 4.webp"
+                    alt="historia-de-un-jabali photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 5.webp"
+                    alt="historia-de-un-jabali photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 7.webp"
+                    alt="historia-de-un-jabali photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 8.webp"
+                    alt="historia-de-un-jabali photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 9.webp"
+                    alt="historia-de-un-jabali photo" loading="lazy" />
+                </div>
               </div>
-            </div>
               <div class="card-content">
                 <div class="card-top">
                   <span class="country-badge">Chile</span>
@@ -435,24 +442,25 @@
             </div>
           </div>
 
-                    <div class="play-card-wrapper orange" onclick="window.location.href='obra-a-fuego.html'" role="button" tabindex="0">
+          <div class="play-card-wrapper orange" onclick="window.location.href='obra-a-fuego.html'" role="button"
+            tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
-              <div class="carousel-track">
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 1.webp" alt="a-fuego photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 2.webp" alt="a-fuego photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 3.webp" alt="a-fuego photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 4.webp" alt="a-fuego photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 5.webp" alt="a-fuego photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 6.webp" alt="a-fuego photo"
-                  loading="lazy" />
+                <div class="carousel-track">
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 1.webp" alt="a-fuego photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 2.webp" alt="a-fuego photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 3.webp" alt="a-fuego photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 4.webp" alt="a-fuego photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 5.webp" alt="a-fuego photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-a-fuego/A FUEGO FOTO 6.webp" alt="a-fuego photo"
+                    loading="lazy" />
+                </div>
               </div>
-            </div>
               <div class="card-content">
                 <div class="card-top">
                   <span class="country-badge">España</span>
@@ -461,7 +469,8 @@
                   <div class="card-meta">
                     <h3>A fuego</h3>
                     <div class="theatre-logos">
-                      <img src="assets/Logos teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png" alt="Koubek Center" />
+                      <img src="assets/Logos teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
+                        alt="Koubek Center" />
                     </div>
                   </div>
                   <a class="ticket-btn" href="obra-a-fuego.html">Entradas</a>
@@ -475,18 +484,19 @@
             </div>
           </div>
 
-                    <div class="play-card-wrapper purple" onclick="window.location.href='obra-odd-man-out.html'" role="button" tabindex="0">
+          <div class="play-card-wrapper purple" onclick="window.location.href='obra-odd-man-out.html'" role="button"
+            tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
-              <div class="carousel-track">
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 1.webp" alt="odd-man-out photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 3.webp" alt="odd-man-out photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 5.webp" alt="odd-man-out photo"
-                  loading="lazy" />
+                <div class="carousel-track">
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 1.webp" alt="odd-man-out photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 3.webp" alt="odd-man-out photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-odd-man-out/OMO FOTO 5.webp" alt="odd-man-out photo"
+                    loading="lazy" />
+                </div>
               </div>
-            </div>
               <div class="card-content">
                 <div class="card-top">
                   <span class="country-badge">USA</span>
@@ -496,8 +506,8 @@
                     <h3>Odd Man Out</h3>
                     <div class="theatre-logos">
                       <img src="assets/mcda.avif" alt="MDCA" />
-                  <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
-                    alt="Westchester Cultural Arts Center" />
+                      <img src="assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+                        alt="Westchester Cultural Arts Center" />
                     </div>
                   </div>
                   <a class="ticket-btn" href="obra-odd-man-out.html">Entradas</a>
@@ -511,24 +521,25 @@
             </div>
           </div>
 
-                    <div class="play-card-wrapper orange" onclick="window.location.href='obra-sueno.html'" role="button" tabindex="0">
+          <div class="play-card-wrapper orange" onclick="window.location.href='obra-sueno.html'" role="button"
+            tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
-              <div class="carousel-track">
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 1.webp" alt="sueno photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 2.webp" alt="sueno photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 3.webp" alt="sueno photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 4.webp" alt="sueno photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 5.webp" alt="sueno photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 6.webp" alt="sueno photo"
-                  loading="lazy" />
+                <div class="carousel-track">
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 1.webp" alt="sueno photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 2.webp" alt="sueno photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 3.webp" alt="sueno photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 4.webp" alt="sueno photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 5.webp" alt="sueno photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-sueno/Copia de SUENO FOTO 6.webp" alt="sueno photo"
+                    loading="lazy" />
+                </div>
               </div>
-            </div>
               <div class="card-content">
                 <div class="card-top">
                   <span class="country-badge">Argentina</span>
@@ -537,7 +548,8 @@
                   <div class="card-meta">
                     <h3>Sueño</h3>
                     <div class="theatre-logos">
-                      <img src="assets/Logos teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png" alt="Koubek Center" />
+                      <img src="assets/Logos teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
+                        alt="Koubek Center" />
                     </div>
                   </div>
                   <a class="ticket-btn" href="obra-sueno.html">Entradas</a>
@@ -553,32 +565,33 @@
 
 
 
-                    <div class="play-card-wrapper teal special" onclick="window.location.href='obra-robinson-crusoe.html'" role="button" tabindex="0">
+          <div class="play-card-wrapper teal special" onclick="window.location.href='obra-robinson-crusoe.html'"
+            role="button" tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
-              <div class="carousel-track">
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 1.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 2.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 3.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 4.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 5.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 6.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 7.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 8.webp"
-                  alt="robinson-crusoe photo" loading="lazy" />
+                <div class="carousel-track">
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 1.webp"
+                    alt="robinson-crusoe photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 2.webp"
+                    alt="robinson-crusoe photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 3.webp"
+                    alt="robinson-crusoe photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 4.webp"
+                    alt="robinson-crusoe photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 5.webp"
+                    alt="robinson-crusoe photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 6.webp"
+                    alt="robinson-crusoe photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 7.webp"
+                    alt="robinson-crusoe photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-robinson-crusoe/Copia de ROBINSON FOTO 8.webp"
+                    alt="robinson-crusoe photo" loading="lazy" />
+                </div>
               </div>
-            </div>
               <div class="card-content">
                 <div class="card-top">
                   <span class="country-badge">USA</span>
-          <span class="kids-badge">Día Internacional del Niño</span>
+                  <span class="kids-badge">Día Internacional del Niño</span>
                 </div>
                 <div class="card-bottom">
                   <div class="card-meta">
@@ -591,7 +604,8 @@
             <div class="dates" style="grid-template-columns: 1fr 1fr;">
               <div
                 style="background: #CD65AD; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 8px 4px;">
-                <div style="background: transparent; padding: 0;"><span>Sept</span><strong>19</strong><em>5:00 PM</em><small class="foro-label" style="visibility: hidden;">Foro</small>
+                <div style="background: transparent; padding: 0;"><span>Sept</span><strong>19</strong><em>5:00
+                    PM</em><small class="foro-label" style="visibility: hidden;">Foro</small>
                 </div>
                 <img src="assets/Logos%20teatros/Copia%20de%206a17e343778e61a102967a29_Village_Biscayne.png"
                   alt="Key Biscayne" style="height: 28px; width: auto;" />
@@ -601,7 +615,8 @@
                 <div style="background: transparent; padding: 0;"><span>Sept</span><strong>20</strong><em>5:00 PM</em>
                 </div>
                 <div style="display: flex; align-items: center; gap: 8px;">
-                  <img src="assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png" alt="MDCA" style="height: 24px; width: auto;" />
+                  <img src="assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png" alt="MDCA"
+                    style="height: 24px; width: auto;" />
                   <img src="assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
                     alt="Koubek Center" style="height: 20px; width: auto;" />
                 </div>
@@ -609,34 +624,35 @@
             </div>
           </div>
 
-                    <div class="play-card-wrapper red" onclick="window.location.href='obra-hamlet.html'" role="button" tabindex="0">
+          <div class="play-card-wrapper red" onclick="window.location.href='obra-hamlet.html'" role="button"
+            tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
-              <div class="carousel-track">
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 1.webp" alt="hamlet photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 10.webp" alt="hamlet photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 11.webp" alt="hamlet photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 2.webp" alt="hamlet photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 3.webp" alt="hamlet photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 4.webp" alt="hamlet photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 5.webp" alt="hamlet photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 6.webp" alt="hamlet photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 7.webp" alt="hamlet photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 8.webp" alt="hamlet photo"
-                  loading="lazy" />
-                <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 9.webp" alt="hamlet photo"
-                  loading="lazy" />
+                <div class="carousel-track">
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 1.webp" alt="hamlet photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 10.webp"
+                    alt="hamlet photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 11.webp"
+                    alt="hamlet photo" loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 2.webp" alt="hamlet photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 3.webp" alt="hamlet photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 4.webp" alt="hamlet photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 5.webp" alt="hamlet photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 6.webp" alt="hamlet photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 7.webp" alt="hamlet photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 8.webp" alt="hamlet photo"
+                    loading="lazy" />
+                  <img src="assets/40thIHTF - FOTOS de OBRAS/obra-hamlet/Copia de HAMLET FOTO 9.webp" alt="hamlet photo"
+                    loading="lazy" />
+                </div>
               </div>
-            </div>
               <div class="card-content">
                 <div class="card-top">
                   <span class="country-badge">Perú</span>
