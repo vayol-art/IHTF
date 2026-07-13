@@ -35,24 +35,38 @@ body {
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url('assets/textura%20fondo.png') center/cover;
-  opacity: 0.1;
+  inset: 0;
+  background: radial-gradient(circle at 20% 10%, rgba(255,255,255,.18), transparent 26%),
+              radial-gradient(circle at 80% 70%, rgba(226,131,30,.28), transparent 30%);
+  opacity: .8;
+  z-index: 1;
   pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/textura%20fondo.png') center/cover;
+  opacity: 0.05;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 3;
 }
 
 .hero h1 {
   font-family: var(--font-title);
-  font-size: clamp(48px, 8vw, 90px);
-  line-height: 0.95;
+  font-size: clamp(58px, 10vw, 120px);
+  line-height: .85;
   text-transform: uppercase;
   margin: 0;
   letter-spacing: -0.03em;
-  position: relative;
-  z-index: 1;
-  color: #fff;
 }
 
 /* Content Layout */
