@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendario | 40° Festival Internacional de Teatro Hispano (IHTF 40)</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="style.css?v=1.0.6">
+  <link rel="stylesheet" href="calendario.css?v=1.0.1">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#inicio" aria-label="IHTF Inicio">
+      <img class="logo-white" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+    </a>
+    <nav class="main-nav" aria-label="Menú principal">
+      <a href="agenda.html">PROGRAMA</a>
+      <a href="calendario.html" class="active">CALENDARIO</a>
+      <a href="teatros.html">TEATROS</a>
+    </nav>
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.querySelector(".hamburger");
+        const mainNav = document.querySelector(".main-nav");
+        if (hamburger && mainNav) {
+          hamburger.addEventListener("click", function(e) {
+            e.stopPropagation();
+            const isOpen = hamburger.classList.toggle("open");
+            mainNav.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function(event) {
+            if (!hamburger.contains(event.target) && !mainNav.contains(event.target)) {
+              hamburger.classList.remove("open");
+              mainNav.classList.remove("open");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+    </script>
+  </header>
+
+  <main class="calendar-page">
+    <section class="hero">
+      <h1>CALENDARIO</h1>
+    </section>
+
+    <section class="calendar-header-section">
+      <div class="legend-container">
+        <div class="legend-item text-red">
+          <span class="badge red-bg"></span>
+          <span class="legend-label">Adrienne Arsht Center</span>
+        </div>
+        <div class="legend-item text-orange">
+          <span class="badge orange-bg"></span>
+          <span class="legend-label">Koubek Center</span>
+        </div>
+        <div class="legend-item text-purple">
+          <span class="badge purple-bg"></span>
+          <span class="legend-label">Westchester Cultural Arts Center</span>
+        </div>
+        <div class="legend-item text-pink">
+          <span class="badge pink-bg"></span>
+          <span class="legend-label">Key Biscayne Community Center</span>
+        </div>
+      </div>
+      
+      <h2 class="month-title">SEPTIEMBRE</h2>
+    </section>
+
+    <section class="calendar-grid-section">
+      <div class="calendar-container">
+        <!-- Weekdays Headers -->
+        <div class="weekday-header">Lunes</div>
+        <div class="weekday-header">Martes</div>
+        <div class="weekday-header">Miércoles</div>
+        <div class="weekday-header">Jueves</div>
+        <div class="weekday-header">Viernes</div>
+        <div class="weekday-header">Sábado</div>
+        <div class="weekday-header">Domingo</div>
+
+        <!-- Row 1: Days 1-7 (Sept 1 is Tuesday) -->
+        <div class="day-cell empty-day">
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">1</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">2</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">3</div>
+          <div class="plays-container">
+            <a href="obra-carrusel.html" class="play-badge purple-badge" data-time="8:30 PM">CARRUSEL</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">4</div>
+          <div class="plays-container">
+            <a href="obra-carrusel.html" class="play-badge purple-badge" data-time="8:30 PM">CARRUSEL</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">5</div>
+          <div class="plays-container">
+            <a href="obra-carrusel.html" class="play-badge purple-badge" data-time="8:30 PM">CARRUSEL</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">6</div>
+          <div class="plays-container">
+            <a href="obra-carrusel.html" class="play-badge purple-badge" data-time="5:00 PM">CARRUSEL</a>
+          </div>
+        </div>
+
+        <!-- Row 2: Days 7-13 -->
+        <div class="day-cell empty-day">
+          <div class="day-number">7</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">8</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">9</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">10</div>
+          <div class="plays-container">
+            <a href="obra-zombi-manifiesto.html" class="play-badge purple-badge" data-time="8:30 PM">ZOMBI MANIFIESTO</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">11</div>
+          <div class="plays-container">
+            <a href="obra-zombi-manifiesto.html" class="play-badge purple-badge" data-time="8:30 PM">ZOMBI MANIFIESTO</a>
+            <a href="obra-historia-de-un-jabali.html" class="play-badge red-badge" data-time="8:30 PM">HISTORIA DE UN JABALÍ</a>
+            <a href="obra-a-fuego.html" class="play-badge orange-badge" data-time="8:30 PM">A FUEGO</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">12</div>
+          <div class="plays-container">
+            <a href="obra-zombi-manifiesto.html" class="play-badge purple-badge" data-time="8:30 PM">ZOMBI MANIFIESTO</a>
+            <a href="obra-historia-de-un-jabali.html" class="play-badge red-badge" data-time="8:30 PM">HISTORIA DE UN JABALÍ</a>
+            <a href="obra-a-fuego.html" class="play-badge orange-badge" data-time="8:30 PM">A FUEGO</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">13</div>
+          <div class="plays-container">
+            <a href="obra-historia-de-un-jabali.html" class="play-badge red-badge" data-time="5:00 PM">HISTORIA DE UN JABALÍ</a>
+            <a href="obra-a-fuego.html" class="play-badge orange-badge" data-time="5:00 PM">A FUEGO</a>
+          </div>
+        </div>
+
+        <!-- Row 3: Days 14-20 -->
+        <div class="day-cell empty-day">
+          <div class="day-number">14</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">15</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">16</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">17</div>
+          <div class="plays-container">
+            <a href="obra-odd-man-out.html" class="play-badge purple-badge" data-time="8:30 PM">ODD MAN OUT</a>
+            <a href="obra-sueno.html" class="play-badge orange-badge" data-time="8:30 PM">SUEÑO</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">18</div>
+          <div class="plays-container">
+            <a href="obra-odd-man-out.html" class="play-badge purple-badge" data-time="8:30 PM">ODD MAN OUT</a>
+            <a href="obra-sueno.html" class="play-badge orange-badge" data-time="8:30 PM">SUEÑO</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">19</div>
+          <div class="plays-container">
+            <a href="obra-odd-man-out.html" class="play-badge purple-badge" data-time="8:30 PM">ODD MAN OUT</a>
+            <a href="obra-sueno.html" class="play-badge orange-badge" data-time="8:30 PM">SUEÑO</a>
+            <a href="obra-robinson-crusoe.html" class="play-badge pink-badge" data-time="5:00 PM">ROBINSON CRUSOE</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">20</div>
+          <div class="plays-container">
+            <a href="obra-robinson-crusoe.html" class="play-badge pink-badge" data-time="5:00 PM">ROBINSON CRUSOE</a>
+          </div>
+        </div>
+
+        <!-- Row 4: Days 21-27 -->
+        <div class="day-cell empty-day">
+          <div class="day-number">21</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">22</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">23</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">24</div>
+          <div class="plays-container">
+            <a href="obra-hamlet.html" class="play-badge red-badge" data-time="8:30 PM">HAMLET</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">25</div>
+          <div class="plays-container">
+            <a href="obra-hamlet.html" class="play-badge red-badge" data-time="8:30 PM">HAMLET</a>
+          </div>
+        </div>
+        <div class="day-cell active-day">
+          <div class="day-number">26</div>
+          <div class="plays-container">
+            <a href="obra-hamlet.html" class="play-badge red-badge" data-time="8:30 PM">HAMLET</a>
+          </div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">27</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+
+        <!-- Row 5: Days 28-30 -->
+        <div class="day-cell empty-day">
+          <div class="day-number">28</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">29</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="day-number">30</div>
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+        <div class="day-cell empty-day">
+          <div class="empty-dots"><span>.</span><span>.</span><span>.</span><span>.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer-wrapper">
+    <section class="newsletter" id="newsletter">
+      <div class="section-inner narrow">
+        <h2>Suscríbete a nuestro Newsletter</h2>
+        <p>Recibe información actualizada sobre el IHTF</p>
+        <form class="signup">
+          <input type="email" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" />
+          <button type="submit">Enviar &rarr;</button>
+        </form>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div><img src="assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" class="footer-logo" /></div>
+      <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('.site-header');
+      if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
