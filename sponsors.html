@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teatros | Festival Internacional de Teatro Hispano (IHTF 40)</title>
-  <meta name="description"
-    content="Salas de teatro, ubicaciones, precios de entradas y detalles de estacionamiento para el IHTF 40." />
+  <title>Sponsors | Festival Internacional de Teatro Hispano (IHTF 40)</title>
+  <meta name="description" content="Patrocinadores y colaboradores del 40° Festival Internacional de Teatro Hispano de Miami." />
   <link rel="stylesheet" href="fonts.css" />
-  <link rel="stylesheet" href="teatros.css" />
+  <link rel="stylesheet" href="style.css?v=1.0.6" />
+  <link rel="stylesheet" href="sponsors.css" />
 </head>
 
 <body>
@@ -99,135 +99,24 @@
             }
           });
         }
-
-        // Secciones animadas (scroll reveal)
-        const sections = document.querySelectorAll("main > section, .venues-stack > section, .program-grid > article, .program-card, .play-card, .subpage-hero, .footer-wrapper");
-        if (window.IntersectionObserver) {
-          const observerOptions = {
-            root: null,
-            rootMargin: "0px 0px -60px 0px",
-            threshold: 0.08
-          };
-          
-          const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("revealed");
-                obs.unobserve(entry.target);
-              }
-            });
-          }, observerOptions);
-
-          sections.forEach(sec => {
-            sec.classList.add("reveal");
-            observer.observe(sec);
-          });
-        }
       });
     </script>
   </header>
 
-  <main class="site">
+  <main>
     <section class="hero">
-      <h1>TEATROS</h1>
+      <h1>Sponsors</h1>
     </section>
 
-    <div class="venues-stack">
-      <section class="venue-full-row purple">
-        <div class="venue-title-bar">
-          <h2>Westchester Cultural Arts Center</h2>
+    <section class="content-section">
+      <div class="content-container">
+        <div class="placeholder-msg">
+          <div class="placeholder-icon">🤝</div>
+          <h2>Nuestros Patrocinadores</h2>
+          <p>Pronto publicaremos la lista completa de sponsors y organizaciones que hacen posible la realización del 40° Festival Internacional de Teatro Hispano de Miami.</p>
         </div>
-        <div class="venue-body">
-          <div class="venue-bg-texture"></div>
-          <div class="venue-body-container">
-            <div class="venue-photo">
-              <img src="assets/westchester.png" alt="Westchester Cultural Arts Center">
-            </div>
-            <div class="venue-info">
-              <p class="address">7930 S.W. 40th Street<br>(Tropical Park) Miami 33155<br>305.226.0030</p>
-              <div class="details">
-                <p>Entradas: <strong>$30.00</strong></p>
-                <p>Personas mayores de 65 años, estudiantes y<br>personas especiales: <strong>$25.00</strong></p>
-                <p><strong>Estacionamiento gratis</strong></p>
-              </div>
-              <a class="venue-btn" href="https://www.westchesterculturalartscenter.com/" target="_blank"
-                rel="noopener">www.westchesterculturalartscenter.com</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="venue-full-row red">
-        <div class="venue-title-bar">
-          <h2>Adrienne Arsht Center</h2>
-        </div>
-        <div class="venue-body">
-          <div class="venue-bg-texture"></div>
-          <div class="venue-body-container">
-            <div class="venue-photo">
-              <img src="assets/adrienne-arsht.png" alt="Adrienne Arsht Center">
-            </div>
-            <div class="venue-info">
-              <p class="address">1300 Biscayne Boulevard, Miami 33132<br>305.949.6722</p>
-              <div class="details">
-                <p>Entradas: <strong>$30.00</strong></p>
-                <p>Personas mayores de 65 años, estudiantes y<br>personas especiales: <strong>$25.00</strong><br>(No
-                  incluye 17% handling fee)</p>
-                <p><strong>Estacionamiento: www.arshtcenter.org/parking<br>305.949.6722.</strong></p>
-              </div>
-              <a class="venue-btn" href="https://www.arshtcenter.org/" target="_blank"
-                rel="noopener">www.arshtcenter.org</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="venue-full-row orange">
-        <div class="venue-title-bar">
-          <h2>Koubek Center - Miami Dade College</h2>
-        </div>
-        <div class="venue-body">
-          <div class="venue-bg-texture"></div>
-          <div class="venue-body-container">
-            <div class="venue-photo">
-              <img src="assets/koubek.png" alt="Koubek Center - Miami Dade College">
-            </div>
-            <div class="venue-info">
-              <p class="address">2705 SW 3rd Street, Miami 33135<br>305.237.7750</p>
-              <div class="details">
-                <p>Entradas: <strong>$30.00</strong></p>
-                <p>Personas mayores de 65 años, estudiantes<br>y personas especiales: <strong>$25.00</strong></p>
-                <p><strong>Estacionamiento valet gratis</strong></p>
-              </div>
-              <a class="venue-btn" href="https://www.koubekcenter.org/" target="_blank"
-                rel="noopener">www.koubekcenter.org</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="venue-full-row pink">
-        <div class="venue-title-bar">
-          <h2>Key Biscayne Community Center</h2>
-        </div>
-        <div class="venue-body">
-          <div class="venue-bg-texture"></div>
-          <div class="venue-body-container">
-            <div class="venue-photo">
-              <img src="assets/key-biscayne.png" alt="Key Biscayne Community Center">
-            </div>
-            <div class="venue-info">
-              <p class="address">10 Village Green Way, Key Biscayne 33149<br>305.365.8900</p>
-              <div class="details">
-              </div>
-              <a class="venue-btn" href="https://www.keybiscayne.fl.gov/" target="_blank"
-                rel="noopener">https://www.keybiscayne.fl.gov/</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
+      </div>
+    </section>
   </main>
 
   <div class="footer-wrapper">
@@ -255,8 +144,6 @@
 
       if (header && hero) {
         const updateHeader = () => {
-          // Calculate when the header leaves the hero section
-          // The header is usually ~80px tall and 20px from top
           const heroBottom = hero.getBoundingClientRect().bottom;
           if (heroBottom <= 100) {
             header.classList.add('scrolled');
@@ -266,9 +153,8 @@
         };
 
         window.addEventListener('scroll', updateHeader);
-        updateHeader(); // Check on load
+        updateHeader();
       } else if (header) {
-        // Fallback if no hero section
         window.addEventListener('scroll', () => {
           if (window.scrollY > 50) header.classList.add('scrolled');
           else header.classList.remove('scrolled');
@@ -276,7 +162,6 @@
       }
     });
   </script>
-
 </body>
 
 </html>

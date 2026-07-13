@@ -1,0 +1,122 @@
+:root {
+  --blue: #1a789e;
+  --orange: #e2831e;
+  --purple: #761354;
+  --red: #a21e00;
+  --teal: #139da3;
+  --cream: #f7f3ec;
+  --light: #f5f5f5;
+  --text: #17333d;
+  --font-title: 'Cabinet Grotesk', 'Anton SC', 'Arial Black', system-ui, sans-serif;
+  --font-body: 'General Sans', 'Inter', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--text, #17333d);
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Subpage Hero Styles */
+.hero {
+  min-height: 400px;
+  background: #1a789e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('assets/textura%20fondo.png') center/cover;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-family: var(--font-title);
+  font-size: clamp(48px, 8vw, 90px);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -0.03em;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* Content Layout */
+.content-section {
+  padding: 80px 24px;
+  background: radial-gradient(circle at 50% 30%, #ffffff, #eff6f7 85%);
+  min-height: 50vh;
+}
+
+.content-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(26, 120, 158, 0.1);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 10px 40px rgba(26, 120, 158, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.content-container h2 {
+  font-family: var(--font-title);
+  font-size: clamp(24px, 4vw, 36px);
+  color: var(--blue);
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.content-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #4a5d64;
+}
+
+.content-container ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.content-container li {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #4a5d64;
+}
+
+/* Specific templates */
+.placeholder-msg {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--blue);
+}
+
+.placeholder-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    padding: 30px 20px;
+  }
+}
