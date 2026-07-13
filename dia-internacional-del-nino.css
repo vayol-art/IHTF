@@ -9,20 +9,31 @@
   --text: #17333d;
   --font-title: 'Cabinet Grotesk', 'Anton SC', 'Arial Black', system-ui, sans-serif;
   --font-body: 'General Sans', 'Inter', system-ui, sans-serif;
+
+  /* Theme colors matching Robinson Crusoe */
+  --turquoise-dark: #107579;
+  --turquoise-medium: #139da3;
+  --turquoise-light: #e6f4f5;
+  
+  /* Section-specific backgrounds */
+  --pink: #d85fb0;
+  --pink-light: #fdf6fa;
+  --pink-dark: #cf66a2;
+  --orange-dark: #cc7212;
 }
 
 body {
   margin: 0;
   background: #ffffff;
-  color: var(--text, #17333d);
+  color: var(--text);
   font-family: var(--font-body), sans-serif;
   overflow-x: hidden;
 }
 
-/* Subpage Hero Styles */
+/* Subpage Hero */
 .hero {
   min-height: 400px;
-  background: #1a789e;
+  background: var(--teal, #139da3);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -45,7 +56,7 @@ body {
 
 .hero h1 {
   font-family: var(--font-title);
-  font-size: clamp(48px, 8vw, 90px);
+  font-size: clamp(40px, 6vw, 80px);
   line-height: 0.95;
   text-transform: uppercase;
   margin: 0;
@@ -55,68 +66,306 @@ body {
   color: #fff;
 }
 
-/* Content Layout */
-.content-section {
-  padding: 80px 24px;
-  background: radial-gradient(circle at 50% 30%, #ffffff, #eff6f7 85%);
-  min-height: 50vh;
+/* Layout Sections */
+.child-section {
+  padding: 90px 24px;
 }
 
-.content-container {
-  max-width: 1000px;
+/* Section 1: Key Biscayne (Pink Theme) */
+.child-section.key-biscayne {
+  background: var(--pink-light);
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+}
+
+.child-section.key-biscayne::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/Texturas/textura%20rosa.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05; /* 5% opacity */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.child-section.key-biscayne .mockup-date-card .card-header {
+  background: var(--pink-dark);
+}
+
+.child-section.key-biscayne .card-time {
+  color: var(--pink);
+}
+
+.child-section.key-biscayne .mockup-title {
+  color: var(--pink-dark);
+}
+
+/* Section 2: Koubek Center (Orange Theme) */
+.child-section.koubek {
+  background: #fff6eb;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+}
+
+.child-section.koubek::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/Texturas/textura%20amarilla.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05; /* 5% opacity */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.child-section.koubek .mockup-date-card .card-header {
+  background: var(--orange);
+}
+
+.child-section.koubek .card-time {
+  color: var(--orange);
+}
+
+/* Section 3: Robinson Crusoe (Teal Theme) */
+.child-section.play-details {
+  background: var(--teal);
+  color: #ffffff;
+}
+
+.section-container {
+  max-width: 1100px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(26, 120, 158, 0.1);
-  border-radius: 24px;
-  padding: 48px;
-  box-shadow: 0 10px 40px rgba(26, 120, 158, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
 }
 
-.content-container h2 {
+/* Date Card layout */
+.mockup-date-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+}
+
+.mockup-date-card .card-header {
+  color: #ffffff;
   font-family: var(--font-title);
-  font-size: clamp(24px, 4vw, 36px);
-  color: var(--blue);
-  margin-top: 0;
-  margin-bottom: 24px;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.mockup-date-card .card-body {
+  padding: 24px 20px;
+}
+
+.mockup-date-card .card-day {
+  font-family: var(--font-title);
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.mockup-date-card .card-weekday {
+  font-size: 16px;
+  font-weight: 600;
+  color: #7a8d94;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.mockup-date-card .card-time {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 15px;
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Schedule Info Styles */
+.schedule-info h2 {
+  font-family: var(--font-title);
+  font-size: 34px;
+  color: inherit;
+  margin: 0 0 10px;
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
-.content-container p {
+.schedule-info .venue-address {
+  font-size: 16px;
+  opacity: 0.85;
+  margin: 0 0 40px;
+}
+
+/* Mockup Title Styles */
+.mockup-title {
+  font-family: var(--font-title);
+  font-size: 42px;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.mockup-credits {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 15px;
+}
+
+.mockup-credits strong {
+  font-weight: 700;
+}
+
+.mockup-company {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+/* Activities List */
+.mockup-activities {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.mockup-activity-item {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
   font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #4a5d64;
+  line-height: 1.4;
 }
 
-.content-container ul {
-  margin-bottom: 20px;
-  padding-left: 20px;
+.mockup-activity-time {
+  font-family: var(--font-title);
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-.content-container li {
-  font-size: 17px;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: #4a5d64;
+.mockup-activity-desc {
+  opacity: 0.95;
 }
 
-/* Specific templates */
-.placeholder-msg {
+/* Play Bio Section */
+.play-bio-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.play-bio-wrap h2.play-title {
+  font-family: var(--font-title);
+  font-size: clamp(36px, 5vw, 54px);
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   text-align: center;
-  padding: 40px 0;
-  color: var(--blue);
 }
 
-.placeholder-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-  opacity: 0.8;
+.play-bio-wrap .author-info {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .content-container {
-    padding: 30px 20px;
+.play-bio-text {
+  font-size: 18px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+.play-bio-text p {
+  margin-bottom: 24px;
+}
+
+.free-tag {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 99px;
+  margin-bottom: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Image Gallery Grid */
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.photo-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 4 / 3;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .section-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .mockup-date-card {
+    margin: 0 auto;
+  }
+  .schedule-info {
+    text-align: center;
+  }
+  .mockup-activities {
+    align-items: center;
+  }
+  .mockup-activity-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+  }
+  .play-bio-wrap {
+    text-align: center;
   }
 }
