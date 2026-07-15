@@ -114,14 +114,6 @@
           });
         }
 
-        // Fade out the hero intro image after 3 seconds
-        const introImg = document.querySelector('.hero-intro-img');
-        if (introImg) {
-          setTimeout(() => {
-            introImg.classList.add('fade-out');
-          }, 3000);
-        }
-
         // Hero Media Sequencer
         const mediaSequence = [
           {
@@ -159,6 +151,21 @@
           let currentImageIndex = 0;
           let activeElement = null;
 
+          function showPosterAndAdvance(nextIndex) {
+            const introImg = document.querySelector('.hero-intro-img');
+            if (introImg) {
+              introImg.classList.remove('fade-out');
+              setTimeout(() => {
+                introImg.classList.add('fade-out');
+                currentSeqIndex = nextIndex;
+                playNextMedia();
+              }, 4000);
+            } else {
+              currentSeqIndex = nextIndex;
+              playNextMedia();
+            }
+          }
+
           function playNextMedia() {
             const item = mediaSequence[currentSeqIndex];
             const nextElement = document.createElement(item.type === 'video' ? 'video' : 'img');
@@ -169,14 +176,24 @@
               nextElement.muted = true;
               nextElement.playsInline = true;
               nextElement.onended = () => {
-                currentSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
-                playNextMedia();
+                const nextSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
+                if (nextSeqIndex === 0) {
+                  showPosterAndAdvance(nextSeqIndex);
+                } else {
+                  currentSeqIndex = nextSeqIndex;
+                  playNextMedia();
+                }
               };
 
               nextElement.play().catch(e => {
                 console.error("Video play failed:", e);
-                currentSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
-                setTimeout(playNextMedia, 1000);
+                const nextSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
+                if (nextSeqIndex === 0) {
+                  showPosterAndAdvance(nextSeqIndex);
+                } else {
+                  currentSeqIndex = nextSeqIndex;
+                  setTimeout(playNextMedia, 1000);
+                }
               });
             } else {
               // Image logic
@@ -211,8 +228,13 @@
                   activeElement = nextImg;
                   setTimeout(slideImages, imageDuration);
                 } else {
-                  currentSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
-                  playNextMedia();
+                  const nextSeqIndex = (currentSeqIndex + 1) % mediaSequence.length;
+                  if (nextSeqIndex === 0) {
+                    showPosterAndAdvance(nextSeqIndex);
+                  } else {
+                    currentSeqIndex = nextSeqIndex;
+                    playNextMedia();
+                  }
                 }
               };
 
@@ -236,8 +258,8 @@
             activeElement = nextElement;
           }
 
-          // Start sequence 1 second after the intro poster fades out (starts at 3s, fade takes 1.2s)
-          setTimeout(playNextMedia, 4000);
+          // Start sequence immediately on load
+          playNextMedia();
         }
 
         // Secciones animadas (scroll reveal)
@@ -271,7 +293,7 @@
     <section class="hero-scroll-track" id="inicio">
       <div class="hero-sticky-container">
         <div id="hero-media-container" class="hero-bg"></div>
-        <div class="hero-bg hero-intro-img">
+        <div class="hero-bg hero-intro-img fade-out">
           <img src="assets/OSPS+TA_PostFest_Digital-HiRes-001.webp" alt="Poster de IHTF"
             style="width: 100%; height: 100%; -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 95%); mask-image: radial-gradient(ellipse at center, black 55%, transparent 95%);" />
         </div>
