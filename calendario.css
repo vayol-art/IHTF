@@ -244,11 +244,11 @@
 }
 
 .pink-badge {
-  background-color: var(--teal, #139da3); /* Robinson Crusoe has teal colorClass */
+  background-color: #cf66a2;
 }
 .pink-badge:hover {
-  background-color: #17b9c0;
-  box-shadow: 0 4px 10px rgba(19, 157, 163, 0.25);
+  background-color: #e675b6;
+  box-shadow: 0 4px 10px rgba(207, 102, 162, 0.25);
 }
 
 /* Hover effects for badges and cells */
