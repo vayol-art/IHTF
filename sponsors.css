@@ -79,11 +79,24 @@ body {
 .support-section {
   padding: 90px 24px;
   background: #ffffff;
+  position: relative;
+}
+
+.support-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/textura%20fondo.png') center/cover;
+  opacity: 0.04;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .support-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .support-grid {
@@ -113,27 +126,22 @@ body {
 /* Specific background colors matching the mockup layout (using Blue shades) */
 .support-card.amigo {
   background: var(--avante-charcoal);
-  grid-column: 1;
 }
 
 .support-card.actor {
   background: var(--avante-medium);
-  grid-column: 2;
 }
 
 .support-card.dramaturgo {
   background: var(--avante-dark);
-  grid-column: 3;
 }
 
 .support-card.director {
   background: var(--avante-dark);
-  grid-column: 1;
 }
 
 .support-card.productor {
   background: var(--avante-light);
-  grid-column: 2 / span 2;
 }
 
 .support-card .card-top {
@@ -198,14 +206,13 @@ body {
 
 /* Crimson solid button */
 .btn-donate.solid {
-  background: var(--orange);
-  color: #ffffff;
-  border: 1px solid var(--orange);
+  background: #ffffff;
+  color: var(--avante-dark);
+  border: 1px solid #ffffff;
 }
 
 .btn-donate.solid:hover {
-  background: #c77215;
-  border-color: #c77215;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* White background / outline button */
@@ -219,24 +226,12 @@ body {
   background: rgba(255, 255, 255, 0.9);
 }
 
-/* Sponsor Logos Section: Solid Blue Background with texture */
+/* Sponsor Logos Section: Background handled by footer-wrapper */
 .sponsors-section {
-  padding: 80px 24px;
-  background: var(--avante-dark);
+  padding: 80px 24px 20px 24px; /* Reduced bottom padding slightly since it flows into footer */
+  background: transparent;
   position: relative;
-  overflow: hidden;
-}
-
-.sponsors-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('assets/Texturas/textura%20turquesa.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.05; /* 5% opacity for textures/tramas */
-  z-index: 1;
-  pointer-events: none;
+  z-index: 2; /* To sit above footer texture */
 }
 
 .sponsors-container {
@@ -247,26 +242,31 @@ body {
   z-index: 2;
 }
 
+.sponsors-section h2 {
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
 .sponsors-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
   align-items: center;
   justify-items: center;
 }
 
 .sponsor-logo-card {
   width: 100%;
-  max-width: 140px;
-  height: 80px;
-  background: #ffffff; /* Solid card background inside the blue section */
+  max-width: 200px;
+  height: 120px;
+  background: transparent;
   border-radius: 12px;
   padding: 12px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
   transition: transform 0.3s ease;
 }
 
@@ -274,16 +274,11 @@ body {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.7);
   transition: all 0.3s;
 }
 
 .sponsor-logo-card:hover {
   transform: translateY(-3px);
-}
-
-.sponsor-logo-card:hover img {
-  filter: grayscale(0%) opacity(1);
 }
 
 @media (max-width: 900px) {
@@ -299,7 +294,12 @@ body {
     grid-column: auto;
   }
   .sponsors-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 20px;
   }
+}
+
+/* Fix newsletter background gradient bleeding into sponsors */
+.newsletter {
+  overflow: hidden;
 }
