@@ -2176,6 +2176,23 @@ main#inicio::before {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  position: relative;
+}
+
+.npc-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/textura%20fondo.png');
+  background-size: cover;
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.npc-body > * {
+  position: relative;
+  z-index: 1;
 }
 
 .npc-body h1 {
@@ -2236,11 +2253,13 @@ main#inicio::before {
   gap: 12px;
 }
 .npc-logos img {
-  height: 40px;
+  height: 60px;
   width: auto;
+  max-width: none;
   object-fit: contain;
-  /* some logos might be white originally, so if they are on white bg, we can invert them. But let's leave it as is for now */
+  flex-shrink: 0;
 }
+
 
 .npc-extra p {
   font-size: 11px;
@@ -2295,9 +2314,9 @@ main#inicio::before {
   margin-bottom: 2px;
 }
 .npc-date-item .d {
-  font-family: var(--font-body);
+  font-family: "Cabinet Grotesk", sans-serif;
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
   margin-bottom: 4px;
 }

@@ -12,8 +12,8 @@ const playsData = {
     "image": "assets/f9bb5bfefcbf580338da65d3b9a672234de1553f.png",
     "colorClass": "purple",
     "logos": [
-      "assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png",
-      "assets/Logos%20teatros/6a17e299d0a0bd93c818319f_Westchester_Center.avif"
+      "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png",
+      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
     ],
     "dates": [
       { "day": "3", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
@@ -35,8 +35,8 @@ const playsData = {
     "image": "assets/03118e0eda2b2a3dc82478dfcbbc13158e2d2f6c.png",
     "colorClass": "purple",
     "logos": [
-      "assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png",
-      "assets/Logos%20teatros/6a17e299d0a0bd93c818319f_Westchester_Center.avif"
+      "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png",
+      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
     ],
     "dates": [
       { "day": "10", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
@@ -59,7 +59,7 @@ const playsData = {
     "image": "assets/07fb4fbd9864c0979b71bc86cf6ea90268b59cc0.png",
     "colorClass": "red",
     "logos": [
-      "assets/Logos%20teatros/6a17e2d82ff7f5b53dd06eb1_arsht-white-logo.webp"
+      "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
     ],
     "dates": [
       { "day": "11", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
@@ -81,7 +81,7 @@ const playsData = {
     "image": "assets/7bff60db5f4c6efeb5de0f8638d105d40370289f.png",
     "colorClass": "orange",
     "logos": [
-      "assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
+      "assets/logo-arte.png"
     ],
     "dates": [
       { "day": "11", "month": "Sept", "time": "8:30 PM" },
@@ -102,8 +102,8 @@ const playsData = {
     "image": "assets/dda7606981ce230e882b3798b729fa48c1d4242c.png",
     "colorClass": "purple",
     "logos": [
-      "assets/30500be2dd8bc1a0a51c37733be79c80eab78731.png",
-      "assets/Logos%20teatros/6a17e299d0a0bd93c818319f_Westchester_Center.avif"
+      "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png",
+      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
     ],
     "dates": [
       { "day": "17", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
@@ -125,7 +125,7 @@ const playsData = {
     "image": "assets/0136c7ebd8c26799cf5362ae00edb9c0931f234f.png",
     "colorClass": "orange",
     "logos": [
-      "assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
+      "assets/logo-arte.png"
     ],
     "dates": [
       { "day": "17", "month": "Sept", "time": "7:00 PM" },
@@ -167,7 +167,7 @@ const playsData = {
     "image": "assets/cbf2ef76e88d69fa6ae983c74d812d2ade032c43.png",
     "colorClass": "red",
     "logos": [
-      "assets/Logos%20teatros/6a17e2d82ff7f5b53dd06eb1_arsht-white-logo.webp"
+      "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
     ],
     "dates": [
       { "day": "24", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
