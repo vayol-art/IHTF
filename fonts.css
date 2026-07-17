@@ -152,9 +152,13 @@
 .hamburger span {
   width: 100%;
   height: 3px;
-  background-color: #1a789e;
+  background-color: #ffffff;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
+}
+
+.site-header.scrolled .hamburger span {
+  background-color: #1a789e;
 }
 
 /* Open Animation */
@@ -198,10 +202,11 @@
 
   .main-nav.open a {
     display: block !important;
-    padding: 12px 16px !important;
+    padding: 10px 16px !important;
     color: #1a789e !important;
     font-size: 16px !important;
-    text-align: center !important;
+    text-align: left !important;
+    font-weight: 700 !important;
     border-radius: 8px !important;
     background: transparent !important;
     transition: background 0.2s !important;
@@ -325,11 +330,11 @@
   }
 
   .main-nav.open .nav-submenu a.submenu-item {
-    padding: 8px 16px 8px 32px !important; /* Ligeramente indentado */
+    padding: 8px 16px 8px 48px !important; /* Indentado con un tab */
     text-align: left !important;
     font-size: 15px !important;
     font-weight: 500 !important;
-    color: var(--blue, #1a789e) !important;
+    color: #4a5568 !important; /* Jerarquía visual: gris oscuro */
     display: block !important;
     border-radius: 8px !important;
   }

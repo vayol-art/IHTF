@@ -324,3 +324,12 @@
     min-height: 120px;
   }
 }
+
+
+/* Adjust hero height on mobile to match teatros.html */
+@media (max-width: 900px) {
+  .hero {
+    min-height: 260px !important;
+    padding: 70px 18px !important;
+  }
+}

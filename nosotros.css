@@ -490,9 +490,19 @@ body {
   .directors-list, .tribute-photo {
     max-width: 360px;
     margin: 0 auto;
+    position: static;
   }
   .staff-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+}
+
+
+/* Adjust hero height on mobile to match teatros.html */
+@media (max-width: 900px) {
+  .hero {
+    min-height: 260px !important;
+    padding: 70px 18px !important;
   }
 }
