@@ -174,7 +174,24 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 @media (max-width: 1100px) {
+  .nav-container {
+    display: contents;
+  }
+
+  .lang-selector {
+    position: relative;
+    z-index: 101;
+    margin-right: 16px;
+    margin-left: auto;
+  }
+
   .hamburger {
     display: flex;
   }
