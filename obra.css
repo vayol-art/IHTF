@@ -2341,19 +2341,5 @@ main#inicio::before {
     height: 350px;
     min-height: auto;
   }
-  .npc-dates-bar {
-    flex-wrap: wrap;
-  }
-  .npc-date-item {
-    border-left: none;
-    border-top: 1px solid rgba(255,255,255,0.3);
-    flex: 0 0 50%;
-  }
-  .npc-date-item:nth-child(odd) {
-    border-right: 1px solid rgba(255,255,255,0.3);
-  }
-  .npc-date-item:nth-child(1), .npc-date-item:nth-child(2) {
-    border-top: none;
-  }
 }
 

@@ -545,15 +545,38 @@
       play.dates.forEach(d => {
         const card = document.createElement("div");
         card.className = "play-date-item";
+        let logoHTML = "";
+        if (play.id === "robinson-crusoe") {
+          if (d.day === "19") {
+            card.style.background = "#CD65AD";
+            logoHTML = `<img src="../assets/Logos%20teatros/Copia%20de%206a17e343778e61a102967a29_Village_Biscayne.png" alt="Key Biscayne" style="height: 52px; width: auto;" />`;
+          } else if (d.day === "20") {
+            card.style.background = "var(--orange)";
+            logoHTML = `
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <img src="../assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png" alt="MDCA" style="height: 32px; width: auto;" />
+                  <img src="../assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png" alt="Koubek Center" style="height: 28px; width: auto;" />
+                </div>
+                <a href="#" style="display: inline-block; font-size: 13px; font-weight: 700; text-transform: uppercase; padding: 6px 16px; border-radius: 99px; background: #fff; color: var(--orange); text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,0.15); margin-top: 6px;">Reserve</a>
+              </div>
+            `;
+          }
+        }
         let noteText = d.foro || "";
         if (noteText === "Foro después de la obra") {
           noteText = "Forum after the play";
         }
         card.innerHTML = `
-          <span class="m">${d.month.toUpperCase()}</span>
-          <strong class="d">${d.day}</strong>
-          <small class="t">${d.time}</small>
-          ${d.foro ? `<small class="note">${noteText}</small>` : ""}
+          <div style="display: flex; align-items: center; justify-content: center; gap: 20px; width: 100%; padding: 0 4px;">
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+              <span class="m" style="margin-bottom: 2px;">${d.month.toUpperCase()}</span>
+              <strong class="d" style="line-height: 1; margin-bottom: 4px;">${d.day}</strong>
+              <small class="t">${d.time}</small>
+              ${d.foro ? `<small class="note" style="margin-top: 4px; line-height: 1.1;">${noteText}</small>` : ""}
+            </div>
+            ${logoHTML ? `<div style="display: flex; align-items: center; justify-content: center;">${logoHTML}</div>` : ""}
+          </div>
         `;
         scheduleContainer.appendChild(card);
       });
@@ -600,8 +623,7 @@
 
       // Botón Comprar Entradas
       const buyBtn = document.getElementById("play-buy-btn");
-      const buyText = play.buttonText || "Comprar";
-      buyBtn.textContent = buyText === "Reservar" ? "Reserve now" : "Buy tickets";
+      buyBtn.style.display = "none";
 
       
     });

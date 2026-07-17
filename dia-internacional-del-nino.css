@@ -56,7 +56,7 @@ body {
 
 .hero h1 {
   font-family: var(--font-title);
-  font-size: clamp(40px, 6vw, 80px);
+  font-size: clamp(20px, 3vw, 40px);
   line-height: 0.95;
   text-transform: uppercase;
   margin: 0;
