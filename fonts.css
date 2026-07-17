@@ -180,6 +180,13 @@
   gap: 16px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
 @media (max-width: 1100px) {
   .nav-container {
     display: contents;
@@ -188,8 +195,6 @@
   .lang-selector {
     position: relative;
     z-index: 101;
-    margin-right: 16px;
-    margin-left: auto;
   }
 
   .hamburger {
