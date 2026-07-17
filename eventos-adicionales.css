@@ -62,18 +62,33 @@ body {
 
 .hero h1 {
   font-family: var(--font-title);
-  font-size: clamp(29px, 5vw, 60px);
+  font-size: clamp(38px, 6vw, 60px);
   line-height: .85;
   text-transform: uppercase;
   margin: 0;
   letter-spacing: -0.03em;
 }
 
-/* Content Layout */
 .content-section {
   padding: 80px 24px;
   background: radial-gradient(circle at 50% 30%, #ffffff, #eff6f7 85%);
   min-height: 50vh;
+  position: relative;
+}
+
+.content-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/textura%20fondo.png') center/cover;
+  opacity: 0.05;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.content-section > * {
+  position: relative;
+  z-index: 2;
 }
 
 .content-container {
@@ -121,7 +136,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1.8fr;
   gap: 60px;
-  align-items: start;
+  align-items: stretch;
 }
 
 /* Director Card Styles */
@@ -132,6 +147,11 @@ body {
   border: 1px solid rgba(26, 120, 158, 0.08);
   box-shadow: 0 8px 30px rgba(26, 120, 158, 0.03);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .director-photo-wrapper {

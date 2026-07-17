@@ -23,7 +23,7 @@
 
 .hero h1 {
   font-family: 'Cabinet Grotesk', 'Arial Black', sans-serif !important;
-  font-size: clamp(29px, 5vw, 60px) !important;
+  font-size: clamp(38px, 6vw, 60px) !important;
   line-height: .85 !important;
   text-transform: uppercase !important;
   margin: 0 !important;

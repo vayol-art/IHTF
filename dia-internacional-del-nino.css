@@ -56,7 +56,7 @@ body {
 
 .hero h1 {
   font-family: var(--font-title);
-  font-size: clamp(20px, 3vw, 40px);
+  font-size: clamp(28px, 5vw, 40px);
   line-height: 0.95;
   text-transform: uppercase;
   margin: 0;
@@ -131,10 +131,25 @@ body {
   color: var(--orange);
 }
 
-/* Section 3: Robinson Crusoe (Teal Theme) */
 .child-section.play-details {
   background: var(--teal);
   color: #ffffff;
+  position: relative;
+}
+
+.child-section.play-details::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('assets/textura%20fondo.png') center/cover;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.child-section.play-details > * {
+  position: relative;
+  z-index: 2;
 }
 
 .section-container {

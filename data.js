@@ -11,6 +11,8 @@ const playsData = {
     "description_en": "It seems to be a country in recent democracy that has lived a convulsive and long period of dictatorship. Or perhaps it is the opposite, although the characters are not aware, or should not say it. In the middle of a math class, a teenager begins to attack her classmates in an unexpected and violent way. The teacher meets with the grandfather, her legal guardian, to analyze the strange behavior, which has generated notable physical damage even to the minor herself. The dialogue with a doctor will bring more uncertainties than certitudes, but it will open the door to a past that, slowly, moving between two times, will reveal secret links between these four beings and dictate their destinies.",
     "image": "assets/f9bb5bfefcbf580338da65d3b9a672234de1553f.png",
     "colorClass": "purple",
+    "ticketUrl": "https://caroentertainment.com/tc-events/carrusel-by-teatro-avante-sept-3-4-and-5-at-830pm-sept-6-at-5pm-at-westchester-cultural-arts-center/",
+    "ticketUrl": "https://caroentertainment.com/tc-events/carrusel-by-teatro-avante-sept-3-4-and-5-at-830pm-sept-6-at-5pm-at-westchester-cultural-arts-center/",
     "logos": [
       "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png",
       "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
@@ -34,6 +36,8 @@ const playsData = {
     "description_en": "Fifty years after the coup d'état in Uruguay, theater remains an arena for debate. The corpse of a military officer disappears after a clandestine exhumation and a kidnapping. An exemplary bureaucrat demands a decent burial. The deceased appears and demands justice. When memory is reversed, the bodies appear. Marx asserts that history occurs twice: first as tragedy, then as farce. Meanwhile, two young people ask themselves what is the best tool to change the world, political correctness or class consciousness? Marxist philosophy continues to shed light on an economic system that generates the living dead. 'Capital is an abstract parasite, a gigantic vampire, a maker of zombies; but the fresh flesh it converts into dead labor is ours and the zombies it generates are ourselves,' writes Mark Fisher in his book Capitalist Realism. From there are born the eleven scenes of this Zombie Manifesto, like the eleven Theses on Feuerbach that postulated that it is not enough to interpret the world in various ways, what matters is to transform it.",
     "image": "assets/03118e0eda2b2a3dc82478dfcbbc13158e2d2f6c.png",
     "colorClass": "purple",
+    "ticketUrl": "https://caroentertainment.com/tc-events/zombi-manifiesto-sept-10-11-and-12-at-830pm-at-westchester-cultural-arts-center/",
+    "ticketUrl": "https://caroentertainment.com/tc-events/carrusel-by-teatro-avante-sept-3-4-and-5-at-830pm-sept-6-at-5pm-at-westchester-cultural-arts-center/",
     "logos": [
       "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png",
       "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
@@ -101,6 +105,8 @@ const playsData = {
     "description_en": "ODD MAN OUT is an immersive sensory experience that awakens your senses and your imagination. You will take a flight like no other – in complete darkness. You arrive at our airport and wait in the lounge and boarding gate of PITCHBLACK Airlines, where we prepare you for the trip. We guide you to your seat in a completely dark cabin. Once on the flight, you will experience a story through sound, smell, taste, and touch. You will even feel the weather happening inside the room. But all in complete darkness. Once you exit, we invite you to stay and enjoy the beauty, life, and hope of your new destination. The show tells the story of a blind musician whose life takes him from Buenos Aires to New York. We will follow Alberto's life as he discovers music, learns to play the guitar, travels the world, and finally leads and triumphs with his own band. He will also experience heartbreak and loss in a country torn by internal conflict. 'ODD MAN OUT' is not just about telling a story, but about creating a unique theatrical experience.",
     "image": "assets/dda7606981ce230e882b3798b729fa48c1d4242c.png",
     "colorClass": "purple",
+    "ticketUrl": "https://caroentertainment.com/tc-events/odd-man-out-by-pitchblack-immersive-experiences-sept-17-18-and-19-at-830pm-at-westchester-cultural-arts-center/",
+    "ticketUrl": "https://caroentertainment.com/tc-events/carrusel-by-teatro-avante-sept-3-4-and-5-at-830pm-sept-6-at-5pm-at-westchester-cultural-arts-center/",
     "logos": [
       "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png",
       "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
