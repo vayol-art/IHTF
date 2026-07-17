@@ -255,6 +255,14 @@ body {
   line-height: 1.1;
 }
 
+.tribute-text h2 .tribute-date {
+  display: block;
+  font-size: 0.65em;
+  opacity: 0.85;
+  margin-top: 8px;
+  letter-spacing: 0.05em;
+}
+
 .tribute-text .subtitle {
   font-family: var(--font-title);
   font-size: 22px;
