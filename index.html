@@ -222,6 +222,11 @@
                     oldImg.classList.remove('active');
                     setTimeout(() => {
                       if (oldImg && mediaContainer.contains(oldImg)) {
+                        if (oldImg.tagName === 'VIDEO') {
+                          oldImg.pause();
+                          oldImg.removeAttribute('src');
+                          oldImg.load();
+                        }
                         mediaContainer.removeChild(oldImg);
                       }
                     }, 1000); // Wait for CSS transition
@@ -253,6 +258,11 @@
               oldElement.classList.remove('active');
               setTimeout(() => {
                 if (oldElement && mediaContainer.contains(oldElement)) {
+                  if (oldElement.tagName === 'VIDEO') {
+                    oldElement.pause();
+                    oldElement.removeAttribute('src');
+                    oldElement.load();
+                  }
                   mediaContainer.removeChild(oldElement);
                 }
               }, 1000);
