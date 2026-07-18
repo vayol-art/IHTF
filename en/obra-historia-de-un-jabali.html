@@ -141,10 +141,37 @@
   </header>
 
   <main id="inicio">
-    <section class="hero-wrapper" id="hero-wrapper">
-      <section class="hero" id="play-hero">
-        <div class="hero-carousel-container" id="hero-carousel">
-          <div class="carousel-track">
+        <section class="new-play-card-section">
+      <div class="new-play-card" id="play-card-container">
+        <div class="new-play-left">
+          <div class="npc-country-bar" id="play-country-bar">
+            <span id="play-country">Country</span>
+          </div>
+          <div class="npc-body">
+            <h1 id="play-title">Title</h1>
+            <div id="play-description" class="npc-desc"></div>
+            
+            <div class="npc-credits">
+              <div class="credit-item"><strong>Author:</strong> <span id="play-author">Author</span></div>
+              <div class="credit-item"><strong>Director:</strong> <span id="play-director">Director</span></div>
+              <div class="credit-item"><strong>Cast:</strong> <span id="play-cast">Cast</span></div>
+            </div>
+            
+            <div class="npc-actions">
+              <a class="npc-btn" id="play-buy-btn" href="agenda.html">Buy tickets</a>
+              <div id="play-bar-logo" class="npc-logos">
+                <!-- Logos dynamically inserted -->
+              </div>
+            </div>
+            <div id="play-extra-info" class="npc-extra"></div>
+          </div>
+        </div>
+        
+        <div class="new-play-right">
+          <div class="npc-image-container">
+            <!-- Reuse existing carousel -->
+            <div class="hero-carousel-container" id="hero-carousel">
+              <div class="carousel-track">
             <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 1.webp" alt="Hero Photo" loading="lazy" />
             <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 2.webp" alt="Hero Photo" loading="lazy" />
             <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/Copia de JABALI FOTO 3.webp" alt="Hero Photo" loading="lazy" />
@@ -154,50 +181,11 @@
             <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 8.webp" alt="Hero Photo" loading="lazy" />
             <img src="../assets/40thIHTF - FOTOS de OBRAS/obra-historia-de-un-jabali/JABALI FOTO 9.webp" alt="Hero Photo" loading="lazy" />
           </div>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content bottom-left">
-          <h1 id="play-title">Título</h1>
-          <span class="eyebrow" id="play-country">País</span>
-        </div>
-      </section>
-      <div class="play-bar" id="play-bar">
-        <div class="play-bar-inner">
-          <div class="play-bar-left" id="play-bar-logo">
-            <!-- Logo dynamically inserted -->
+            </div>
           </div>
-          <div class="play-bar-right" id="play-schedule">
+          <div class="npc-dates-bar" id="play-schedule">
             <!-- Dates dynamically inserted -->
           </div>
-        </div>
-      </div>
-    </section>
-
-    
-
-    <section id="obra" class="detail-section">
-      <div class="section-inner single-column">
-        <div class="credits-box">
-          <div class="credit-item">
-            <strong>Author:</strong>
-            <span id="play-author">Autor</span>
-          </div>
-          <div class="credit-item">
-            <strong>Director:</strong>
-            <span id="play-director">Director</span>
-          </div>
-          <div class="credit-item">
-            <strong>Cast:</strong>
-            <span id="play-cast">Elenco</span>
-          </div>
-        </div>
-        
-        <div class="description-box">
-          <div id="play-description" class="desc-text">
-            <p>Descripción detallada...</p>
-          </div>
-          <div id="play-extra-info"></div>
-          <a class="btn-buy" id="play-buy-btn" href="agenda.html" onclick="event.stopPropagation();">Buy tickets</a>
         </div>
       </div>
     </section>
@@ -554,11 +542,15 @@
                 style="background: var(--orange); display: flex; align-items: center; justify-content: center; gap: 12px; padding: 8px 4px;">
                 <div style="background: transparent; padding: 0;"><span>Sept</span><strong>20</strong><em>5:00 PM</em>
                 </div>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <img src="../assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png" alt="MDCA"
-                    style="height: 24px; width: auto;" />
-                  <img src="../assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
-                    alt="Koubek Center" style="height: 20px; width: auto;" />
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <img src="../assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png" alt="MDCA"
+                      style="height: 24px; width: auto;" />
+                    <img src="../assets/Logos%20teatros/6a17e30e0c852c84f81a069a_koubek_logo_Stack_sm.png"
+                      alt="Koubek Center" style="height: 20px; width: auto;" />
+                  </div>
+                  <a class="ticket-btn" href="https://www.squadup.com/events/40-festival-internacional-de-teatro-hispano-de-miami-1?legacy=0"
+                    style="font-size: 11px; padding: 4px 12px; margin: 0; min-height: 0; background: #fff; color: var(--orange);" target="_blank" onclick="event.stopPropagation();">Reserve</a>
                 </div>
               </div>
             </div>
@@ -684,50 +676,89 @@
       };
 
       // Título de la página
+            // Título de la página
       document.title = `${play.title} | Festival Internacional de Teatro Hispano`;
 
-      // Hero
+      // Set Theme color for styling
+      document.getElementById("inicio").style.setProperty('--theme-color', 'var(--' + play.colorClass + ')');
+
+      // Populate Texts
       document.getElementById("play-country").textContent = play.country_en || play.country;
       document.getElementById("play-title").innerHTML = play.titleHTML || play.title;
-      
-      const heroBg = playId === "a-fuego" ? "assets/hero-a-fuego.jpg" : `assets/${posterMap[playId]}`;
-      // document.getElementById("play-hero").style.backgroundImage = `url('${heroBg}')`;
-      
-      // Setup the play bar
-      document.getElementById("inicio").style.setProperty('--theme-color', 'var(--' + play.colorClass + ')');
-      const playBar = document.getElementById("play-bar");
-      playBar.className = "play-bar " + play.colorClass;
-      
-      // Setup the theater logo
-      const playBarLogo = document.getElementById("play-bar-logo");
-      // The theater logo is usually the last one, or the only one
-      let theaterLogoSrc = play.logos[play.logos.length - 1];
-      if (theaterLogoSrc) {
-        if (!theaterLogoSrc.startsWith('../')) {
-          theaterLogoSrc = '../' + theaterLogoSrc;
-        }
-        playBarLogo.innerHTML = `<img src="${theaterLogoSrc}" alt="Logo Teatro">`;
-      }
 
-      
-      
+      document.getElementById("play-author").textContent = play.author;
+      document.getElementById("play-director").textContent = play.director;
+      document.getElementById("play-cast").textContent = play.cast;
+
+      // Populate Logos
+      const logosContainer = document.getElementById("play-bar-logo");
+      logosContainer.innerHTML = "";
+      play.logos.forEach(logo => {
+        let logoSrc = logo;
+        if (!logoSrc.startsWith('../')) {
+          logoSrc = '../' + logoSrc;
+        }
+        let extraStyle = logoSrc.includes("white") || logoSrc.includes("blanco") || logoSrc.includes("arsht") ? 'style="filter: invert(1);"' : '';
+        logosContainer.innerHTML += `<img src="${logoSrc}" alt="Logo Teatro" ${extraStyle}>`;
+      });
+
       // Funciones
       const scheduleContainer = document.getElementById("play-schedule");
       scheduleContainer.innerHTML = "";
       play.dates.forEach(d => {
         const card = document.createElement("div");
-        card.className = "play-date-item";
-        let noteText = d.foro || "";
-        if (noteText === "Foro después de la obra") {
-          noteText = "Forum after the play";
+        card.className = "npc-date-item";
+        let noteText = "";
+        if (d.foro) {
+          noteText = d.foro.includes("Foro") ? "Forum after the play" : d.foro;
         }
         card.innerHTML = `
           <span class="m">${d.month.toUpperCase()}</span>
           <strong class="d">${d.day}</strong>
           <small class="t">${d.time}</small>
-          ${d.foro ? `<small class="note">${noteText}</small>` : ""}
+          ${noteText ? `<small class="note">${noteText}</small>` : ""}
         `;
         scheduleContainer.appendChild(card);
+      });
+
+      // Descripción
+      const descContainer = document.getElementById("play-description");
+      descContainer.innerHTML = "";
+      
+      const sentences = (play.description_en || play.description).split(". ");
+      let currentParagraph = "";
+      sentences.forEach((sentence, index) => {
+        if (sentence.trim()) {
+          currentParagraph += sentence.trim() + ". ";
+          if ((index + 1) % 2 === 0 || index === sentences.length - 1) {
+            const p = document.createElement("p");
+            p.textContent = currentParagraph;
+            descContainer.appendChild(p);
+            currentParagraph = "";
+          }
+        }
+      });
+
+      // Información adicional
+      const extraContainer = document.getElementById("play-extra-info");
+      extraContainer.innerHTML = "";
+      if (play.extraInfo) {
+        const extraP = document.createElement("p");
+        extraP.textContent = play.extraInfo;
+        extraContainer.appendChild(extraP);
+      }
+
+      // Botón Comprar Entradas
+      const buyBtn = document.getElementById("play-buy-btn");
+      const buyText = play.buttonText || "Comprar";
+      buyBtn.textContent = buyText === "Reservar" ? "Reserve now" : "Buy tickets";
+      if (play.ticketUrl) {
+        buyBtn.href = play.ticketUrl;
+        buyBtn.target = "_blank";
+      } else {
+        buyBtn.href = "agenda.html";
+        buyBtn.removeAttribute("target");
+      }
       });
 
       // Ficha Técnica
