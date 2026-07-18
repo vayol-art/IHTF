@@ -84,6 +84,7 @@ const playsData = {
     "extraInfo": "",
     "image": "assets/7bff60db5f4c6efeb5de0f8638d105d40370289f.png",
     "colorClass": "orange",
+    "ticketUrl": "https://www.squadup.com/events/40-festival-internacional-de-teatro-hispano-de-miami-1?legacy=0",
     "logos": [
       "assets/logo-arte.png"
     ],
@@ -106,7 +107,6 @@ const playsData = {
     "image": "assets/dda7606981ce230e882b3798b729fa48c1d4242c.png",
     "colorClass": "purple",
     "ticketUrl": "https://caroentertainment.com/tc-events/odd-man-out-by-pitchblack-immersive-experiences-sept-17-18-and-19-at-830pm-at-westchester-cultural-arts-center/",
-    "ticketUrl": "https://caroentertainment.com/tc-events/carrusel-by-teatro-avante-sept-3-4-and-5-at-830pm-sept-6-at-5pm-at-westchester-cultural-arts-center/",
     "logos": [
       "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png",
       "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
@@ -130,6 +130,7 @@ const playsData = {
     "extraInfo": "",
     "image": "assets/0136c7ebd8c26799cf5362ae00edb9c0931f234f.png",
     "colorClass": "orange",
+    "ticketUrl": "https://www.squadup.com/events/40-festival-internacional-de-teatro-hispano-de-miami-1?legacy=0",
     "logos": [
       "assets/logo-arte.png"
     ],
@@ -152,6 +153,7 @@ const playsData = {
     "description_en": "The Amazing Adventures of Robinson Crusoe tells the story of a daring young man (Robinson) who decides to embark on a destination-less journey in search of adventure. After his ship shipwrecks, he arrives on a deserted island where he meets unforgettable characters who will change his destiny. With creativity and optimism, Robinson will manage to supply himself with everything necessary to survive and will learn the value of friendship and companionship, while looking for a way to return home. \n\nDuring the adventures, themes such as creativity, ingenuity, friendship, and decision-making are touched upon, leading us to move forward and venture into an active life. It also highlights the vital power of imagination, connecting the entire audience with fantasy and a sense of adventure, with play as a methodology and with the vital power of imagination.",
     "image": "assets/5d19c5452df84b7ff38e739377d7763698b23581.png",
     "colorClass": "teal",
+    "ticketUrl": "https://www.squadup.com/events/40-festival-internacional-de-teatro-hispano-de-miami-1?legacy=0",
     "buttonText": "Reservar",
     "logos": [],
     "dates": [
