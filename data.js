@@ -161,6 +161,27 @@ const playsData = {
       { "day": "20", "month": "Sept", "time": "5:00 PM" }
     ]
   },
+  "pundonor": {
+    "id": "pundonor",
+    "title": "Pundonor",
+    "country": "Argentina",
+    "country_en": "Argentina",
+    "author": "Andrea Garrote",
+    "director": "Andrea Garrote & Rafael Spregelburd",
+    "cast": "Andrea Garrote",
+    "description": "Claudia Pérez Espinosa es una profesora universitaria, Doctora en Sociología, que vuelve al aula después de tomarse unos meses de licencia. Pero la clase que debe dar, una introducción a la obra de Michel Foucault se interrumpe constantemente debido a su frágil situación. Necesita dar explicaciones sobre su comportamiento, aparentemente necesita redimirse.",
+    "description_en": "Claudia Pérez Espinosa, a university professor and Doctor of Sociology returning to the classroom after taking several months of leave. However, the lecture she is supposed to deliver—an introduction to the work of Michel Foucault—is repeatedly interrupted by her own fragile emotional state. She feels compelled to explain her behavior, as though she must redeem herself.",
+    "image": "assets/40thIHTF - FOTOS de OBRAS/obra-pundonor/PUNDONOR FOTO 1.webp",
+    "colorClass": "red",
+    "logos": [
+      "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
+    ],
+    "dates": [
+      { "day": "18", "month": "Sept", "time": "8:30 PM" },
+      { "day": "19", "month": "Sept", "time": "8:30 PM" },
+      { "day": "20", "month": "Sept", "time": "5:00 PM" }
+    ]
+  },
   "hamlet": {
     "id": "hamlet",
     "title": "Hamlet",
