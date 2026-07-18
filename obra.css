@@ -2343,3 +2343,25 @@ main#inicio::before {
   }
 }
 
+.npc-awards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.npc-award-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  background: rgba(197, 160, 89, 0.12);
+  color: #b38f43;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+

@@ -676,6 +676,7 @@
 
       // Título de la página
             // Título de la página
+            // Título de la página
       document.title = `${play.title} | Festival Internacional de Teatro Hispano`;
 
       // Set Theme color for styling
@@ -741,9 +742,10 @@
       // Información adicional
       const extraContainer = document.getElementById("play-extra-info");
       extraContainer.innerHTML = "";
-      if (play.extraInfo) {
+      const extraText = play.extraInfo_en || play.extraInfo;
+      if (extraText) {
         const extraP = document.createElement("p");
-        extraP.textContent = play.extraInfo;
+        extraP.textContent = extraText;
         extraContainer.appendChild(extraP);
       }
 
@@ -759,54 +761,6 @@
         buyBtn.removeAttribute("target");
       }
       });
-
-      // Ficha Técnica
-      document.getElementById("play-author").textContent = play.author_en || play.author;
-      document.getElementById("play-director").textContent = play.director_en || play.director;
-      document.getElementById("play-cast").textContent = play.cast_en || play.cast;
-
-      // Descripción
-      const descContainer = document.getElementById("play-description");
-      descContainer.innerHTML = "";
-      
-      // Dividir descripción por párrafos o frases largas para mejorar legibilidad
-      const sentences = (play.description_en || play.description).split(". ");
-      let currentParagraph = "";
-      sentences.forEach((sentence, index) => {
-        if (sentence.trim()) {
-          currentParagraph += sentence.trim() + ". ";
-          if ((index + 1) % 2 === 0 || index === sentences.length - 1) {
-            const p = document.createElement("p");
-            p.textContent = currentParagraph;
-            descContainer.appendChild(p);
-            currentParagraph = "";
-          }
-        }
-      });
-
-      // Información adicional (MDCA Away From Home, etc.)
-      const extraContainer = document.getElementById("play-extra-info");
-      extraContainer.innerHTML = "";
-      if (play.extraInfo) {
-        const extraP = document.createElement("p");
-        extraP.className = "note";
-        extraP.style.borderLeft = "3px solid var(--orange)";
-        extraP.style.paddingLeft = "14px";
-        extraP.style.marginTop = "24px";
-        extraP.style.fontStyle = "italic";
-        extraP.style.fontSize = "16px";
-        extraP.style.color = "var(--orange)";
-        extraP.textContent = play.extraInfo;
-        extraContainer.appendChild(extraP);
-      }
-
-      // Botón Comprar Entradas
-      const buyBtn = document.getElementById("play-buy-btn");
-      const buyText = play.buttonText || "Comprar";
-      buyBtn.textContent = buyText === "Reservar" ? "Reserve now" : "Buy tickets";
-
-      
-    });
   </script>
 
   <script>

@@ -173,6 +173,8 @@ const playsData = {
     "description_en": "Claudia Pérez Espinosa, a university professor and Doctor of Sociology returning to the classroom after taking several months of leave. However, the lecture she is supposed to deliver—an introduction to the work of Michel Foucault—is repeatedly interrupted by her own fragile emotional state. She feels compelled to explain her behavior, as though she must redeem herself.",
     "image": "assets/40thIHTF - FOTOS de OBRAS/obra-pundonor/PUNDONOR FOTO 1.webp",
     "colorClass": "red",
+    "extraInfo": "Premios Trinidad Guevara: Nominación Mejor Actuación Femenina • Premios Konex 2021: Mejor Unipersonal de la Década • Premios María Guerrero: Mejor Unipersonal",
+    "extraInfo_en": "Trinidad Guevara Awards: Best Actress Nomination • Konex Awards 2021: Best Solo Show of the Decade • María Guerrero Awards: Best Solo Show",
     "logos": [
       "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
     ],
