@@ -198,6 +198,7 @@ const playsData = {
     "extraInfo": "",
     "image": "assets/cbf2ef76e88d69fa6ae983c74d812d2ade032c43.png",
     "colorClass": "red",
+    "ticketUrl": "https://www.arshtcenter.org/tickets/2025-2026/international-hispanic-theatre-festival-of-miami/hamlet/",
     "logos": [
       "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
     ],
