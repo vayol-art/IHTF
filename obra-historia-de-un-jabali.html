@@ -717,7 +717,12 @@
       // Botón Comprar Entradas
       const buyBtn = document.getElementById("play-buy-btn");
       buyBtn.textContent = play.buttonText || "Entradas";
-      buyBtn.href = "obra-" + play.id + ".html";
+      if (play.ticketUrl) {
+        buyBtn.href = play.ticketUrl;
+        buyBtn.target = "_blank";
+      } else {
+        buyBtn.href = "obra-" + play.id + ".html";
+      }
     });
   </script>
 

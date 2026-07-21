@@ -62,6 +62,7 @@ const playsData = {
     "extraInfo": "",
     "image": "assets/07fb4fbd9864c0979b71bc86cf6ea90268b59cc0.png",
     "colorClass": "red",
+    "ticketUrl": "https://www.arshtcenter.org/tickets/2025-2026/international-hispanic-theatre-festival-of-miami/historia-de-un-jabali-o-algo-de-ricardo-iii/",
     "logos": [
       "assets/69e8b7f0d9cb37f2e237587a9fad4790ab7cf8c5.png"
     ],
