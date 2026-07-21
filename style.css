@@ -137,8 +137,13 @@ img {
 }
 
 @keyframes kenburns {
-  0% { transform: scale(1.05); }
-  100% { transform: scale(1.15); }
+  0% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
 }
 
 .zoom-effect {
@@ -508,7 +513,9 @@ section h2 {
 
 .program-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1028px;
+  margin: 0 auto;
   gap: 16px;
 }
 
@@ -1809,4 +1816,4 @@ section h2 {
 .hero-intro-img.fade-out {
   opacity: 0;
   pointer-events: none;
-}
+}
