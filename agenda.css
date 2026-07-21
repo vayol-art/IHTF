@@ -137,7 +137,9 @@ main {
 
 .program-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1036px;
+  margin: 0 auto;
   gap: 20px;
 }
 
