@@ -180,7 +180,7 @@ const playsData = {
     ],
     "dates": [
       { "day": "18", "month": "Sept", "time": "8:30 PM" },
-      { "day": "19", "month": "Sept", "time": "8:30 PM" },
+      { "day": "19", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
       { "day": "20", "month": "Sept", "time": "5:00 PM" }
     ]
   },
