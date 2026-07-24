@@ -12,10 +12,11 @@ const playsData = {
     "image": "assets/f9bb5bfefcbf580338da65d3b9a672234de1553f.png",
     "colorClass": "purple",
     "ticketUrl": "https://caroentertainment.com/tc-events/carrusel-by-teatro-avante-sept-3-4-and-5-at-830pm-sept-6-at-5pm-at-westchester-cultural-arts-center/",
-    "ticketUrl": "https://caroentertainment.com/tc-events/carrusel-by-teatro-avante-sept-3-4-and-5-at-830pm-sept-6-at-5pm-at-westchester-cultural-arts-center/",
+    "extraInfo": "Parte de la serie Away From Home del Auditorio del Condado de Miami-Dade, un programa que consiste en eventos fuera de sus instalaciones en sedes alternativas mientras el MDCA permanece temporalmente cerrado por renovaciones.",
+    "extraInfo_en": "Part of Miami-Dade County Auditorium's Away From Home series, a program consisting of off-site events at alternative venues while MDCA is temporarily closed for renovations.",
     "logos": [
-      "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png",
-      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png",
+      "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png"
     ],
     "dates": [
       { "day": "3", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
@@ -37,10 +38,11 @@ const playsData = {
     "image": "assets/03118e0eda2b2a3dc82478dfcbbc13158e2d2f6c.png",
     "colorClass": "purple",
     "ticketUrl": "https://caroentertainment.com/tc-events/zombi-manifiesto-sept-10-11-and-12-at-830pm-at-westchester-cultural-arts-center/",
-    "ticketUrl": "https://caroentertainment.com/tc-events/carrusel-by-teatro-avante-sept-3-4-and-5-at-830pm-sept-6-at-5pm-at-westchester-cultural-arts-center/",
+    "extraInfo": "Parte de la serie Away From Home del Auditorio del Condado de Miami-Dade, un programa que consiste en eventos fuera de sus instalaciones en sedes alternativas mientras el MDCA permanece temporalmente cerrado por renovaciones.",
+    "extraInfo_en": "Part of Miami-Dade County Auditorium's Away From Home series, a program consisting of off-site events at alternative venues while MDCA is temporarily closed for renovations.",
     "logos": [
-      "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png",
-      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png",
+      "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png"
     ],
     "dates": [
       { "day": "10", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },
@@ -108,9 +110,11 @@ const playsData = {
     "image": "assets/dda7606981ce230e882b3798b729fa48c1d4242c.png",
     "colorClass": "purple",
     "ticketUrl": "https://caroentertainment.com/tc-events/odd-man-out-by-pitchblack-immersive-experiences-sept-17-18-and-19-at-830pm-at-westchester-cultural-arts-center/",
+    "extraInfo": "Parte de la serie Away From Home del Auditorio del Condado de Miami-Dade, un programa que consiste en eventos fuera de sus instalaciones en sedes alternativas mientras el MDCA permanece temporalmente cerrado por renovaciones.",
+    "extraInfo_en": "Part of Miami-Dade County Auditorium's Away From Home series, a program consisting of off-site events at alternative venues while MDCA is temporarily closed for renovations.",
     "logos": [
-      "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png",
-      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png"
+      "assets/c1e1569e14d73f64ec6c09fe00a5cb1ad45eecac.png",
+      "assets/c6c34a67f99807d7cc132ebfb6abf5827c23757a.png"
     ],
     "dates": [
       { "day": "17", "month": "Sept", "time": "8:30 PM", "foro": "Foro después de la obra" },

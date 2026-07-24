@@ -119,21 +119,21 @@
           });
         }
 
-        // IntersectionObserver para activar la animación de las tarjetas al hacer scroll
-        const cards = document.querySelectorAll(".mockup-date-card");
+        // IntersectionObserver para activar la animación de las tarjetas e iconos al hacer scroll
+        const animatedElements = document.querySelectorAll(".mockup-date-card, .pirate-icon");
         if ("IntersectionObserver" in window) {
-          const cardObserver = new IntersectionObserver((entries) => {
+          const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 entry.target.classList.add("in-view");
-                cardObserver.unobserve(entry.target);
+                observer.unobserve(entry.target);
               }
             });
-          }, { threshold: 0.2 });
+          }, { threshold: 0.1 });
 
-          cards.forEach((card) => cardObserver.observe(card));
+          animatedElements.forEach((el) => observer.observe(el));
         } else {
-          cards.forEach((card) => card.classList.add("in-view"));
+          animatedElements.forEach((el) => el.classList.add("in-view"));
         }
       });
     </script>
@@ -141,11 +141,16 @@
 
   <main>
     <section class="hero">
+      <img src="assets/Iconos%20piratas/Recurso%202.svg" alt="" class="pirate-icon compass" style="top: 15%; left: 4%;">
+      <img src="assets/Iconos%20piratas/Recurso%204.svg" alt="" class="pirate-icon ship" style="bottom: 12%; right: 4%;">
       <h1>Día Internacional del Niño</h1>
     </section>
 
     <!-- Key Biscayne Section -->
     <section class="child-section key-biscayne">
+      <img src="assets/Iconos%20piratas/Recurso%203.svg" alt="" class="pirate-icon island" style="top: 20px; right: 4%;">
+      <img src="assets/Iconos%20piratas/Recurso%205.svg" alt="" class="pirate-icon waves" style="bottom: 15px; left: 3%;">
+      <img src="assets/Iconos%20piratas/Recurso%206.svg" alt="" class="pirate-icon footprints" style="bottom: 30px; right: 10%;">
       <div class="section-container">
         <div class="mockup-date-card">
           <div class="card-header">Septiembre</div>
@@ -175,6 +180,9 @@
 
     <!-- Koubek Center Section -->
     <section class="child-section koubek">
+      <img src="assets/Iconos%20piratas/Recurso%201.svg" alt="" class="pirate-icon skull" style="top: 25px; left: 3%;">
+      <img src="assets/Iconos%20piratas/Recurso%207.svg" alt="" class="pirate-icon treasure-x" style="bottom: 30px; right: 5%;">
+      <img src="assets/Iconos%20piratas/Recurso%202.svg" alt="" class="pirate-icon compass" style="top: 38%; right: 3%;">
       <div class="section-container">
         <div class="mockup-date-card">
           <div class="card-header">Septiembre</div>

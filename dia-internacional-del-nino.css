@@ -262,6 +262,8 @@ body {
   background: var(--teal);
   color: #ffffff;
   position: relative;
+  padding-top: 20px !important;
+  padding-bottom: 60px !important;
 }
 
 .child-section.play-details::before {
@@ -651,6 +653,101 @@ body {
   transition: transform 0.3s ease;
 }
 
+/* Decorative Floating Pirate Icons & Scroll Reveals */
+.pirate-icon {
+  position: absolute;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  transform: scale(0.4) translateY(40px) rotate(-10deg);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.12));
+  transition: opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform, opacity;
+}
+
+.pirate-icon.in-view {
+  opacity: 0.95;
+  transform: scale(1) translateY(0) rotate(0deg);
+}
+
+/* Unique Icon Sizes */
+.pirate-icon.skull { width: 130px; height: auto; }
+.pirate-icon.compass { width: 220px; height: auto; }
+.pirate-icon.island { width: 250px; height: auto; }
+.pirate-icon.ship { width: 200px; height: auto; }
+.pirate-icon.waves { width: 260px; height: auto; }
+.pirate-icon.footprints { width: 220px; height: auto; }
+.pirate-icon.treasure-x { width: 120px; height: auto; }
+
+/* 1. Compass: Smooth Slow 360 Rotation + Bobbing */
+.pirate-icon.compass.in-view {
+  animation: pirate-compass-spin 16s ease-in-out infinite alternate;
+}
+@keyframes pirate-compass-spin {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-16px) rotate(180deg) scale(1.05); }
+  100% { transform: translateY(0) rotate(360deg) scale(1); }
+}
+
+/* 2. Ship: Nautical Wave Rocking Motion */
+.pirate-icon.ship.in-view {
+  animation: pirate-ship-sailing 5s ease-in-out infinite alternate;
+}
+@keyframes pirate-ship-sailing {
+  0% { transform: translateY(0) rotate(-4deg) translateX(0); }
+  50% { transform: translateY(-18px) rotate(5deg) translateX(8px); }
+  100% { transform: translateY(-4px) rotate(-3deg) translateX(-4px); }
+}
+
+/* 3. Island: Tropical Breeze Sway */
+.pirate-icon.island.in-view {
+  animation: pirate-island-breeze 7.5s ease-in-out infinite alternate;
+}
+@keyframes pirate-island-breeze {
+  0% { transform: translateY(0) rotate(-2deg) scale(1); }
+  50% { transform: translateY(-12px) rotate(3deg) scale(1.03); }
+  100% { transform: translateY(0) rotate(-1deg) scale(1); }
+}
+
+/* 4. Waves: Gentle Ocean Drift */
+.pirate-icon.waves.in-view {
+  animation: pirate-waves-drift 6s ease-in-out infinite alternate;
+}
+@keyframes pirate-waves-drift {
+  0% { transform: translateX(0) translateY(0); opacity: 0.6; }
+  50% { transform: translateX(15px) translateY(-8px); opacity: 0.85; }
+  100% { transform: translateX(-10px) translateY(4px); opacity: 0.65; }
+}
+
+/* 5. Footprints: Walking Trail Step Fade */
+.pirate-icon.footprints.in-view {
+  animation: pirate-footprints-walk 4s ease-in-out infinite alternate;
+}
+@keyframes pirate-footprints-walk {
+  0% { transform: scale(0.96) translateY(0); opacity: 0.4; }
+  50% { transform: scale(1.04) translateY(-6px); opacity: 0.75; }
+  100% { transform: scale(1) translateY(0); opacity: 0.5; }
+}
+
+/* 6. Skull: Mystical Hover & Tilt */
+.pirate-icon.skull.in-view {
+  animation: pirate-skull-hover 6.5s ease-in-out infinite alternate;
+}
+@keyframes pirate-skull-hover {
+  0% { transform: translateY(0) rotate(-5deg) scale(1); }
+  50% { transform: translateY(-15px) rotate(6deg) scale(1.08); }
+  100% { transform: translateY(0) rotate(-3deg) scale(1); }
+}
+
+/* 7. Treasure X: Pop & Pulse Accent */
+.pirate-icon.treasure-x.in-view {
+  animation: pirate-treasure-pulse 2.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+@keyframes pirate-treasure-pulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.22) rotate(8deg); }
+}
+
 @media (max-width: 900px) {
   .section-container {
     grid-template-columns: 1fr;
@@ -728,6 +825,14 @@ body {
   .play-bio-text {
     font-size: 18px;
   }
+
+  .pirate-icon.skull { width: 85px; }
+  .pirate-icon.compass { width: 130px; }
+  .pirate-icon.island { width: 140px; }
+  .pirate-icon.ship { width: 120px; }
+  .pirate-icon.waves { width: 160px; }
+  .pirate-icon.treasure-x { width: 80px; }
+  .pirate-icon.footprints { width: 130px; }
 }
 
 /* Adjust hero height on mobile */

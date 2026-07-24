@@ -101,9 +101,23 @@ body {
 
 .support-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 30px;
   margin-bottom: 80px;
+}
+
+.support-card.amigo,
+.support-card.actor,
+.support-card.dramaturgo {
+  grid-column: span 2;
+}
+
+.support-card.director {
+  grid-column: 2 / span 2;
+}
+
+.support-card.productor {
+  grid-column: 4 / span 2;
 }
 
 .support-card {
@@ -296,6 +310,10 @@ body {
   max-height: 100%;
   object-fit: contain;
   transition: all 0.3s;
+}
+
+.sponsor-logo-card img[src*="4.avif"] {
+  transform: scale(1.4);
 }
 
 .sponsor-logo-card:hover {
