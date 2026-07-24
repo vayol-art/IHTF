@@ -1,3 +1,24 @@
+/* ==========================================================================
+   Fuentes Especiales: Día Internacional del Niño
+   ========================================================================== */
+@font-face {
+  font-family: 'Korachi';
+  src: url('assets/Korachi.otf') format('opentype'),
+       url('assets/Tipografia%20día%20del%20Niño/Korachi.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Scribble Kidsy';
+  src: url('assets/ScribbleKidsy.otf') format('opentype'),
+       url('assets/Tipografia%20día%20del%20Niño/ScribbleKidsy.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --blue: #1a789e;
   --orange: #e2831e;
@@ -7,8 +28,8 @@
   --cream: #f7f3ec;
   --light: #f5f5f5;
   --text: #17333d;
-  --font-title: 'Cabinet Grotesk', 'Anton SC', 'Arial Black', system-ui, sans-serif;
-  --font-body: 'General Sans', 'Inter', system-ui, sans-serif;
+  --font-title: 'Korachi', 'Cabinet Grotesk', system-ui, sans-serif;
+  --font-body: 'Scribble Kidsy', 'General Sans', system-ui, sans-serif;
 
   /* Theme colors matching Robinson Crusoe */
   --turquoise-dark: #107579;
@@ -30,9 +51,87 @@ body {
   overflow-x: hidden;
 }
 
+/* Conservar tipografía legible en menú de navegación y footer */
+.site-header, 
+.site-header a, 
+.site-header .main-nav,
+.footer-wrapper,
+.footer-wrapper p,
+.footer-wrapper h2,
+.footer-wrapper input,
+.footer-wrapper button {
+  font-family: 'General Sans', 'Inter', system-ui, sans-serif !important;
+}
+
+/* ==========================================================================
+   Animaciones Infantiles y Efectos Lúdicos (Entrada & Hover)
+   ========================================================================== */
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(18px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.02) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wiggle-hover {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Animación Estilo Explosión / Inflado de Globo (Balloon Pop) */
+@keyframes balloonPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.2) translateY(50px) rotate(-10deg);
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.15) translateY(-12px) rotate(4deg); /* Inflado de globo previo a soltarse */
+  }
+  75% {
+    transform: scale(0.94) translateY(4px) rotate(-2deg); /* Rebote elástico */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotate(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes balloonPopHover {
+  0% { transform: scale(1) rotate(0deg); }
+  35% { transform: scale(1.08) translateY(-6px) rotate(-3deg); }
+  65% { transform: scale(0.97) translateY(-12px) rotate(3deg); }
+  85% { transform: scale(1.04) translateY(-10px) rotate(-1deg); }
+  100% { transform: scale(1.03) translateY(-10px) rotate(1.5deg); }
+}
+
 /* Subpage Hero */
 .hero {
-  min-height: 400px;
+  min-height: 380px;
   background: var(--teal, #139da3);
   color: #fff;
   display: flex;
@@ -50,25 +149,35 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('assets/textura%20fondo.png') center/cover;
-  opacity: 0.1;
+  opacity: 0.12;
   pointer-events: none;
 }
 
 .hero h1 {
   font-family: var(--font-title);
-  font-size: clamp(28px, 5vw, 40px);
-  line-height: 0.95;
+  font-size: clamp(34px, 5.5vw, 50px);
+  line-height: 1.05;
   text-transform: uppercase;
   margin: 0;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.04em;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   color: #fff;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.12);
+  animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transition: transform 0.35s ease, text-shadow 0.35s ease;
+  cursor: default;
+}
+
+.hero h1:hover {
+  transform: scale(1.05) rotate(-1deg);
+  text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
 }
 
 /* Layout Sections */
 .child-section {
   padding: 90px 24px;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 /* Section 1: Key Biscayne (Pink Theme) */
@@ -86,7 +195,7 @@ body {
   background-image: url('assets/Texturas/textura%20rosa.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.05; /* 5% opacity */
+  opacity: 0.05;
   z-index: 1;
   pointer-events: none;
 }
@@ -100,6 +209,15 @@ body {
 }
 
 .child-section.key-biscayne .mockup-title {
+  color: var(--pink-dark);
+}
+
+.child-section.key-biscayne .schedule-info h2 {
+  color: var(--pink-dark);
+  text-align: left;
+}
+
+.child-section.key-biscayne .mockup-date-card:hover .card-day {
   color: var(--pink-dark);
 }
 
@@ -118,7 +236,7 @@ body {
   background-image: url('assets/Texturas/textura%20amarilla.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.05; /* 5% opacity */
+  opacity: 0.05;
   z-index: 1;
   pointer-events: none;
 }
@@ -128,6 +246,15 @@ body {
 }
 
 .child-section.koubek .card-time {
+  color: var(--orange);
+}
+
+.child-section.koubek .schedule-info h2 {
+  color: var(--orange);
+  text-align: left;
+}
+
+.child-section.koubek .mockup-date-card:hover .card-day {
   color: var(--orange);
 }
 
@@ -158,27 +285,46 @@ body {
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 60px;
-  align-items: start;
+  align-items: stretch;
   position: relative;
   z-index: 2;
 }
 
-/* Date Card layout */
+/* Date Card Layout - Playful Balloon Pop Style (Scroll-Triggered) */
 .mockup-date-card {
   background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 3px solid rgba(255, 255, 255, 0.9);
   text-align: center;
   width: 100%;
   max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: scale(0.3) translateY(40px);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 0.4s ease;
+  position: relative;
+}
+
+.mockup-date-card.in-view {
+  opacity: 1;
+  animation: balloonPop 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.mockup-date-card.in-view:hover {
+  opacity: 1;
+  transform: translateY(-10px) rotate(1.5deg) scale(1.03);
+  box-shadow: 0 20px 45px rgba(19, 157, 163, 0.22), 0 0 0 6px rgba(255, 255, 255, 0.7);
 }
 
 .mockup-date-card .card-header {
   color: #ffffff;
   font-family: var(--font-title);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   padding: 14px;
   text-transform: uppercase;
@@ -187,19 +333,29 @@ body {
 
 .mockup-date-card .card-body {
   padding: 24px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mockup-date-card .card-day {
   font-family: var(--font-title);
-  font-size: 64px;
+  font-size: 68px;
   font-weight: 800;
   line-height: 1;
   color: var(--text);
   margin-bottom: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mockup-date-card:hover .card-day {
+  transform: scale(1.22) rotate(-2deg);
 }
 
 .mockup-date-card .card-weekday {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   color: #7a8d94;
   text-transform: uppercase;
@@ -207,25 +363,31 @@ body {
 }
 
 .mockup-date-card .card-time {
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px dashed rgba(0, 0, 0, 0.12);
   padding-top: 15px;
   font-family: var(--font-title);
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
 }
 
-/* Schedule Info Styles */
+/* Schedule Info & Playful Titles */
 .schedule-info h2 {
   font-family: var(--font-title);
   font-size: 34px;
-  color: inherit;
   margin: 0 0 10px;
   line-height: 1.1;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.schedule-info h2:hover {
+  animation: wiggle-hover 0.5s ease-in-out;
 }
 
 .schedule-info .venue-address {
-  font-size: 16px;
+  font-size: 18px;
   opacity: 0.85;
   margin: 0 0 40px;
 }
@@ -236,11 +398,16 @@ body {
   font-size: 42px;
   text-transform: uppercase;
   margin: 0 0 12px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.04em;
+  transition: transform 0.3s ease;
+}
+
+.mockup-title:hover {
+  animation: wiggle-hover 0.5s ease-in-out;
 }
 
 .mockup-credits {
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.5;
   margin: 0 0 15px;
 }
@@ -250,14 +417,14 @@ body {
 }
 
 .mockup-company {
-  font-size: 15px;
+  font-size: 17px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.05em;
   opacity: 0.9;
 }
 
-/* Activities List */
+/* Activities List - Playful Interactive Items */
 .mockup-activities {
   display: flex;
   flex-direction: column;
@@ -267,20 +434,72 @@ body {
 
 .mockup-activity-item {
   display: flex;
-  align-items: baseline;
-  gap: 15px;
-  font-size: 18px;
+  align-items: center;
+  gap: 12px;
+  font-size: 19px;
   line-height: 1.4;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  border: 2px dashed rgba(226, 131, 30, 0.3);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  white-space: nowrap;
+}
+
+.mockup-activity-item:hover {
+  transform: translateX(10px) scale(1.02);
+  background: #ffffff;
+  border-color: var(--orange);
+  border-style: solid;
+  box-shadow: 0 10px 25px rgba(226, 131, 30, 0.18);
+}
+
+.activity-icon-svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  margin-right: 4px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.child-section.koubek .activity-icon-svg {
+  color: var(--orange);
+}
+
+.child-section.key-biscayne .activity-icon-svg {
+  color: var(--pink-dark);
+}
+
+.mockup-activity-item:hover .activity-icon-svg {
+  transform: scale(1.25) rotate(8deg);
 }
 
 .mockup-activity-time {
   font-family: var(--font-title);
   font-weight: 700;
   white-space: nowrap;
+  color: var(--orange);
+  background: #fff0e0;
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
 .mockup-activity-desc {
   opacity: 0.95;
+  white-space: nowrap;
+}
+
+/* Reservar Button - Bouncy Scale on Hover */
+.mockup-date-card a[href="obra-robinson-crusoe.html"] {
+  transition: transform 0.25s ease, background-color 0.25s ease !important;
+}
+
+.mockup-date-card a[href="obra-robinson-crusoe.html"]:hover {
+  transform: scale(1.1) rotate(-2deg) !important;
+  background-color: var(--orange-dark) !important;
 }
 
 /* Play Bio Section */
@@ -296,20 +515,25 @@ body {
   text-transform: uppercase;
   margin: 0 0 10px;
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.play-bio-wrap h2.play-title:hover {
+  animation: wiggle-hover 0.5s ease-in-out;
 }
 
 .play-bio-wrap .author-info {
-  font-size: 18px;
+  font-size: 21px;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 40px;
   text-align: center;
 }
 
 .play-bio-text {
-  font-size: 18px;
-  line-height: 1.75;
+  font-size: 22px;
+  line-height: 1.7;
   color: rgba(255, 255, 255, 0.95);
   margin-bottom: 40px;
   text-align: justify;
@@ -319,21 +543,31 @@ body {
   margin-bottom: 24px;
 }
 
+/* Free Tag - Floating Playful Badge */
 .free-tag {
   font-size: 20px;
   font-weight: 700;
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   display: inline-block;
-  padding: 10px 24px;
+  padding: 12px 32px;
   border-radius: 99px;
   margin-bottom: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 2px dashed rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  animation: popIn 0.8s ease-out forwards;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* Image Gallery Grid */
+.free-tag:hover {
+  transform: scale(1.1) rotate(2deg);
+  border-style: solid;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Image Gallery Grid - Playful Polaroid Cards */
 .photos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -342,11 +576,26 @@ body {
 }
 
 .photo-card {
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  border: 3px solid #ffffff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
   aspect-ratio: 4 / 3;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.photo-card:nth-child(even) {
+  transform: rotate(-1.5deg);
+}
+
+.photo-card:nth-child(odd) {
+  transform: rotate(1.5deg);
+}
+
+.photo-card:hover {
+  transform: scale(1.08) rotate(0deg) translateY(-8px) !important;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+  z-index: 5;
 }
 
 .photo-card img {
@@ -354,10 +603,6 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-}
-
-.photo-card:hover img {
-  transform: scale(1.05);
 }
 
 @media (max-width: 900px) {
@@ -377,16 +622,23 @@ body {
   .mockup-activity-item {
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     text-align: center;
+    font-size: 18px;
+    white-space: normal;
+  }
+  .mockup-activity-desc {
+    white-space: normal;
   }
   .play-bio-wrap {
     text-align: center;
   }
+  .play-bio-text {
+    font-size: 18px;
+  }
 }
 
-
-/* Adjust hero height on mobile to match teatros.html */
+/* Adjust hero height on mobile */
 @media (max-width: 900px) {
   .hero {
     min-height: 260px !important;

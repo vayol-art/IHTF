@@ -115,6 +115,23 @@
             langBtn.setAttribute("aria-expanded", "false");
           });
         }
+
+        // IntersectionObserver para activar la animación de las tarjetas al hacer scroll
+        const cards = document.querySelectorAll(".mockup-date-card");
+        if ("IntersectionObserver" in window) {
+          const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                cardObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.2 });
+
+          cards.forEach((card) => cardObserver.observe(card));
+        } else {
+          cards.forEach((card) => card.classList.add("in-view"));
+        }
       });
     </script>
   </header>
@@ -164,19 +181,39 @@
           
           <div class="mockup-activities">
             <div class="mockup-activity-item">
-              <span class="mockup-activity-time">2:00 – 3:00 pm |</span>
+              <span class="activity-icon-svg">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.21-.64-1.67-.42-.45-.66-1.04-.66-1.71 0-1.38 1.12-2.5 2.5-2.5H18c2.21 0 4-1.79 4-4 0-4.97-4.48-9-10-9zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 8 6.5 8s1.5.67 1.5 1.5S7.33 11 6.5 11zm3-4c-.83 0-1.5-.67-1.5-1.5S8.67 4 9.5 4s1.5.67 1.5 1.5S10.33 7 9.5 7zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 4 14.5 4s1.5.67 1.5 1.5S15.33 7 14.5 7zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 8 17.5 8s1.5.67 1.5 1.5S18.33 11 17.5 11z"/>
+                </svg>
+              </span>
+              <span class="mockup-activity-time">2:00 – 3:00 pm</span>
               <span class="mockup-activity-desc">Pintura facial, personaje en zancos, y distribución de meriendas</span>
             </div>
             <div class="mockup-activity-item">
-              <span class="mockup-activity-time">2:30 – 5:00 pm |</span>
+              <span class="activity-icon-svg">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                </svg>
+              </span>
+              <span class="mockup-activity-time">2:30 – 5:00 pm</span>
               <span class="mockup-activity-desc">Juegos de Feria</span>
             </div>
             <div class="mockup-activity-item">
-              <span class="mockup-activity-time">3:00 – 5:00 pm |</span>
+              <span class="activity-icon-svg">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 20.3c-.2.2-.2.51 0 .71.1.1.23.15.35.15s.26-.05.35-.15l2.79-2.79C9.39 18.73 10.65 19 12 19c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-3 6c.83 0 1.5.67 1.5 1.5S9.83 12 9 12s-1.5-.67-1.5-1.5S8.17 9 9 9zm6 0c.83 0 1.5.67 1.5 1.5S15.83 12 15 12s-1.5-.67-1.5-1.5S14.17 9 15 9zm-6.02 5.5c.34-.41 1.48-1.5 3.02-1.5s2.68 1.09 3.02 1.5c.18.22.14.54-.08.72-.22.18-.54.14-.72-.08-.18-.21-.99-.89-2.22-.89s-2.04.68-2.22.89c-.1.12-.24.18-.37.18-.12 0-.25-.04-.35-.13-.22-.18-.26-.5-.08-.72z"/>
+                </svg>
+              </span>
+              <span class="mockup-activity-time">3:00 – 5:00 pm</span>
               <span class="mockup-activity-desc">Talleres: Pintura, Títeres, Danza y Percusión</span>
             </div>
             <div class="mockup-activity-item">
-              <span class="mockup-activity-time">5:00 pm |</span>
+              <span class="activity-icon-svg">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+              </span>
+              <span class="mockup-activity-time">5:00 pm</span>
               <span class="mockup-activity-desc">Espectáculo: <strong>Las asombrosas aventuras de Robinson Crusoe</strong></span>
             </div>
           </div>

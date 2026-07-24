@@ -200,7 +200,7 @@ body {
   border-radius: 16px;
   border: 1px solid rgba(26, 120, 158, 0.08);
   box-shadow: 0 8px 30px rgba(26, 120, 158, 0.03);
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 .forum-table {
