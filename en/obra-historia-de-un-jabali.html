@@ -1,6 +1,13 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
+  <script>
+  if (localStorage.getItem("preferred_lang") !== "en") {
+    let filename = window.location.pathname.split("/").pop() || "index.html";
+    if (!filename.endsWith(".html")) filename = "index.html";
+    window.location.href = "../" + filename;
+  }
+</script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Historia de un Jabalí (Or something about Richard III) | IHTF 40</title>
@@ -47,14 +54,14 @@
             <line x1="2" y1="12" x2="22" y2="12"></line>
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
           </svg>
-          <span class="lang-text">Language</span>
+          <span class="lang-text">English</span>
           <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </button>
         <div class="lang-dropdown">
-          <button class="lang-opt">English</button>
-          <button class="lang-opt">Spanish</button>
+          <button class="lang-opt active">English</button>
+          <button class="lang-opt">Español</button>
         </div>
       </div>
       <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
@@ -103,12 +110,15 @@
         // Language options click behavior
         const langOpts = document.querySelectorAll(".lang-opt");
         if (langOpts.length >= 2) {
-          langOpts[0].addEventListener("click", function() { // English
+          langOpts[0].addEventListener("click", function () { // English (current)
+            localStorage.setItem("preferred_lang", "en");
             langSelector.classList.remove("open");
             langBtn.setAttribute("aria-expanded", "false");
           });
-          langOpts[1].addEventListener("click", function() { // Spanish
+          langOpts[1].addEventListener("click", function () { // Spanish
+            localStorage.setItem("preferred_lang", "es");
             let filename = window.location.pathname.split("/").pop() || "index.html";
+            if (!filename.endsWith(".html")) filename = "index.html";
             window.location.href = "../" + filename;
           });
         }

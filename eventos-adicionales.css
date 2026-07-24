@@ -117,7 +117,7 @@ body {
 .component-header h2 {
   font-family: var(--font-title);
   font-size: clamp(32px, 5vw, 48px);
-  color: var(--text);
+  color: var(--blue);
   margin: 0 0 40px;
   text-transform: uppercase;
   letter-spacing: -0.01em;
@@ -175,14 +175,15 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #7a8d94;
+  color: var(--blue);
+  opacity: 0.8;
   margin-bottom: 6px;
 }
 
 .director-info h3 {
   font-family: var(--font-title);
   font-size: 22px;
-  color: var(--text);
+  color: var(--blue);
   margin: 0 0 8px;
   font-weight: 700;
 }
@@ -211,7 +212,7 @@ body {
 
 .forum-table th {
   background: rgba(26, 120, 158, 0.05);
-  color: var(--text);
+  color: var(--blue);
   font-family: var(--font-title);
   font-size: 16px;
   font-weight: 600;
@@ -225,7 +226,7 @@ body {
   padding: 16px 24px;
   border-bottom: 1px solid rgba(26, 120, 158, 0.05);
   font-size: 15px;
-  color: #4a5d64;
+  color: var(--blue);
   vertical-align: middle;
 }
 
@@ -238,15 +239,46 @@ body {
 }
 
 .forum-table td strong {
-  color: var(--text);
+  color: var(--blue);
 }
 
 .forum-table td.play-name {
   font-family: var(--font-title);
   font-size: 16px;
   font-weight: 700;
-  color: var(--text);
+  color: var(--blue);
   letter-spacing: 0.02em;
+}
+
+/* Forum Table Row Colors matching Theater */
+.forum-table tbody tr.row-wcac td,
+.forum-table tbody tr.row-wcac td strong,
+.forum-table tbody tr.row-wcac td.play-name,
+.forum-table tbody tr:has(.venue-tag.wcac) td,
+.forum-table tbody tr:has(.venue-tag.wcac) td strong,
+.forum-table tbody tr:has(.venue-tag.wcac) td.play-name {
+  color: var(--purple, #761354);
+}
+
+.forum-table tbody tr.row-carnival td,
+.forum-table tbody tr.row-carnival td strong,
+.forum-table tbody tr.row-carnival td.play-name,
+.forum-table tbody tr.row-arsht td,
+.forum-table tbody tr.row-arsht td strong,
+.forum-table tbody tr.row-arsht td.play-name,
+.forum-table tbody tr:has(.venue-tag.carnival) td,
+.forum-table tbody tr:has(.venue-tag.carnival) td strong,
+.forum-table tbody tr:has(.venue-tag.carnival) td.play-name {
+  color: var(--red, #a21e00);
+}
+
+.forum-table tbody tr.row-koubek td,
+.forum-table tbody tr.row-koubek td strong,
+.forum-table tbody tr.row-koubek td.play-name,
+.forum-table tbody tr:has(.venue-tag.koubek) td,
+.forum-table tbody tr:has(.venue-tag.koubek) td strong,
+.forum-table tbody tr:has(.venue-tag.koubek) td.play-name {
+  color: var(--orange, #e2831e);
 }
 
 /* Venue Tags */
@@ -275,6 +307,11 @@ body {
 }
 
 /* Award Section Styles */
+.award-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .award-grid {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -300,7 +337,7 @@ body {
 .award-info h2 {
   font-family: var(--font-title);
   font-size: clamp(28px, 4vw, 38px);
-  color: var(--text);
+  color: var(--blue);
   line-height: 1.15;
   margin: 0 0 15px;
   text-transform: uppercase;
@@ -328,20 +365,19 @@ body {
 }
 
 .award-bio {
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .award-bio p {
   font-size: 17px;
   line-height: 1.7;
-  color: #4a5d64;
+  color: var(--blue);
   margin-bottom: 24px;
   text-align: justify;
 }
 
 .award-bio p strong {
-  color: var(--text);
+  color: var(--blue);
 }
 
 @media (max-width: 1024px) {
@@ -358,7 +394,17 @@ body {
 
 @media (max-width: 768px) {
   .content-container {
-    padding: 40px 24px;
+    padding: 30px 18px;
+  }
+  .component-header h2 {
+    font-size: clamp(24px, 6vw, 34px);
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+  .component-header h2 .subtitle {
+    font-size: 0.75em;
+    margin-top: 6px;
   }
   .award-grid {
     grid-template-columns: 1fr;
@@ -369,21 +415,94 @@ body {
     max-width: 200px;
     margin: 0 auto;
   }
+  .award-info h2 {
+    font-size: clamp(20px, 5.5vw, 28px);
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 12px;
+  }
   .awardee-meta {
     justify-content: center;
   }
-}
 
-@media (max-width: 580px) {
-  .forum-table th, .forum-table td {
-    padding: 12px 14px;
+  /* Responsive Forum Table as Cards */
+  .forum-table-wrapper {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .forum-table, 
+  .forum-table tbody, 
+  .forum-table tr, 
+  .forum-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .forum-table thead {
+    display: none;
+  }
+
+  .forum-table tbody tr {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid rgba(26, 120, 158, 0.12);
+    box-shadow: 0 4px 18px rgba(26, 120, 158, 0.05);
+    margin-bottom: 14px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "play venue"
+      "date venue"
+      "mod mod";
+    gap: 6px 12px;
+    align-items: center;
+  }
+
+  .forum-table tbody tr td {
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .forum-table tbody tr td:nth-child(1) {
+    grid-area: date;
     font-size: 14px;
   }
-  .forum-table td.play-name {
+
+  .forum-table tbody tr td.play-name {
+    grid-area: play;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .forum-table tbody tr td:nth-child(3) {
+    grid-area: venue;
+    text-align: right;
+  }
+
+  .forum-table tbody tr td:nth-child(4) {
+    grid-area: mod;
     font-size: 14px;
+    padding-top: 8px !important;
+    margin-top: 4px;
+    border-top: 1px dashed rgba(26, 120, 158, 0.15) !important;
+    display: block;
+  }
+
+  .forum-table tbody tr td:nth-child(4)::before {
+    content: "Moderador: ";
+    font-weight: 600;
+    opacity: 0.85;
+  }
+
+  html[lang="en"] .forum-table tbody tr td:nth-child(4)::before {
+    content: "Moderator: ";
   }
 }
-
 
 /* Adjust hero height on mobile to match teatros.html */
 @media (max-width: 900px) {
