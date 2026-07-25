@@ -22,8 +22,8 @@ def reorder_nav(filepath):
     # 3. Contactanos
     cont_match = re.search(r'(\s*<a href="[^"]*contactanos\.html"[^>]*>.*?</a>)', nav_inner)
     
-    # 4. Inscripciones (case insensitive, allowing 41st FESTIVAL REGISTRATIONS)
-    insc_match = re.search(r'(\s*<a[^>]*>[^<]*41st FESTIVAL REGISTRATIONS[^<]*</a>)', nav_inner, re.IGNORECASE)
+    # 4. Inscripciones (case insensitive, allowing 41st IHTF INSCRIPTIONS)
+    insc_match = re.search(r'(\s*<a[^>]*>[^<]*41st IHTF INSCRIPTIONS[^<]*</a>)', nav_inner, re.IGNORECASE)
     
     # 5. Language selector
     lang_match = re.search(r'(\s*<div class="lang(?:uage)?-selector"[\s\S]*?</div>\s*</div>)', nav_inner)
