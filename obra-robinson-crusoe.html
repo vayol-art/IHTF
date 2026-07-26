@@ -721,10 +721,11 @@
       let currentParagraph = "";
       sentences.forEach((sentence, index) => {
         if (sentence.trim()) {
-          currentParagraph += sentence.trim() + ". ";
+          const cleanSentence = sentence.trim().replace(/\.+$/, "");
+          currentParagraph += cleanSentence + ". ";
           if ((index + 1) % 2 === 0 || index === sentences.length - 1) {
             const p = document.createElement("p");
-            p.textContent = currentParagraph;
+            p.textContent = currentParagraph.trim();
             descContainer.appendChild(p);
             currentParagraph = "";
           }
