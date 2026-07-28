@@ -188,6 +188,7 @@ const playsData = {
     "awards_en": "Nominated for María Guerrero Award for Best Solo Performance • Teatro XXI Award for Best Dramatic Play 2019 (GETEA)",
     "image": "assets/40thIHTF - FOTOS de OBRAS/obra-pundonor/PUNDONOR FOTO 1.webp",
     "colorClass": "red",
+    "ticketUrl": "https://www.arshtcenter.org/tickets/2025-2026/international-hispanic-theatre-festival-of-miami/pundonor/",
     "extraInfo": "",
     "extraInfo_en": "",
     "logos": [
