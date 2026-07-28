@@ -491,10 +491,27 @@ section h2 {
 }
 
 .program-section {
-  padding: 80px 0
+  position: relative;
+  background: rgba(0, 166, 76, .05);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.program-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/textura%20fondo.png');
+  background-size: cover;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .program-section .section-inner {
+  position: relative;
+  z-index: 1;
   width: min(1376px, calc(100% - 64px));
   max-width: 100%;
 }
