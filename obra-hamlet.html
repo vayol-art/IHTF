@@ -151,6 +151,7 @@
             <span id="play-country">País</span>
           </div>
           <div class="npc-body">
+            <div id="play-awards" class="npc-awards"></div>
             <h1 id="play-title">Título</h1>
             <div id="play-description" class="npc-desc"></div>
             
@@ -712,13 +713,31 @@
         }
       });
 
+      // Premios
+      const awardsContainer = document.getElementById("play-awards");
+      if (awardsContainer) {
+        awardsContainer.innerHTML = "";
+        const awardsText = play.awards;
+        if (awardsText) {
+          const items = awardsText.split(" • ");
+          items.forEach(item => {
+            const badge = document.createElement("span");
+            badge.className = "npc-award-badge";
+            badge.textContent = item;
+            awardsContainer.appendChild(badge);
+          });
+        }
+      }
+
       // Información adicional
       const extraContainer = document.getElementById("play-extra-info");
-      extraContainer.innerHTML = "";
-      if (play.extraInfo) {
-        const extraP = document.createElement("p");
-        extraP.textContent = play.extraInfo;
-        extraContainer.appendChild(extraP);
+      if (extraContainer) {
+        extraContainer.innerHTML = "";
+        if (play.extraInfo) {
+          const extraP = document.createElement("p");
+          extraP.textContent = play.extraInfo;
+          extraContainer.appendChild(extraP);
+        }
       }
 
       // Botón Comprar Entradas

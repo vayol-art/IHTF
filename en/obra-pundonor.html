@@ -749,18 +749,32 @@
         }
       });
 
-      // Premios / Información adicional
+      // Premios / Awards
       const awardsContainer = document.getElementById("play-awards");
-      awardsContainer.innerHTML = "";
-      const extraText = play.extraInfo_en || play.extraInfo;
-      if (extraText) {
-        const items = extraText.split(" • ");
-        items.forEach(item => {
-          const badge = document.createElement("span");
-          badge.className = "npc-award-badge";
-          badge.textContent = item;
-          awardsContainer.appendChild(badge);
-        });
+      if (awardsContainer) {
+        awardsContainer.innerHTML = "";
+        const awardsText = play.awards_en || play.awards;
+        if (awardsText) {
+          const items = awardsText.split(" • ");
+          items.forEach(item => {
+            const badge = document.createElement("span");
+            badge.className = "npc-award-badge";
+            badge.textContent = item;
+            awardsContainer.appendChild(badge);
+          });
+        }
+      }
+
+      // Información adicional
+      const extraContainer = document.getElementById("play-extra-info");
+      if (extraContainer) {
+        extraContainer.innerHTML = "";
+        const extraText = play.extraInfo_en || play.extraInfo;
+        if (extraText) {
+          const extraP = document.createElement("p");
+          extraP.textContent = extraText;
+          extraContainer.appendChild(extraP);
+        }
       }
 
       // Botón Comprar Entradas
