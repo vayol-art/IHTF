@@ -1,7 +1,7 @@
 import os
 import re
 
-DOMAIN = "https://vayol-art.github.io/IHTF"
+DOMAIN = "https://ihtfmiami.org"
 DEFAULT_IMG = f"{DOMAIN}/assets/afiche_1_horizontal.jpg"
 
 PAGES_CONFIG = {
@@ -390,6 +390,6 @@ for rel_path, cfg in PAGES_CONFIG.items():
 
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(content)
-    print(f"Cleaned & Updated metadata for: {rel_path}")
+    print(f"Updated metadata for domain ihtfmiami.org: {rel_path}")
 
-print("Clean update completed for all 40 files!")
+print("Clean update completed for all 40 files for ihtfmiami.org!")
