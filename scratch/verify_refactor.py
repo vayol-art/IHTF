@@ -75,10 +75,10 @@ for rel_path in EXPECTED_FILES:
     if 'rel="canonical"' not in content:
         errors.append(f"{rel_path}: Missing canonical link")
 
-    # Check for dead .html href links
-    dead_html_links = re.findall(r'href="([^"]+\.html[^"]*)"', content)
+    # Check for dead .html links in href or onclick
+    dead_html_links = re.findall(r'(?:href|location\.href)\s*=\s*["\']([^"\']+\.html[^"\']*)["\']', content)
     for link in dead_html_links:
-        if not link.startswith("http") and not link.startswith("//"):
+        if not link.startswith("http") and not link.startswith("//") and link != "index.html":
             errors.append(f"{rel_path}: Found old HTML link format: {link}")
 
     # Check iframe script
@@ -90,4 +90,4 @@ if errors:
     for err in errors:
         print(" -", err)
 else:
-    print("SUCCESS: All 41 files (es/ and en/ structure + root redirect) verified successfully!")
+    print("SUCCESS: All 41 files (es/ and en/ structure + root redirect) verified successfully! No dead .html links in href or onclick!")

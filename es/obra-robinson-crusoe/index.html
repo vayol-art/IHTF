@@ -215,7 +215,7 @@
       <div class="section-inner">
         <h2>PROGRAMA</h2>
         <div class="program-grid">
-          <div class="play-card-wrapper purple" onclick="window.location.href='obra-carrusel.html'" role="button"
+          <div class="play-card-wrapper purple" onclick="window.location.href='../obra-carrusel/'" role="button"
             tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
@@ -253,7 +253,7 @@
             </div>
           </div>
 
-          <div class="play-card-wrapper purple" onclick="window.location.href='obra-zombi-manifiesto.html'"
+          <div class="play-card-wrapper purple" onclick="window.location.href='../obra-zombi-manifiesto/'"
             role="button" tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
@@ -304,7 +304,7 @@
             </div>
           </div>
 
-          <div class="play-card-wrapper red" onclick="window.location.href='obra-historia-de-un-jabali.html'"
+          <div class="play-card-wrapper red" onclick="window.location.href='../obra-historia-de-un-jabali/'"
             role="button" tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
@@ -349,7 +349,7 @@
             </div>
           </div>
 
-          <div class="play-card-wrapper orange" onclick="window.location.href='obra-a-fuego.html'" role="button"
+          <div class="play-card-wrapper orange" onclick="window.location.href='../obra-a-fuego/'" role="button"
             tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
@@ -391,7 +391,7 @@
             </div>
           </div>
 
-          <div class="play-card-wrapper purple" onclick="window.location.href='obra-odd-man-out.html'" role="button"
+          <div class="play-card-wrapper purple" onclick="window.location.href='../obra-odd-man-out/'" role="button"
             tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
@@ -428,7 +428,7 @@
             </div>
           </div>
 
-          <div class="play-card-wrapper orange" onclick="window.location.href='obra-sueno.html'" role="button"
+          <div class="play-card-wrapper orange" onclick="window.location.href='../obra-sueno/'" role="button"
             tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
@@ -470,7 +470,7 @@
             </div>
           </div>
 
-          <div class="play-card-wrapper red" onclick="window.location.href='obra-pundonor.html'" role="button"
+          <div class="play-card-wrapper red" onclick="window.location.href='../obra-pundonor/'" role="button"
             tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
@@ -514,7 +514,7 @@
             </div>
           </div>
 
-          <div class="play-card-wrapper teal special" onclick="window.location.href='obra-robinson-crusoe.html'"
+          <div class="play-card-wrapper teal special" onclick="window.location.href='../obra-robinson-crusoe/'"
             role="button" tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
@@ -576,7 +576,7 @@
             </div>
           </div>
 
-          <div class="play-card-wrapper red" onclick="window.location.href='obra-hamlet.html'" role="button"
+          <div class="play-card-wrapper red" onclick="window.location.href='../obra-hamlet/'" role="button"
             tabindex="0">
             <article class="play-card">
               <div class="image-carousel">
@@ -721,7 +721,8 @@
       logosContainer.innerHTML = "";
       play.logos.forEach(logo => {
         let extraStyle = logo.includes("white") || logo.includes("blanco") || logo.includes("arsht") ? 'style="filter: invert(1);"' : '';
-        logosContainer.innerHTML += `<img src="${logo}" alt="Logo Teatro" ${extraStyle}>`;
+        let cleanLogo = logo.startsWith("../../") ? logo : (logo.startsWith("../") ? "../" + logo : "../../" + logo);
+        logosContainer.innerHTML += `<img src="${cleanLogo}" alt="Logo Teatro" ${extraStyle}>`;
       });
 
       // Funciones
