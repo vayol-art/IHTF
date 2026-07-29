@@ -372,22 +372,24 @@ for rel_path, cfg in PAGES_CONFIG.items():
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Clean existing meta blocks
+    # Clean previous tags and comments completely
+    content = re.sub(r'\s*<title>.*?</title>', '', content, flags=re.DOTALL)
+    content = re.sub(r'\s*<meta name="description"[^>]*>', '', content)
     content = re.sub(r'\s*<link rel="canonical"[^>]*>', '', content)
     content = re.sub(r'\s*<meta property="og:[^>]*>', '', content)
     content = re.sub(r'\s*<meta name="twitter:[^>]*>', '', content)
+    content = re.sub(r'\s*<!-- Open Graph / Facebook / WhatsApp -->', '', content)
+    content = re.sub(r'\s*<!-- Twitter -->', '', content)
 
     new_meta = generate_head_meta(cfg)
-    pattern = r'<title>.*?</title>(?:\s*<meta name="description" content=".*?"\s*/?>)?'
     
-    if re.search(pattern, content, flags=re.DOTALL):
-        content = re.sub(pattern, new_meta, content, count=1, flags=re.DOTALL)
-    else:
-        viewport_pattern = r'(<meta name="viewport" content="[^"]*" />)'
+    # Insert cleanly after <meta name="viewport"...>
+    viewport_pattern = r'(<meta name="viewport" content="[^"]*" />)'
+    if re.search(viewport_pattern, content):
         content = re.sub(viewport_pattern, r'\1\n' + new_meta, content, count=1)
 
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(content)
-    print(f"Updated metadata for: {rel_path}")
+    print(f"Cleaned & Updated metadata for: {rel_path}")
 
-print("All 40 files updated successfully with GitHub Pages URLs!")
+print("Clean update completed for all 40 files!")
