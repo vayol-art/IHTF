@@ -32,7 +32,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../../fonts.css" />
-  <link rel="stylesheet" href="../obra.css" />
+  <link rel="stylesheet" href="../../obra.css" />
 </head>
 <body>
   <header class="site-header">
@@ -595,7 +595,7 @@
       document.getElementById("play-country").textContent = play.country_en || play.country;
       document.getElementById("play-title").innerHTML = play.titleHTML || play.title;
       
-      const heroBg = playId === "a-fuego" ? "assets/hero-a-fuego.jpg" : `assets/${posterMap[playId]}`;
+      const heroBg = playId === "a-fuego" ? "../../assets/hero-a-fuego.jpg" : `../../assets/${posterMap[playId]}`;
       document.getElementById("play-hero").style.backgroundImage = `url('${heroBg}')`;
       
       // Setup the play bar
@@ -611,7 +611,7 @@
         if (!theaterLogoSrc.startsWith('../')) {
           theaterLogoSrc = '../' + theaterLogoSrc;
         }
-        playBarLogo.innerHTML = `<img src="${theaterLogoSrc}" alt="Logo Teatro">`;
+        playBarLogo.innerHTML = `<img src="${theaterLogoSrc.startsWith('..') ? theaterLogoSrc : '../../' + theaterLogoSrc}" alt="Logo Teatro">`;
       }
 
       
