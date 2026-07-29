@@ -2397,3 +2397,14 @@ main#inicio::before {
 .carousel-track img {
   background-color: #141414 !important;
 }
+
+
+/* Explicit white lines for program cards (outer border, date dividers, and top border) */
+.play-card-wrapper {
+  border: 1px solid #ffffff !important;
+}
+
+.dates {
+  background: #ffffff !important;
+  border-top: 1px solid #ffffff !important;
+}
