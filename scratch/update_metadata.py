@@ -1,7 +1,7 @@
 import os
 import re
 
-DOMAIN = "https://ihtfmiami.org"
+DOMAIN = "https://vayol-art.github.io/IHTF"
 DEFAULT_IMG = f"{DOMAIN}/assets/afiche_1_horizontal.jpg"
 
 PAGES_CONFIG = {
@@ -390,4 +390,4 @@ for rel_path, cfg in PAGES_CONFIG.items():
         f.write(content)
     print(f"Updated metadata for: {rel_path}")
 
-print("All 40 files updated successfully with JPG images!")
+print("All 40 files updated successfully with GitHub Pages URLs!")
