@@ -2387,3 +2387,13 @@ main#inicio::before {
   line-height: 1.2;
 }
 
+
+
+/* Background fix to prevent white space during carousel transitions */
+.play-card-wrapper,
+.play-card,
+.image-carousel,
+.carousel-track,
+.carousel-track img {
+  background-color: #141414 !important;
+}
