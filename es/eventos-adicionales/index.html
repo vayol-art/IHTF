@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <title>Eventos Adicionales | Festival Internacional de Teatro Hispano (IHTF 40)</title>
+  <meta name="description" content="Conozca los eventos adicionales, homenajes póstumos y reconocimientos especiales del 40° Festival Internacional de Teatro Hispano de Miami." />
+  <link rel="canonical" href="https://vayol-art.github.io/IHTF/es/eventos-adicionales/" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vayol-art.github.io/IHTF/es/eventos-adicionales/" />
+  <meta property="og:title" content="Eventos Adicionales | Festival Internacional de Teatro Hispano (IHTF 40)" />
+  <meta property="og:description" content="Conozca los eventos adicionales, homenajes póstumos y reconocimientos especiales del 40° Festival Internacional de Teatro Hispano de Miami." />
+  <meta property="og:image" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta property="og:image:secure_url" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:locale" content="es_US" />
+  <meta property="og:site_name" content="Festival Internacional de Teatro Hispano de Miami" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://vayol-art.github.io/IHTF/es/eventos-adicionales/" />
+  <meta name="twitter:title" content="Eventos Adicionales | Festival Internacional de Teatro Hispano (IHTF 40)" />
+  <meta name="twitter:description" content="Conozca los eventos adicionales, homenajes póstumos y reconocimientos especiales del 40° Festival Internacional de Teatro Hispano de Miami." />
+  <meta name="twitter:image" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../fonts.css" />
+  <link rel="stylesheet" href="../../style.css?v=1.0.6" />
+  <link rel="stylesheet" href="../eventos-adicionales.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="../#inicio" aria-label="IHTF Inicio">
+      <img class="logo-white" src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+    </a>
+    <div class="nav-container"><nav class="main-nav" aria-label="Menú principal">
+      <div class="nav-dropdown-wrapper">
+        <a href="../agenda/" class="nav-dropdown-trigger">PROGRAMA</a>
+        <div class="nav-submenu">
+          <a href="../agenda/" class="submenu-item">Programa de Mano</a>
+          <a href="../calendario/" class="submenu-item">Calendario</a>
+          <a href="../eventos-adicionales/" class="submenu-item">Eventos Adicionales</a>
+          <div class="dropdown-divider"></div>
+          <a href="../dia-internacional-del-nino/" class="submenu-item">Día Internacional del Niño</a>
+          <a href="../teatros/" class="submenu-item">Teatros</a>
+          <a href="../sponsors/" class="submenu-item">Apoya IHTF</a>
+        </div>
+      </div>
+      <a href="../contactanos/">CONTÁCTANOS</a>
+      <div class="nav-dropdown-wrapper">
+        <a href="../nosotros/" class="nav-dropdown-trigger">SOBRE NOSOTROS</a>
+        <div class="nav-submenu">
+          <a href="../nosotros/#compania" class="submenu-item">Historia del Festival</a>
+          <a href="../nosotros/#personal" class="submenu-item">Personal</a>
+        </div>
+      </div>
+      <a href="../inscripciones/">INSCRIPCIONES 41° FESTIVAL</a>
+      
+</nav>
+      
+    <div class="header-actions">
+      <div class="lang-selector">
+        <button class="lang-btn" aria-label="Cambiar idioma" aria-expanded="false">
+          <svg class="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-text">Español</span>
+          <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="lang-dropdown">
+          <button class="lang-opt active">Español</button>
+          <button class="lang-opt">English</button>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const mainNav = document.querySelector(".main-nav");
+        if (hamburger && mainNav) {
+          hamburger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = hamburger.classList.toggle("open");
+            mainNav.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function (event) {
+            if (!hamburger.contains(event.target) && !mainNav.contains(event.target)) {
+              hamburger.classList.remove("open");
+              mainNav.classList.remove("open");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        // Language Selector Dropdown logic
+        const langSelector = document.querySelector(".lang-selector");
+        const langBtn = document.querySelector(".lang-btn");
+        if (langSelector && langBtn) {
+          langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = langSelector.classList.toggle("open");
+            langBtn.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function (event) {
+            if (!langSelector.contains(event.target)) {
+              langSelector.classList.remove("open");
+              langBtn.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        // Language options click behavior
+        const langOpts = document.querySelectorAll(".lang-opt");
+        if (langOpts.length >= 2) {
+          langOpts[0].addEventListener("click", function () { // Spanish (current)
+            localStorage.setItem("preferred_lang", "es");
+            langSelector.classList.remove("open");
+            langBtn.setAttribute("aria-expanded", "false");
+          });
+          langOpts[1].addEventListener("click", function () {
+            localStorage.setItem("preferred_lang", "en");
+            window.location.href = "../../en/eventos-adicionales/";
+          });
+        }
+      });
+    </script>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Eventos Adicionales</h1>
+    </section>
+
+    <section class="content-section">
+      <div class="content-container">
+        
+        <!-- Componente Educativo Section -->
+        <div class="educational-component">
+          <div class="component-header">
+            <h2>Componente Educativo <span class="subtitle">Foros</span></h2>
+          </div>
+          <div class="component-grid">
+            <div class="director-card">
+              <div class="director-photo-wrapper">
+                <img src="../../assets/43cce5bf554a80306db20052dac90c4d.avif" alt="Beatriz J. Rizk, Ph.D.">
+              </div>
+              <div class="director-info">
+                <span class="dir-by">Dirigido por</span>
+                <h3>BEATRIZ J. RIZK, Ph.D.</h3>
+                <p>Directora del Programa Educativo</p>
+              </div>
+            </div>
+            
+            <div class="forum-table-wrapper">
+              <table class="forum-table">
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th>Obra</th>
+                    <th>Teatro</th>
+                    <th>Moderador</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="row-wcac">
+                    <td><strong>Jue.</strong> Sept 3</td>
+                    <td class="play-name">CARRUSEL</td>
+                    <td><span class="venue-tag wcac">WCAC</span></td>
+                    <td>Beatriz J. Rizk, Ph.D.</td>
+                  </tr>
+                  <tr class="row-wcac">
+                    <td><strong>Jue.</strong> Sept 10</td>
+                    <td class="play-name">ZOMBIE</td>
+                    <td><span class="venue-tag wcac">WCAC</span></td>
+                    <td>Beatriz J. Rizk, Ph.D.</td>
+                  </tr>
+                  <tr class="row-carnival">
+                    <td><strong>Vier.</strong> Sept 11</td>
+                    <td class="play-name">JABALI</td>
+                    <td><span class="venue-tag carnival">ARSHT</span></td>
+                    <td>Beatriz J. Rizk, Ph.D.</td>
+                  </tr>
+                  <tr class="row-koubek">
+                    <td><strong>Sáb.</strong> Sept 12</td>
+                    <td class="play-name">A FUEGO</td>
+                    <td><span class="venue-tag koubek">KOUBEK</span></td>
+                    <td>Beatriz J. Rizk, Ph.D.</td>
+                  </tr>
+                  <tr class="row-wcac">
+                    <td><strong>Jue.</strong> Sept 17</td>
+                    <td class="play-name">ODD MAN OUT</td>
+                    <td><span class="venue-tag wcac">WCAC</span></td>
+                    <td>Juan Bautista Espinoza</td>
+                  </tr>
+                  <tr class="row-koubek">
+                    <td><strong>Vier.</strong> Sept 18</td>
+                    <td class="play-name">SUENO</td>
+                    <td><span class="venue-tag koubek">KOUBEK</span></td>
+                    <td>Luciano Cortes</td>
+                  </tr>
+                  <tr class="row-carnival">
+                    <td><strong>Sáb.</strong> Sept 19</td>
+                    <td class="play-name">PUNDONOR</td>
+                    <td><span class="venue-tag carnival">ARSHT</span></td>
+                    <td>Luciano Cortes</td>
+                  </tr>
+                  <tr class="row-carnival">
+                    <td><strong>Jue.</strong> Sept 24</td>
+                    <td class="play-name">HAMLET</td>
+                    <td><span class="venue-tag carnival">ARSHT</span></td>
+                    <td>Juan Bautista Espinoza</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="section-divider">
+        
+        <!-- Award Section -->
+        <div class="award-section">
+          <div class="award-grid">
+            <div class="award-photo-wrapper">
+              <img src="../../assets/13040f5e605769c4a63153dae70d9067.avif" alt="Mario Ernesto Sánchez">
+            </div>
+            <div class="award-info">
+              <h2>Premio a una Vida de Dedicación<br>a las Artes Escénicas 2026 – Homenaje Póstumo</h2>
+              <div class="awardee-meta">
+                <span class="awardee-name">Mario Ernesto Sánchez</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="award-bio">
+            <p>En el marco de la celebración del <strong>40.º Festival Internacional de Teatro Hispano de Miami</strong>, el Festival rinde un homenaje póstumo a su fundador, director artístico y productor, <strong>Mario Ernesto Sánchez</strong>, otorgándole el <strong>Premio a una Vida de Dedicación a las Artes</strong>, distinción creada en <strong>1989</strong> para reconocer trayectorias excepcionales que han enriquecido el desarrollo de las artes escénicas.</p>
+            
+            <p>Esta cuadragésima edición representa la consolidación del sueño que Mario Ernesto impulsó con pasión durante cuatro décadas. Contando desde sus inicios con el apoyo de <strong>Olga Garay</strong> para llevar adelante su proyecto de vida. Su mayor anhelo era ver al Festival alcanzar este importante aniversario convertido en uno de los encuentros de teatro hispano más prestigiosos de los Estados Unidos y un puente permanente entre las culturas de Iberoamérica.</p>
+            
+            <p>Actor, director, productor, dramaturgo y gestor cultural, Mario Ernesto Sánchez dedicó su vida a la promoción del teatro hispano dentro y fuera de los Estados Unidos. Como intérprete protagonizó numerosas obras del repertorio universal y participó en más de cuarenta producciones cinematográficas, compartiendo créditos con reconocidas figuras del cine internacional, además de desarrollar una constante y destacada trayectoria en la televisión.</p>
+            
+            <p>Bajo su liderazgo, las producciones de <strong>Teatro Avante</strong>, compañía teatral creada por su persona en 1978, co-fundada con Teresa María Rojas y Alina Interian, llamándose en esa oportunidad RAS Community Theatre, representaron a los Estados Unidos en reconocidos festivales y escenarios nacionales e internacionales, fortaleciendo el intercambio cultural y proyectando el teatro hispano a nivel internacional. Asimismo, fue invitado como representante cultural de los Estados Unidos en numerosos festivales y encuentros artísticos en América Latina y Europa, además de participar como panelista y evaluador en importantes organismos dedicados al desarrollo de las artes.</p>
+
+            <p>Su extraordinaria labor fue reconocida con el <strong>Distinguished Career Award</strong> de la Florida Theatre Conference por su contribución al desarrollo del teatro; el <strong>Premio Ollantay</strong> del Centro Latinoamericano de Creación e Investigación Teatral (CELCIT), en 1994; el prestigioso <strong>Premio Federico García Lorca</strong>, otorgado en Fuente Vaqueros, España, en 1995, por su invaluable aporte al desarrollo del teatro hispánico en América; el <strong>Premio Kusillo</strong>, recibido en La Paz, Bolivia, en 2004; el premio <strong>Atahualpa del Cioppo</strong>, otorgado al FITH por el Festival Iberoamericano de Cádiz (2009); entre muchos otros reconocimientos.</p>
+
+            <p>Cabe destacar que también fue miembro de la Junta Directiva del <strong>Adrienne Arsht Performing Arts Center Trust (PACT)</strong>.</p>
+
+            <p>El legado de Mario Ernesto Sánchez trasciende los escenarios. Vive en los artistas con quienes trabajó, en las instituciones a las que pudo fortalecer, en el Festival que siempre imaginó para convertirlo con su ahínco en referente internacional, y en el público que, durante cuarenta años, ha encontrado en el teatro un espacio de encuentro, reflexión y celebración de nuestra identidad cultural. Este reconocimiento honra no solo una vida dedicada al arte, sino la permanencia de una visión que seguirá iluminando el futuro del teatro hispano.</p>
+          </div>
+        </div>
+        </div>
+      </section>
+  </main>
+
+  <div class="footer-wrapper">
+    <section class="newsletter" id="newsletter">
+      <div class="section-inner narrow">
+        <h2>Suscríbete a nuestro Newsletter</h2>
+        <p>Recibe información actualizada sobre el IHTF</p>
+        <style>
+          .newsletter {
+            padding: 40px 24px 20px !important;
+          }
+
+          .newsletter .section-inner {
+            padding: 25px 30px 20px !important;
+          }
+
+          .newsletter h2 {
+            margin-bottom: 6px !important;
+          }
+
+          .newsletter p {
+            margin: 6px auto 16px !important;
+          }
+
+          #inline-r6eISDaBPxXTF61S6JO6 {
+            width: 100%;
+            height: 90px;
+            border: none;
+            border-radius: 12px;
+            display: block;
+          }
+
+          @media (max-width: 767px) {
+            #inline-r6eISDaBPxXTF61S6JO6 {
+              height: 140px;
+            }
+          }
+        </style>
+
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/r6eISDaBPxXTF61S6JO6"
+          id="inline-r6eISDaBPxXTF61S6JO6"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Newsletter"
+          data-height="90"
+          data-layout-iframe-id="inline-r6eISDaBPxXTF61S6JO6"
+          data-form-id="r6eISDaBPxXTF61S6JO6"
+          title="Newsletter">
+        </iframe>
+
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div><img src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
+          class="footer-logo" /></div>
+      <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const header = document.querySelector('.site-header');
+      const hero = document.querySelector('.hero');
+
+      if (header && hero) {
+        const updateHeader = () => {
+          const heroBottom = hero.getBoundingClientRect().bottom;
+          if (heroBottom <= 100) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        };
+
+        window.addEventListener('scroll', updateHeader);
+        updateHeader();
+      } else if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+        });
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.top !== window.self) {
+        document.querySelectorAll('a[href]').forEach(function(link) {
+          var href = link.getAttribute('href');
+          if (href && !href.startsWith('#') && !href.startsWith('javascript:') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+            link.setAttribute('target', '_top');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

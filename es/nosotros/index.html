@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <title>Sobre Nosotros | Festival Internacional de Teatro Hispano (IHTF 40)</title>
+  <meta name="description" content="Conozca la historia de Teatro Avante, el equipo de trabajo, los colaboradores y los reconocimientos del Festival Internacional de Teatro Hispano de Miami." />
+  <link rel="canonical" href="https://vayol-art.github.io/IHTF/es/nosotros/" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vayol-art.github.io/IHTF/es/nosotros/" />
+  <meta property="og:title" content="Sobre Nosotros | Festival Internacional de Teatro Hispano (IHTF 40)" />
+  <meta property="og:description" content="Conozca la historia de Teatro Avante, el equipo de trabajo, los colaboradores y los reconocimientos del Festival Internacional de Teatro Hispano de Miami." />
+  <meta property="og:image" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta property="og:image:secure_url" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:locale" content="es_US" />
+  <meta property="og:site_name" content="Festival Internacional de Teatro Hispano de Miami" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://vayol-art.github.io/IHTF/es/nosotros/" />
+  <meta name="twitter:title" content="Sobre Nosotros | Festival Internacional de Teatro Hispano (IHTF 40)" />
+  <meta name="twitter:description" content="Conozca la historia de Teatro Avante, el equipo de trabajo, los colaboradores y los reconocimientos del Festival Internacional de Teatro Hispano de Miami." />
+  <meta name="twitter:image" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../fonts.css" />
+  <link rel="stylesheet" href="../../style.css?v=1.0.6" />
+  <link rel="stylesheet" href="../../nosotros.css?v=1.0.1" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="../#inicio" aria-label="IHTF Inicio">
+      <img class="logo-white" src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+    </a>
+    <div class="nav-container"><nav class="main-nav" aria-label="Menú principal">
+      <div class="nav-dropdown-wrapper">
+        <a href="../agenda/" class="nav-dropdown-trigger">PROGRAMA</a>
+        <div class="nav-submenu">
+          <a href="../agenda/" class="submenu-item">Programa de Mano</a>
+          <a href="../calendario/" class="submenu-item">Calendario</a>
+          <a href="../eventos-adicionales/" class="submenu-item">Eventos Adicionales</a>
+          <div class="dropdown-divider"></div>
+          <a href="../dia-internacional-del-nino/" class="submenu-item">Día Internacional del Niño</a>
+          <a href="../teatros/" class="submenu-item">Teatros</a>
+          <a href="../sponsors/" class="submenu-item">Apoya IHTF</a>
+        </div>
+      </div>
+      <a href="../contactanos/">CONTÁCTANOS</a>
+      <div class="nav-dropdown-wrapper">
+        <a href="../nosotros/" class="nav-dropdown-trigger">SOBRE NOSOTROS</a>
+        <div class="nav-submenu">
+          <a href="../nosotros/#compania" class="submenu-item">Historia del Festival</a>
+          <a href="../nosotros/#personal" class="submenu-item">Personal</a>
+        </div>
+      </div>
+      <a href="../inscripciones/">INSCRIPCIONES 41° FESTIVAL</a>
+      
+    </nav>
+      
+    <div class="header-actions">
+      <div class="lang-selector">
+        <button class="lang-btn" aria-label="Cambiar idioma" aria-expanded="false">
+          <svg class="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-text">Español</span>
+          <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="lang-dropdown">
+          <button class="lang-opt active">Español</button>
+          <button class="lang-opt">English</button>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const mainNav = document.querySelector(".main-nav");
+        if (hamburger && mainNav) {
+          hamburger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = hamburger.classList.toggle("open");
+            mainNav.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function (event) {
+            if (!hamburger.contains(event.target) && !mainNav.contains(event.target)) {
+              hamburger.classList.remove("open");
+              mainNav.classList.remove("open");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        // Language Selector Dropdown logic
+        const langSelector = document.querySelector(".lang-selector");
+        const langBtn = document.querySelector(".lang-btn");
+        if (langSelector && langBtn) {
+          langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = langSelector.classList.toggle("open");
+            langBtn.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function (event) {
+            if (!langSelector.contains(event.target)) {
+              langSelector.classList.remove("open");
+              langBtn.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        // Language options click behavior
+        const langOpts = document.querySelectorAll(".lang-opt");
+        if (langOpts.length >= 2) {
+          langOpts[0].addEventListener("click", function () { // Spanish (current)
+            localStorage.setItem("preferred_lang", "es");
+            langSelector.classList.remove("open");
+            langBtn.setAttribute("aria-expanded", "false");
+          });
+          langOpts[1].addEventListener("click", function () {
+            localStorage.setItem("preferred_lang", "en");
+            window.location.href = "../../en/nosotros/";
+          });
+        }
+      });
+    </script>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Historia del Festival</h1>
+    </section>
+
+    <!-- Compañía Section wrapper -->
+    <div id="compania" class="section-wrapper">
+
+
+      <!-- Teatro Avante Grid -->
+      <section class="teatro-section">
+        <div class="teatro-grid">
+
+
+          <article class="teatro-history">
+            <h2>Teatro Avante</h2>
+            <p>Fundada en 1979, Teatro Avante es una organización cultural sin fines de lucro y exenta de impuestos cuyo
+              objetivo esencial es la preservación de la herencia cultural hispana.</p>
+            <p>El grupo ha representado a Estados Unidos en México, Costa Rica, España, Japón, Francia, Colombia,
+              República Dominicana, Guatemala, Portugal, Perú, Brasil, Venezuela, Argentina, Puerto Rico y Eslovenia,
+              además de, en Estados Unidos, Nueva York, Albuquerque, Los Ángeles, El Paso y Buffalo.</p>
+            <p>Ha llevado a la escena textos de Albee, Alomá, Ariza, Assad, Cabrujas, Cocteau, Ferrer, García Lorca,
+              Manet, Matas, Pinto, Piñera, Reguera Saumell, Santana, Triana, Valle-Inclán, Williams, Orwell y
+              Shakespeare, entre otros.</p>
+            <p>En 1994, las Olimpiadas Culturales del Comité Olímpico de Atlanta honraron a Teatro Avante con el Premio
+              Regional de las Artes.</p>
+            <p>Ese mismo año recibió el premio Ollantay en Madrid; en 1995, el Federico García Lorca en Fuente Vaqueros,
+              España; en 2004 el Kusillo en La Paz; en 2009 el FIT de Cádiz-Atahualpa del Cioppo en Cádiz; y en 2012 el
+              de la Universidad Científica del Sur (UCSUR) en Lima.</p>
+            <p>Teatro Avante produce y presenta el galardonado Festival Internacional de Teatro Hispano de Miami.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Personal Section wrapper -->
+    <div class="section-wrapper">
+      <!-- Tribute to Mario Ernesto Sánchez -->
+      <section class="tribute-section">
+        <div class="tribute-grid">
+          <div class="tribute-photo">
+            <!-- Reference the image path. User can copy their photo of Mario Ernesto Sánchez to assets/mario-ernesto-sanchez.png -->
+            <img src="../../assets/13040f5e605769c4a63153dae70d9067.avif" alt="Mario Ernesto Sánchez"
+              onerror="this.src='assets/olga-garay.png'; this.style.filter='grayscale(100%)';">
+          </div>
+          <div class="tribute-text">
+            <h2>Mario Ernesto Sánchez<br><span class="tribute-date">(1947-2025)</span></h2>
+            <div class="subtitle">Un gigante de las tablas</div>
+            <div class="tribute-paragraphs">
+              <p>En 2009 cuando el Festival Iberoamericano de Teatro de Cádiz le otorgó el premio Atahualpa del Cioppo
+                al Festival Internacional de Teatro Hispano de Miami, afirmaba que el festival tenía nombre propio, se
+                llamaba Mario Ernesto Sánchez. Solamente el empeño de este gigante de las tablas (y no me refiero sólo a
+                su tamaño natural), fue capaz de llevar a cabo la ardua labor que se había impuesto desde hacía ya
+                varias décadas, la de preservar la cultura hispana en Estados Unidos, "que tanto contribuye a la calidad
+                de vida de todos," como afirmó una vez. La historia del uno fue y sigue siendo inseparable de la del
+                otro. Desde un principio no se perfilaba como una tarea sencilla de concretar; sin embargo, su
+                manifiesta tenacidad y obstinación estarían de su parte, características que con toda seguridad trajo
+                consigo desde su ciudad natal San Antonio de las Vegas, en Cuba.</p>
+              <p>Ya ha pasado mucha agua bajo el puente desde que un grupo de teatristas y activistas de la cultura de
+                Miami se juntara en 1986, bajo el nombre de Acting Together (Actuando en Conjunto) y presentara lo que
+                se llamó el Primer Festival Anual de Teatro Hispano con producciones locales. No es coincidencia, de
+                paso, que este año le estemos otorgando el premio Una Vida de Dedicación a las Artes Escénicas a Olga
+                Garay-English quien fuera parte de ese primer contingente artístico que se preocupó, y sigue
+                preocupándose, por fomentar un arte teatral significativo que pueda generar placer en un público a la
+                vez que reflexión y entendimiento humano sobre temas relevantes. Ya para el año 1989, el festival se
+                había internacionalizado invitando grupos de fuera, como sucedió al incorporarse España, Colombia,
+                Puerto Rico y Costa Rica a la programación, sino que la gestión pasó enteramente a manos de Mario
+                Ernesto. Y el resto, como dice el refrán, ya es historia. Han pasado por las salas del festival
+                innumerables espectáculos del mundo ibérico e iberoamericano, y de alguno que otro país que se aventuró
+                a montar obras de autores de origen hispano, el único requisito del festival, como pasó con las
+                compañías Lasenkan Theatre de Japón (2003), Insightout de Dinamarca (2005), y el grupo esloveno
+                Ljubijana City Theatre (2008). Aprovechamos esta instancia para darle la bienvenida a las nueve
+                compañías, locales, nacionales e internacionales, que nos honran con su presencia en esta ocasión.</p>
+              <p>Su otro gran logro fue indiscutiblemente la fundación de su compañía Teatro Avante. Se inició en 1978,
+                co-fundada con Teresa María Rojas y Alina Interián, bajo el nombre de RAS Community Theatre. La obra
+                Electra Garrigó, de Virgilio Piñera (1912-79), se escogió para su estreno trayendo para dirigirla al
+                legendario Francisco Morín (1918- 2017), quien fuera el que la montó en La Habana en 1948, considerado
+                por varios críticos como la introducción a la modernidad del teatro Latino Americanico. Ya bajo el
+                nombre de Avante, que nos acompaña hasta hoy, Mario Ernesto supo rodearse de un equipo estable de
+                talentosos actores que sería difícil de listar sin omitir algunos de los que sin duda han contribuido
+                enormemente al éxito de sus montajes. Por otra parte, entre sus colaboradores más asiduos tras
+                bastidores se hace imposible no mencionar a Ernesto Padilla, Irene Olivera, Leiter Padilla, Gabriel
+                Cutiño, Asela Torres, los diseñadores Pedro Balmaseda y Jorge Noa, y en no pocas ocasiones al compositor
+                Mike Porcel. Trabajó con innumerables autores clásicos y contemporáneos entre los que sobresalen el
+                mismo Piñera, cuyas obras llevó a la escena en ocho ocasiones, y a Abel González Melo, quien devino
+                "dramaturgo en residencia" durante los últimos años. Como asistentes de cabecera en su empeño de llevar
+                adelante el Festival contó con los miembros más allegados de su familia, con Verónica y Gastón en
+                primera línea, así como la autora de estas líneas quien ha estado a cargo del Componente Educativo desde
+                1994. El festival, en esta nueva etapa que comienza, no puede haber quedado en mejores manos que las de
+                Melissa Messulam y Néher Jacqueline Briceño, allegadas colaboradoras y colegas, a quienes Mario Ernesto
+                designó como sucesoras al frente de las instituciones que fueron parte de su múltiple legado.</p>
+              <p>No hay duda de que su partida deja un vacío enorme que será casi imposible de superar, abandonándonos
+                antes de llegar a la codiciada fecha de los cuarenta que cumplirá el festival el año entrante. En su
+                memoria, aun en los difíciles momentos en que vivimos, se hará lo imposible por continuar su inmensa
+                labor en nombre también de nuestra tradición, valores y patrimonio cultural que, como él indicaba, nos
+                hace la vida más llevadera.</p>
+            </div>
+            <div class="tribute-signature">- Beatriz J. Rizk</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal y Colaboradores Staff Grid -->
+      <section id="personal" class="staff-section">
+        <div class="staff-inner">
+          <h2>PERSONAL Y COLABORADORES IHTF</h2>
+          <div class="staff-grid">
+            <div class="staff-col">
+              <h3>Verónica Lucía Sánchez</h3>
+              <p>Codirectora<br><strong>Teatro Avante</strong></p>
+
+              <h3>Jackie Briceño</h3>
+              <p>Codirectora<br><strong>Conecta</strong></p>
+
+              <h3>Melissa Messulam</h3>
+              <p>Codirectora<br><strong>Conecta</strong></p>
+
+              <h3>Beatriz J. Rizk, Ph.D.</h3>
+              <p>Directora del Programa Educativo y Consultora Literaria</p>
+
+              <h3>Belen Castres White</h3>
+              <p>Directora de producción</p>
+            </div>
+
+            <div class="staff-col">
+              <h3>Ernesto Padilla</h3>
+              <p>Producción</p>
+
+              <h3>Beatriz Urgelles</h3>
+              <p>Prensa y Comunicaciones<br><strong>Beau Management</strong></p>
+
+              <h3>Millie Padilla</h3>
+              <p>Prensa y Comunicaciones<br><strong>Beau Management</strong></p>
+
+              <h3>Qoritek</h3>
+              <p>Creadores de Sitio Web, Diseño Gráfico</p>
+
+              <h3>Assad Mardelli</h3>
+              <p>Gerente de redes sociales</p>
+            </div>
+
+            <div class="staff-col">
+              <h3>John Da Silva</h3>
+              <p>Digital Marketing</p>
+
+              <h3>Christine Jacobus</h3>
+              <p>Diseñadora Gráfica</p>
+
+              <h3>Gabriel Cutiño</h3>
+              <p>Videógrafo</p>
+
+              <h3>Mario Ernesto Sánchez (1947-2025)</h3>
+              <p>Fundador, Director Artístico y Productor<br><strong>En memoria</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Premios Section wrapper -->
+    <div id="premios" class="section-wrapper">
+      <section class="premios-section">
+        <div class="premios-inner">
+          <h2>Premios</h2>
+          <div class="premios-timeline">
+            <div class="premio-item">
+              <span class="premio-year">1990</span>
+              <div class="premio-details">
+                <span class="premio-name">Clio Anniversary Award</span> &mdash; <span class="premio-location">Miami
+                  (United States)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">1994</span>
+              <div class="premio-details">
+                <span class="premio-name">Premio Regional de las Artes &mdash; Olimpiadas Culturales del Comité
+                  Olímpico</span> &mdash; <span class="premio-location">Atlanta (United States)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">1994</span>
+              <div class="premio-details">
+                <span class="premio-name">Premio Ollantay</span> &mdash; <span class="premio-location">Madrid
+                  (Spain)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">1995</span>
+              <div class="premio-details">
+                <span class="premio-name">Premio Federico García Lorca</span> &mdash; <span
+                  class="premio-location">Fuente Vaqueros (Spain)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">2004</span>
+              <div class="premio-details">
+                <span class="premio-name">Premio Kusillo</span> &mdash; <span class="premio-location">La Paz
+                  (Bolivia)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">2009</span>
+              <div class="premio-details">
+                <span class="premio-name">Garza Award</span> &mdash; <span class="premio-location">Miami (United
+                  States)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">2009</span>
+              <div class="premio-details">
+                <span class="premio-name">FIT de Cádiz &mdash; Atahualpa del Cioppo</span> &mdash; <span
+                  class="premio-location">Cádiz (Spain)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">2010</span>
+              <div class="premio-details">
+                <span class="premio-name">Premio Baco</span> &mdash; <span class="premio-location">Miami (United
+                  States)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">2012</span>
+              <div class="premio-details">
+                <span class="premio-name">Premio UCSUR</span> &mdash; <span class="premio-location">Lima (Peru)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">2012</span>
+              <div class="premio-details">
+                <span class="premio-name">The George Abbott Award for Outstanding Achievement in the Arts</span> &mdash;
+                <span class="premio-location">Miami (United States)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">2014</span>
+              <div class="premio-details">
+                <span class="premio-name">Legacy Award</span> &mdash; <span class="premio-location">Chicago (United
+                  States)</span>
+              </div>
+            </div>
+            <div class="premio-item">
+              <span class="premio-year">2014</span>
+              <div class="premio-details">
+                <span class="premio-name">Community Recognition Award</span> &mdash; <span class="premio-location">Miami
+                  (United States)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="footer-wrapper">
+    <section class="newsletter" id="newsletter">
+      <div class="section-inner narrow">
+        <h2>Suscríbete a nuestro Newsletter</h2>
+        <p>Recibe información actualizada sobre el IHTF</p>
+        <style>
+          .newsletter {
+            padding: 40px 24px 20px !important;
+          }
+
+          .newsletter .section-inner {
+            padding: 25px 30px 20px !important;
+          }
+
+          .newsletter h2 {
+            margin-bottom: 6px !important;
+          }
+
+          .newsletter p {
+            margin: 6px auto 16px !important;
+          }
+
+          #inline-r6eISDaBPxXTF61S6JO6 {
+            width: 100%;
+            height: 90px;
+            border: none;
+            border-radius: 12px;
+            display: block;
+          }
+
+          @media (max-width: 767px) {
+            #inline-r6eISDaBPxXTF61S6JO6 {
+              height: 140px;
+            }
+          }
+        </style>
+
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/r6eISDaBPxXTF61S6JO6"
+          id="inline-r6eISDaBPxXTF61S6JO6"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Newsletter"
+          data-height="90"
+          data-layout-iframe-id="inline-r6eISDaBPxXTF61S6JO6"
+          data-form-id="r6eISDaBPxXTF61S6JO6"
+          title="Newsletter">
+        </iframe>
+
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div><img src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
+          class="footer-logo" /></div>
+      <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const header = document.querySelector('.site-header');
+      const hero = document.querySelector('.hero');
+
+      if (header && hero) {
+        const updateHeader = () => {
+          const heroBottom = hero.getBoundingClientRect().bottom;
+          if (heroBottom <= 100) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        };
+
+        window.addEventListener('scroll', updateHeader);
+        updateHeader();
+      } else if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+        });
+      }
+
+      // Scroll Reveal for Timeline Items
+      const timelineItems = document.querySelectorAll('.premio-item');
+      if (window.IntersectionObserver) {
+        const obsOptions = {
+          root: null,
+          threshold: 0.15,
+          rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, obsOptions);
+        timelineItems.forEach(item => observer.observe(item));
+      } else {
+        timelineItems.forEach(item => item.classList.add('revealed'));
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.top !== window.self) {
+        document.querySelectorAll('a[href]').forEach(function(link) {
+          var href = link.getAttribute('href');
+          if (href && !href.startsWith('#') && !href.startsWith('javascript:') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+            link.setAttribute('target', '_top');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

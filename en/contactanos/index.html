@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Contact Us | International Hispanic Theatre Festival (IHTF 40)</title>
+  <meta name="description" content="Get in touch with the team at the International Hispanic Theatre Festival of Miami (Teatro Avante)." />
+  <link rel="canonical" href="https://vayol-art.github.io/IHTF/en/contactanos/" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vayol-art.github.io/IHTF/en/contactanos/" />
+  <meta property="og:title" content="Contact Us | International Hispanic Theatre Festival (IHTF 40)" />
+  <meta property="og:description" content="Get in touch with the team at the International Hispanic Theatre Festival of Miami (Teatro Avante)." />
+  <meta property="og:image" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta property="og:image:secure_url" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="International Hispanic Theatre Festival of Miami" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://vayol-art.github.io/IHTF/en/contactanos/" />
+  <meta name="twitter:title" content="Contact Us | International Hispanic Theatre Festival (IHTF 40)" />
+  <meta name="twitter:description" content="Get in touch with the team at the International Hispanic Theatre Festival of Miami (Teatro Avante)." />
+  <meta name="twitter:image" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <script>
+  if (localStorage.getItem("preferred_lang") !== "en") {
+    let filename = window.location.pathname.split("/").pop() || "index.html";
+    if (!filename.endsWith(".html")) filename = "index.html";
+    window.location.href = "../" + filename;
+  }
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../fonts.css" />
+  <link rel="stylesheet" href="../../style.css?v=1.0.6" />
+  <link rel="stylesheet" href="../contactanos.css?v=1.0.1" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="../#inicio" aria-label="IHTF Inicio">
+      <img class="logo-white" src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+    </a>
+    <div class="nav-container"><nav class="main-nav" aria-label="Menú principal">
+      <div class="nav-dropdown-wrapper">
+        <a href="../agenda/" class="nav-dropdown-trigger">PROGRAM</a>
+        <div class="nav-submenu">
+          <a href="../agenda/" class="submenu-item">Playbill</a>
+          <a href="../calendario/" class="submenu-item">Calendar</a>
+          <a href="../eventos-adicionales/" class="submenu-item">Additional Events</a>
+          <div class="dropdown-divider"></div>
+          <a href="../dia-internacional-del-nino/" class="submenu-item">International Children's Day</a>
+          <a href="../teatros/" class="submenu-item">Theaters</a>
+          <a href="../sponsors/" class="submenu-item">Support IHTF</a>
+        </div>
+      </div>
+      <a href="../contactanos/">CONTACT US</a>
+      <div class="nav-dropdown-wrapper">
+        <a href="../nosotros/" class="nav-dropdown-trigger">ABOUT US</a>
+        <div class="nav-submenu">
+          <a href="../nosotros/#compania" class="submenu-item">Festival History</a>
+          <a href="../nosotros/#personal" class="submenu-item">Staff</a>
+        </div>
+      </div>
+      <a href="../inscripciones/">41st IHTF INSCRIPTIONS</a>
+      
+</nav>
+      
+    <div class="header-actions">
+      <div class="lang-selector">
+        <button class="lang-btn" aria-label="Cambiar idioma" aria-expanded="false">
+          <svg class="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-text">English</span>
+          <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="lang-dropdown">
+          <button class="lang-opt active">English</button>
+          <button class="lang-opt">Español</button>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const mainNav = document.querySelector(".main-nav");
+        if (hamburger && mainNav) {
+          hamburger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = hamburger.classList.toggle("open");
+            mainNav.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function (event) {
+            if (!hamburger.contains(event.target) && !mainNav.contains(event.target)) {
+              hamburger.classList.remove("open");
+              mainNav.classList.remove("open");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        // Language Selector Dropdown logic
+        const langSelector = document.querySelector(".lang-selector");
+        const langBtn = document.querySelector(".lang-btn");
+        if (langSelector && langBtn) {
+          langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = langSelector.classList.toggle("open");
+            langBtn.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function (event) {
+            if (!langSelector.contains(event.target)) {
+              langSelector.classList.remove("open");
+              langBtn.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        // Language options click behavior
+        const langOpts = document.querySelectorAll(".lang-opt");
+        if (langOpts.length >= 2) {
+          langOpts[0].addEventListener("click", function () {
+            localStorage.setItem("preferred_lang", "es");
+            window.location.href = "../../es/contactanos/";
+          });
+          langOpts[1].addEventListener("click", function () { // Spanish
+            localStorage.setItem("preferred_lang", "es");
+            let filename = window.location.pathname.split("/").pop() || "index.html";
+            if (!filename.endsWith(".html")) filename = "index.html";
+            window.location.href = "../" + filename;
+          });
+        }
+      });
+    </script>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Contact Us</h1>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <!-- Left Side: Form -->
+        <div class="contact-form-wrap">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/iUdy7ux5cSdG5BZEfcdF"
+            style="width:100%;height:100%;border:none;border-radius:8px"
+            id="inline-iUdy7ux5cSdG5BZEfcdF" 
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Contactanos"
+            data-height="576"
+            data-layout-iframe-id="inline-iUdy7ux5cSdG5BZEfcdF"
+            data-form-id="iUdy7ux5cSdG5BZEfcdF"
+            title="Contactanos"
+          >
+          </iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        </div>
+
+        <!-- Right Side: Contact details -->
+        <div class="contact-info">
+          <!-- General Inquiries -->
+          <div class="info-block">
+            <h3>General Inquiries</h3>
+            <div class="info-details">
+              <div class="info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <a href="mailto:ihtfmiami@gmail.com">ihtfmiami@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Media Inquiries -->
+          <div class="info-block">
+            <h3>Media Inquiries</h3>
+            <div class="info-details">
+              <div class="info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>Beatriz Urgelles</span>
+              </div>
+              <div class="info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <a href="mailto:bea@beaumanagement.net">bea@beaumanagement.net</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer-wrapper">
+    <section class="newsletter" id="newsletter">
+      <div class="section-inner narrow">
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Receive updated information about IHTF</p>
+        <style>
+          .newsletter {
+            padding: 40px 24px 20px !important;
+          }
+
+          .newsletter .section-inner {
+            padding: 25px 30px 20px !important;
+          }
+
+          .newsletter h2 {
+            margin-bottom: 6px !important;
+          }
+
+          .newsletter p {
+            margin: 6px auto 16px !important;
+          }
+
+          #inline-r6eISDaBPxXTF61S6JO6 {
+            width: 100%;
+            height: 90px;
+            border: none;
+            border-radius: 12px;
+            display: block;
+          }
+
+          @media (max-width: 767px) {
+            #inline-r6eISDaBPxXTF61S6JO6 {
+              height: 140px;
+            }
+          }
+        </style>
+
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/r6eISDaBPxXTF61S6JO6"
+          id="inline-r6eISDaBPxXTF61S6JO6"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Newsletter"
+          data-height="90"
+          data-layout-iframe-id="inline-r6eISDaBPxXTF61S6JO6"
+          data-form-id="r6eISDaBPxXTF61S6JO6"
+          title="Newsletter">
+        </iframe>
+
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div><img src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
+          class="footer-logo" /></div>
+      <nav><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></nav>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const header = document.querySelector('.site-header');
+      const hero = document.querySelector('.hero');
+
+      if (header && hero) {
+        const updateHeader = () => {
+          const heroBottom = hero.getBoundingClientRect().bottom;
+          if (heroBottom <= 100) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        };
+
+        window.addEventListener('scroll', updateHeader);
+        updateHeader();
+      } else if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+        });
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.top !== window.self) {
+        document.querySelectorAll('a[href]').forEach(function(link) {
+          var href = link.getAttribute('href');
+          if (href && !href.startsWith('#') && !href.startsWith('javascript:') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+            link.setAttribute('target', '_top');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
