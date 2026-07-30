@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <link rel="icon" type="image/png" href="../../assets/favicon.png" />
+
+  <title>Patrocinio y Donaciones | Festival Internacional de Teatro Hispano (IHTF 40)</title>
+  <meta name="description" content="Apoya al Festival Internacional de Teatro Hispano de Miami. Información sobre patrocinadores y cómo realizar donaciones." />
+  <link rel="canonical" href="https://vayol-art.github.io/IHTF/es/sponsors/" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vayol-art.github.io/IHTF/es/sponsors/" />
+  <meta property="og:title" content="Patrocinio y Donaciones | Festival Internacional de Teatro Hispano (IHTF 40)" />
+  <meta property="og:description" content="Apoya al Festival Internacional de Teatro Hispano de Miami. Información sobre patrocinadores y cómo realizar donaciones." />
+  <meta property="og:image" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta property="og:image:secure_url" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:locale" content="es_US" />
+  <meta property="og:site_name" content="Festival Internacional de Teatro Hispano de Miami" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://vayol-art.github.io/IHTF/es/sponsors/" />
+  <meta name="twitter:title" content="Patrocinio y Donaciones | Festival Internacional de Teatro Hispano (IHTF 40)" />
+  <meta name="twitter:description" content="Apoya al Festival Internacional de Teatro Hispano de Miami. Información sobre patrocinadores y cómo realizar donaciones." />
+  <meta name="twitter:image" content="https://vayol-art.github.io/IHTF/assets/afiche_1_horizontal.jpg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../fonts.css" />
+  <link rel="stylesheet" href="../../style.css?v=1.0.6" />
+  <link rel="stylesheet" href="../../sponsors.css?v=1.0.1" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="../#inicio" aria-label="IHTF Inicio">
+      <img class="logo-white" src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco" />
+      <img class="logo-color" src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+    </a>
+    <div class="nav-container"><nav class="main-nav" aria-label="Menú principal">
+      <div class="nav-dropdown-wrapper">
+        <a href="../agenda/" class="nav-dropdown-trigger">PROGRAMA</a>
+        <div class="nav-submenu">
+          <a href="../agenda/" class="submenu-item">Programa de Mano</a>
+          <a href="../calendario/" class="submenu-item">Calendario</a>
+          <a href="../eventos-adicionales/" class="submenu-item">Eventos Adicionales</a>
+          <div class="dropdown-divider"></div>
+          <a href="../dia-internacional-del-nino/" class="submenu-item">Día Internacional del Niño</a>
+          <a href="../teatros/" class="submenu-item">Teatros</a>
+          <a href="../sponsors/" class="submenu-item">Apoya IHTF</a>
+        </div>
+      </div>
+      <a href="../contactanos/">CONTÁCTANOS</a>
+      <div class="nav-dropdown-wrapper">
+        <a href="../nosotros/" class="nav-dropdown-trigger">SOBRE NOSOTROS</a>
+        <div class="nav-submenu">
+          <a href="../nosotros/#compania" class="submenu-item">Historia del Festival</a>
+          <a href="../nosotros/#personal" class="submenu-item">Personal</a>
+        </div>
+      </div>
+      <a href="../inscripciones/">INSCRIPCIONES 41° FESTIVAL</a>
+      
+</nav>
+      
+    <div class="header-actions">
+      <div class="lang-selector">
+        <button class="lang-btn" aria-label="Cambiar idioma" aria-expanded="false">
+          <svg class="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-text">Español</span>
+          <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="lang-dropdown">
+          <button class="lang-opt active">Español</button>
+          <button class="lang-opt">English</button>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const mainNav = document.querySelector(".main-nav");
+        if (hamburger && mainNav) {
+          hamburger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = hamburger.classList.toggle("open");
+            mainNav.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function (event) {
+            if (!hamburger.contains(event.target) && !mainNav.contains(event.target)) {
+              hamburger.classList.remove("open");
+              mainNav.classList.remove("open");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        // Language Selector Dropdown logic
+        const langSelector = document.querySelector(".lang-selector");
+        const langBtn = document.querySelector(".lang-btn");
+        if (langSelector && langBtn) {
+          langBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = langSelector.classList.toggle("open");
+            langBtn.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function (event) {
+            if (!langSelector.contains(event.target)) {
+              langSelector.classList.remove("open");
+              langBtn.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        // Language options click behavior
+        const langOpts = document.querySelectorAll(".lang-opt");
+        if (langOpts.length >= 2) {
+          langOpts[0].addEventListener("click", function () { // Spanish (current)
+            localStorage.setItem("preferred_lang", "es");
+            langSelector.classList.remove("open");
+            langBtn.setAttribute("aria-expanded", "false");
+          });
+          langOpts[1].addEventListener("click", function () {
+            localStorage.setItem("preferred_lang", "en");
+            window.location.href = "../../en/sponsors/";
+          });
+        }
+      });
+    </script>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Apoya IHTF</h1>
+    </section>
+
+    <!-- Support levels section -->
+    <section class="support-section">
+      <div class="support-container">
+        <div class="support-grid">
+          <!-- Amigo -->
+          <article class="support-card amigo">
+            <div class="card-top">
+              <h3>Amigo del Festival</h3>
+              <div class="price">Todos los aportes son bienvenidos</div>
+              <ul>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 4.svg" class="card-icon" alt="Mención" />
+                  <span>Mención en el programa</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=2NFPGC85V6MZC" target="_blank" class="btn-donate solid">Donar</a>
+          </article>
+
+          <!-- Actor -->
+          <article class="support-card actor">
+            <div class="card-top">
+              <h3>Actor</h3>
+              <div class="price">$500 - $999</div>
+              <ul>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 4.svg" class="card-icon" alt="Mención" />
+                  <span>Mención en el programa y reconocimiento digital</span>
+                </li>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 3.svg" class="card-icon" alt="Entradas" />
+                  <span>4 entradas para funciones por festival</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=2NFPGC85V6MZC" target="_blank" class="btn-donate solid">Donar</a>
+          </article>
+
+          <!-- Dramaturgo -->
+          <article class="support-card dramaturgo">
+            <div class="card-top">
+              <h3>Dramaturgo</h3>
+              <div class="price">$1,000 - $2,499</div>
+              <ul>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 2.svg" class="card-icon" alt="Reconocimiento" />
+                  <span>Reconocimiento con nombre y logo en el sitio web y en el programa</span>
+                </li>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 3.svg" class="card-icon" alt="Entradas" />
+                  <span>6 entradas para funciones por festival</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=2NFPGC85V6MZC" target="_blank" class="btn-donate outline">Donar</a>
+          </article>
+
+          <!-- Director -->
+          <article class="support-card director">
+            <div class="card-top">
+              <h3>Director</h3>
+              <div class="price">$2,500 - $4,999</div>
+              <ul>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 2.svg" class="card-icon" alt="Reconocimiento" />
+                  <span>Reconocimiento destacado en el sitio web y en el programa</span>
+                </li>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 5.svg" class="card-icon" alt="Redes Sociales" />
+                  <span>Reconocimiento en redes sociales</span>
+                </li>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 3.svg" class="card-icon" alt="Entradas" />
+                  <span>10 entradas para funciones con asientos reservados</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=2NFPGC85V6MZC" target="_blank" class="btn-donate solid">Donar</a>
+          </article>
+
+          <!-- Productor -->
+          <article class="support-card productor">
+            <div class="card-top">
+              <h3>Productor</h3>
+              <div class="price">$5,000 +</div>
+              <ul>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 2.svg" class="card-icon" alt="Reconocimiento" />
+                  <span>Reconocimiento destacado en el sitio web y en el programa</span>
+                </li>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 5.svg" class="card-icon" alt="Redes Sociales" />
+                  <span>Reconocimiento en redes sociales</span>
+                </li>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 4.svg" class="card-icon" alt="Anuncio" />
+                  <span>Anuncio publicitario en el programa del festival</span>
+                </li>
+                <li class="has-icon">
+                  <img src="../../assets/iconos de sponsors/Recurso 3.svg" class="card-icon" alt="Entradas" />
+                  <span>20 entradas para funciones con asientos reservados</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=2NFPGC85V6MZC" target="_blank" class="btn-donate outline">Donar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="footer-wrapper">
+    <!-- Sponsor Logos Section -->
+    <section class="sponsors-section">
+      <div class="sponsors-container">
+        <h2>Patrocinadores IHTF</h2>
+        <div class="sponsors-grid">
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/1.avif" alt="Sponsor 1" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/2.avif" alt="Sponsor 2" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/3.avif" alt="Sponsor 3" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/4.avif" alt="Sponsor 4" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/5.avif" alt="Sponsor 5" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/6.avif" alt="Sponsor 6" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/7.avif" alt="Sponsor 7" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/8.avif" alt="Sponsor 8" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/9.avif" alt="Sponsor 9" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/10.avif" alt="Sponsor 10" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/11.avif" alt="Sponsor 11" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/12.avif" alt="Sponsor 12" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/13.avif" alt="Sponsor 13" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/14.avif" alt="Sponsor 14" loading="lazy" /></div>
+          <div class="sponsor-logo-card"><img src="../../assets/logos sponsors/15.avif" alt="Sponsor 15" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+      <div class="section-inner narrow">
+        <h2>Suscríbete a nuestro Newsletter</h2>
+        <p>Recibe información actualizada sobre el IHTF</p>
+        <style>
+          .newsletter {
+            padding: 40px 24px 20px !important;
+          }
+
+          .newsletter .section-inner {
+            padding: 25px 30px 20px !important;
+          }
+
+          .newsletter h2 {
+            margin-bottom: 6px !important;
+          }
+
+          .newsletter p {
+            margin: 6px auto 16px !important;
+          }
+
+          #inline-r6eISDaBPxXTF61S6JO6 {
+            width: 100%;
+            height: 90px;
+            border: none;
+            border-radius: 12px;
+            display: block;
+          }
+
+          @media (max-width: 767px) {
+            #inline-r6eISDaBPxXTF61S6JO6 {
+              height: 140px;
+            }
+          }
+        </style>
+
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/r6eISDaBPxXTF61S6JO6"
+          id="inline-r6eISDaBPxXTF61S6JO6"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Newsletter"
+          data-height="90"
+          data-layout-iframe-id="inline-r6eISDaBPxXTF61S6JO6"
+          data-form-id="r6eISDaBPxXTF61S6JO6"
+          title="Newsletter">
+        </iframe>
+
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div><img src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 Blanco"
+          class="footer-logo" /></div>
+      <nav><a href="#">Políticas de privacidad</a><a href="#">Términos y condiciones</a></nav>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const header = document.querySelector('.site-header');
+      const hero = document.querySelector('.hero');
+
+      if (header && hero) {
+        const updateHeader = () => {
+          const heroBottom = hero.getBoundingClientRect().bottom;
+          if (heroBottom <= 100) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        };
+
+        window.addEventListener('scroll', updateHeader);
+        updateHeader();
+      } else if (header) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+        });
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.top !== window.self) {
+        document.querySelectorAll('a[href]').forEach(function(link) {
+          var href = link.getAttribute('href');
+          if (href && !href.startsWith('#') && !href.startsWith('javascript:') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+            link.setAttribute('target', '_top');
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
