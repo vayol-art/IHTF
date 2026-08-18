@@ -56,8 +56,8 @@ const playsData = {
   },
   "historia-de-un-jabali": {
     "id": "historia-de-un-jabali",
-    "title": "Historia de un jabalí (o algo de Ricardo)",
-    "titleHTML": "Historia de un jabalí<br>(o algo de Ricardo)",
+    "title": "Historia de un jabalí (o algo de Ricardo III)",
+    "titleHTML": "Historia de un jabalí<br>(o algo de Ricardo III)",
     "country": "Chile",
     "country_en": "Chile",
     "author": "Gabriel Calderón",
