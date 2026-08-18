@@ -727,14 +727,25 @@
       document.getElementById("play-director").textContent = play.director;
       document.getElementById("play-cast").textContent = play.cast;
 
-      // Populate Logos
+            // Populate Logos
       const logosContainer = document.getElementById("play-bar-logo");
-      logosContainer.innerHTML = "";
-      play.logos.forEach(logo => {
-        let extraStyle = logo.includes("white") || logo.includes("blanco") || logo.includes("arsht") ? 'style="filter: invert(1);"' : '';
-        let cleanLogo = logo.startsWith("../") ? logo : (logo.startsWith("../") ? "../" + logo : "../" + logo);
-        logosContainer.innerHTML += `<img src="${cleanLogo}" alt="Logo Teatro" ${extraStyle}>`;
-      });
+      if (logosContainer && play.logos) {
+        logosContainer.innerHTML = "";
+        play.logos.forEach(logo => {
+          let logoSrc = logo;
+          if (!logoSrc.startsWith("../../")) {
+            if (logoSrc.startsWith("../")) {
+              logoSrc = "../" + logoSrc;
+            } else {
+              logoSrc = "../../" + logoSrc;
+            }
+          }
+          let extraStyle = logoSrc.includes("white") || logoSrc.includes("blanco") || logoSrc.includes("arsht") ? 'style="filter: invert(1);"' : '';
+          logosContainer.innerHTML += `<img src="${logoSrc}" alt="Logo Teatro" ${extraStyle}>`;
+        });
+      }
+
+
 
       // Funciones
       const scheduleContainer = document.getElementById("play-schedule");

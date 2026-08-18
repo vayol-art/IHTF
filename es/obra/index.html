@@ -606,13 +606,23 @@
       const playBar = document.getElementById("play-bar");
       playBar.className = "play-bar " + play.colorClass;
       
-      // Setup the theater logo
+            // Setup the theater logo
       const playBarLogo = document.getElementById("play-bar-logo");
-      // The theater logo is usually the last one, or the only one
-      const theaterLogoSrc = play.logos[play.logos.length - 1];
+      const theaterLogoSrc = (play.logos && play.logos.length > 0) ? play.logos[play.logos.length - 1] : "";
       if (theaterLogoSrc) {
-        playBarLogo.innerHTML = `<img src="${theaterLogoSrc.startsWith('..') ? theaterLogoSrc : '../' + theaterLogoSrc}" alt="Logo Teatro">`;
+        let cleanLogo = theaterLogoSrc;
+        if (!cleanLogo.startsWith("../../")) {
+          if (cleanLogo.startsWith("../")) {
+            cleanLogo = "../" + cleanLogo;
+          } else {
+            cleanLogo = "../../" + cleanLogo;
+          }
+        }
+        let extraStyle = cleanLogo.includes("white") || cleanLogo.includes("blanco") || cleanLogo.includes("arsht") ? 'style="filter: invert(1);"' : '';
+        playBarLogo.innerHTML = `<img src="${cleanLogo}" alt="Logo Teatro" ${extraStyle}>`;
       }
+
+
 
       
       
