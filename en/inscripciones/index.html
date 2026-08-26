@@ -41,6 +41,19 @@
   <link rel="stylesheet" href="../../inscripciones.css?v=1.0.0" />
 <meta http-equiv="refresh" content="0;url=https://docs.google.com/forms/d/e/1FAIpQLSczcvvSrHnWwI0TgvGq_Ad9R9uOO-UCv7Eqy5VTrn_HMan4-g/viewform?usp=header" />
   <script>window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSczcvvSrHnWwI0TgvGq_Ad9R9uOO-UCv7Eqy5VTrn_HMan4-g/viewform?usp=header");</script>
+
+<script>
+  function toggleLangDropdown(e) {
+    if (e) e.stopPropagation();
+    const selector = document.querySelector(".lang-selector");
+    const btn = document.querySelector(".lang-btn");
+    if (selector) {
+      const isOpen = selector.classList.toggle("open");
+      if (btn) btn.setAttribute("aria-expanded", isOpen);
+    }
+  }
+</script>
+
 </head>
 
 <body>
@@ -77,7 +90,7 @@
       
       <div class="header-actions">
         <div class="lang-selector">
-          <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+          <button class="lang-btn" onclick="toggleLangDropdown(event)" aria-label="Change language" aria-expanded="false">
             <svg class="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="2" y1="12" x2="22" y2="12"></line>

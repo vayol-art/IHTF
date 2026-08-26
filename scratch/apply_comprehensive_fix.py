@@ -1,100 +1,8 @@
-/* Inscripciones 41° Festival Styling */
-.hero {
-  min-height: 280px;
-  background: var(--blue);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 100px 24px 60px;
-  position: relative;
-  overflow: hidden;
-}
+import os
+import glob
+import re
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 10%, rgba(255, 255, 255, .18), transparent 26%),
-    radial-gradient(circle at 80% 70%, rgba(226, 131, 30, .28), transparent 30%);
-  opacity: .8;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('assets/textura%20fondo.png') center/cover;
-  opacity: 0.05;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.hero > * {
-  position: relative;
-  z-index: 3;
-}
-
-.hero h1 {
-  font-family: var(--font-title);
-  font-size: clamp(34px, 5.5vw, 56px);
-  line-height: 1.05;
-  text-transform: uppercase;
-  margin: 0;
-  letter-spacing: -0.02em;
-}
-
-.inscripciones-section {
-  position: relative;
-  padding: 60px 24px 80px;
-  background: #f4f8fb;
-  min-height: 800px;
-}
-
-.inscripciones-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('assets/Texturas/textura%20turquesa.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.04;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.inscripciones-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1000px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  padding: 24px;
-  min-height: 800px;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-}
-
-@media (max-width: 767px) {
-  .hero {
-    min-height: 220px;
-    padding: 90px 16px 40px;
-  }
-  .inscripciones-section {
-    padding: 30px 12px 50px;
-  }
-  .inscripciones-container {
-    padding: 10px;
-    border-radius: 12px;
-  }
-}
-
-
+css_snippet = """
 /* =====================================================
    GLOBAL FIX: Language Dropdown & Constant Contact Newsletter
    ===================================================== */
@@ -181,3 +89,18 @@
   font-weight: 700 !important;
   cursor: pointer !important;
 }
+"""
+
+css_files = glob.glob("*.css")
+for css_file in css_files:
+    with open(css_file, "r", encoding="utf-8") as f:
+        content = f.read()
+    
+    # Avoid duplicate appending
+    if "GLOBAL FIX: Language Dropdown & Constant Contact Newsletter" not in content:
+        content += "\n" + css_snippet
+        with open(css_file, "w", encoding="utf-8") as f:
+            f.write(content)
+        print(f"Appended fixes to {css_file}")
+
+print("CSS files update complete.")
