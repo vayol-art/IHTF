@@ -264,6 +264,112 @@ body {
   }
 }
 
+/* Constant Contact Form Styling for Contact Us Page */
+.contact-form-wrap .ctct-inline-form {
+  width: 100% !important;
+}
+
+.contact-form-wrap .ctct-form-defaults,
+.contact-form-wrap .ctct-form-wrapper,
+.contact-form-wrap div[class*="ctct-form"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.contact-form-wrap .ctct-form-header {
+  display: none !important; /* Hide duplicate header injected inside contact card */
+}
+
+.contact-form-wrap .ctct-form-custom-text {
+  font-size: 14px !important;
+  color: #6a7d84 !important;
+  margin-bottom: 10px !important;
+  text-align: left !important;
+}
+
+.contact-form-wrap label,
+.contact-form-wrap .ctct-form-element label {
+  display: block !important;
+  text-align: left !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  color: #17333d !important;
+  margin-bottom: 6px !important;
+}
+
+.contact-form-wrap input[type="text"],
+.contact-form-wrap input[type="email"],
+.contact-form-wrap textarea,
+.contact-form-wrap .ctct-form-element input,
+.contact-form-wrap .ctct-form-element textarea {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  border: 1px solid rgba(26, 120, 158, 0.25) !important;
+  border-radius: 8px !important;
+  padding: 14px 18px !important;
+  font-size: 16px !important;
+  font-family: var(--font-body), sans-serif !important;
+  background: #ffffff !important;
+  color: #17333d !important;
+  outline: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.contact-form-wrap input:focus,
+.contact-form-wrap textarea:focus,
+.contact-form-wrap .ctct-form-element input:focus,
+.contact-form-wrap .ctct-form-element textarea:focus {
+  border-color: var(--blue) !important;
+  box-shadow: 0 0 0 3px rgba(26, 120, 158, 0.15) !important;
+}
+
+.contact-form-wrap textarea,
+.contact-form-wrap .ctct-form-element textarea {
+  min-height: 130px !important;
+  resize: vertical !important;
+}
+
+.contact-form-wrap .ctct-form-button,
+.contact-form-wrap button[type="submit"],
+.contact-form-wrap .ctct-button {
+  align-self: flex-start !important;
+  background: var(--blue) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 99px !important;
+  padding: 14px 45px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  letter-spacing: 0.05em !important;
+  box-shadow: 0 4px 15px rgba(26, 120, 158, 0.2) !important;
+  margin-top: 10px !important;
+  transition: background-color 0.2s, transform 0.2s !important;
+}
+
+.contact-form-wrap .ctct-form-button:hover,
+.contact-form-wrap button[type="submit"]:hover {
+  background-color: #145e7c !important;
+  transform: translateY(-2px) !important;
+}
+
+.contact-form-wrap .ctct-disclosure,
+.contact-form-wrap p[class*="ctct-"] {
+  font-size: 12px !important;
+  color: #8a9d94 !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+}
+
+
 
 /* =====================================================
    GLOBAL FIX: Language Dropdown & Constant Contact Newsletter
