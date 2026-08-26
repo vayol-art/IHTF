@@ -460,17 +460,21 @@
   cursor: pointer;
   padding: 11px 18px;
   text-align: left;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center;
+  box-sizing: border-box;
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 500;
-  color: var(--text, #17333d);
+  color: var(--text, #17333d) !important;
   transition: background 0.2s ease, color 0.2s ease;
   width: 100%;
 }
 
 .lang-opt:hover {
-  background: rgba(26, 120, 158, 0.08);
-  color: var(--blue, #1a789e);
+  background: rgba(26, 120, 158, 0.08) !important;
+  color: var(--blue, #1a789e) !important;
 }
 
 /* Newsletter & Constant Contact Embed Styles */

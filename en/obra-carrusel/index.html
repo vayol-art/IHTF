@@ -40,8 +40,13 @@
   <link rel="stylesheet" href="../../obra.css" />
 
 <script>
+  
+
+<script>
   function toggleLangDropdown(e) {
-    if (e) e.stopPropagation();
+    if (e) {
+      e.stopPropagation();
+    }
     const selector = document.querySelector(".lang-selector");
     const btn = document.querySelector(".lang-btn");
     if (selector) {
@@ -49,8 +54,27 @@
       if (btn) btn.setAttribute("aria-expanded", isOpen);
     }
   }
-</script>
 
+  function switchLang(lang, targetUrl) {
+    localStorage.setItem("preferred_lang", lang);
+    if (targetUrl && targetUrl !== "#") {
+      let finalUrl = targetUrl;
+      if (window.location.search && targetUrl.includes("/obra/")) {
+        finalUrl += window.location.search;
+      }
+      window.location.href = finalUrl;
+    }
+  }
+
+  document.addEventListener("click", function (event) {
+    const selector = document.querySelector(".lang-selector");
+    const btn = document.querySelector(".lang-btn");
+    if (selector && !selector.contains(event.target)) {
+      selector.classList.remove("open");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>
 </head>
 <body>
   <header class="site-header">
@@ -97,8 +121,8 @@
           </svg>
         </button>
         <div class="lang-dropdown">
-          <button class="lang-opt active">English</button>
-          <button class="lang-opt">Español</button>
+          <a href="#" class="lang-opt active" onclick="switchLang('en'); return false;">English</a>
+          <a href="../../es/obra-carrusel/" class="lang-opt" onclick="switchLang('es', '../../es/obra-carrusel/')">Español</a>
         </div>
       </div>
       <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">

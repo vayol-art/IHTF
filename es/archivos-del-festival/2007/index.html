@@ -40,8 +40,13 @@
   <link rel="stylesheet" href="../../../edicion-historica.css?v=1.0.0">
 
 <script>
+  
+
+<script>
   function toggleLangDropdown(e) {
-    if (e) e.stopPropagation();
+    if (e) {
+      e.stopPropagation();
+    }
     const selector = document.querySelector(".lang-selector");
     const btn = document.querySelector(".lang-btn");
     if (selector) {
@@ -49,8 +54,27 @@
       if (btn) btn.setAttribute("aria-expanded", isOpen);
     }
   }
-</script>
 
+  function switchLang(lang, targetUrl) {
+    localStorage.setItem("preferred_lang", lang);
+    if (targetUrl && targetUrl !== "#") {
+      let finalUrl = targetUrl;
+      if (window.location.search && targetUrl.includes("/obra/")) {
+        finalUrl += window.location.search;
+      }
+      window.location.href = finalUrl;
+    }
+  }
+
+  document.addEventListener("click", function (event) {
+    const selector = document.querySelector(".lang-selector");
+    const btn = document.querySelector(".lang-btn");
+    if (selector && !selector.contains(event.target)) {
+      selector.classList.remove("open");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>
 </head>
 <body>
   <header class="site-header">
@@ -98,9 +122,9 @@
             </svg>
           </button>
           <div class="lang-dropdown">
-            <button class="lang-opt active">Español</button>
-            <button class="lang-opt">English</button>
-          </div>
+          <a href="#" class="lang-opt active" onclick="switchLang('es'); return false;">Español</a>
+          <a href="../../../en/archivos-del-festival/2007/" class="lang-opt" onclick="switchLang('en', '../../../en/archivos-del-festival/2007/')">English</a>
+        </div>
         </div>
         <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
           <span></span>
