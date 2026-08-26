@@ -1854,3 +1854,42 @@ section h2 {
   background: #ffffff !important;
   border-top: 1px solid #ffffff !important;
 }
+
+/* Newsletter & Constant Contact Embed Styles */
+.newsletter {
+  padding: 60px 20px 30px !important;
+  text-align: center;
+}
+
+.newsletter .section-inner {
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  padding: 35px 25px !important;
+  background: #ffffff !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  box-sizing: border-box !important;
+}
+
+.ctct-inline-form {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 15px auto 0 !important;
+  overflow: visible !important;
+}
+
+.ctct-inline-form form,
+.ctct-embed-signup form,
+div[id*="ctct"] {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.ctct-inline-form .ctct-form-button,
+.ctct-inline-form button[type="submit"] {
+  position: static !important;
+  margin: 12px auto 0 !important;
+  display: block !important;
+  width: auto !important;
+  max-width: 100% !important;
+}
