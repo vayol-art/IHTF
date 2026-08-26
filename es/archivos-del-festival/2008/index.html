@@ -41,11 +41,11 @@
 
 <script>
   function toggleLangDropdown(e) {
-    if (e) {
+    if (e && typeof e.stopPropagation === 'function') {
       e.stopPropagation();
     }
-    const selector = document.querySelector(".lang-selector");
-    const btn = document.querySelector(".lang-btn");
+    const btn = (e && e.currentTarget) ? e.currentTarget : document.querySelector(".lang-btn");
+    const selector = btn ? btn.closest(".lang-selector") : document.querySelector(".lang-selector");
     if (selector) {
       const isOpen = selector.classList.toggle("open");
       if (btn) btn.setAttribute("aria-expanded", isOpen);
