@@ -1933,14 +1933,21 @@ div[id*="ctct"] {
   display: block !important;
 }
 
-.ctct-inline-form div[class*="ctct-form"],
-.ctct-embed-signup div[class*="ctct-form"] {
+.ctct-inline-form div[class*="ctct-form"]:not([style*="display: none"]):not([hidden]),
+.ctct-embed-signup div[class*="ctct-form"]:not([style*="display: none"]):not([hidden]) {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   width: 100% !important;
   box-sizing: border-box !important;
   gap: 10px !important;
+}
+
+.ctct-inline-form [style*="display: none"],
+.ctct-embed-signup [style*="display: none"],
+.ctct-inline-form [hidden],
+.ctct-embed-signup [hidden] {
+  display: none !important;
 }
 
 .ctct-inline-form label,
