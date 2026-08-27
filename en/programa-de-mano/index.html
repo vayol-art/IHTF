@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Begin Constant Contact Active Forms -->
+  <script> var _ctct_m = "a79e89c0998befa80793c5464469c842"; </script>
+  <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+  <!-- End Constant Contact Active Forms -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17480587494"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17480587494');
+  </script>
+  <link rel="icon" type="image/png" href="../../assets/favicon.png" />
+
+  <title>Playbill | International Hispanic Theatre Festival of Miami</title>
+  <meta name="description" content="40th IHTF Edition - Official digital Playbill of the International Hispanic Theatre Festival of Miami." />
+  <link rel="canonical" href="https://vayol-art.github.io/IHTF/en/programa-de-mano/" />
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vayol-art.github.io/IHTF/en/programa-de-mano/" />
+  <meta property="og:title" content="Playbill | International Hispanic Theatre Festival (IHTF 40)" />
+  <meta property="og:description" content="We are preparing the official digital Playbill for the festival. It will be available very soon." />
+  <meta property="og:image" content="https://vayol-art.github.io/IHTF/assets/favicon.png" />
+  <meta property="og:image:secure_url" content="https://vayol-art.github.io/IHTF/assets/favicon.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="International Hispanic Theatre Festival of Miami" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://vayol-art.github.io/IHTF/en/programa-de-mano/" />
+  <meta name="twitter:title" content="Playbill | International Hispanic Theatre Festival (IHTF 40)" />
+  <meta name="twitter:description" content="We are preparing the official digital Playbill for the festival. It will be available very soon." />
+  <meta name="twitter:image" content="https://vayol-art.github.io/IHTF/assets/favicon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../fonts.css" />
+  <link rel="stylesheet" href="../../style.css?v=1.0.6" />
+
+  <style>
+    body {
+      min-height: 100vh;
+      background-color: #1a789e;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url('../../assets/Texturas/textura%20turquesa.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.18;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .site-header {
+      z-index: 50;
+    }
+
+    .main-wrapper {
+      position: relative;
+      z-index: 10;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 20px 60px;
+    }
+
+    .coming-soon-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 48px 36px;
+      text-align: center;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+    }
+
+    .pill-badge {
+      background: #fdf0e6;
+      color: #d97706;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      padding: 6px 18px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .coming-soon-card h1 {
+      color: #1a789e;
+      font-size: 32px;
+      font-weight: 800;
+      font-family: var(--font-title), sans-serif;
+      margin: 0 0 16px 0;
+      line-height: 1.25;
+    }
+
+    .coming-soon-card p {
+      color: #556970;
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 440px;
+      margin: 0 auto 28px;
+    }
+
+    .btn-agenda {
+      background: #19789e;
+      color: #ffffff !important;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 15px;
+      box-shadow: 0 4px 14px rgba(25, 120, 158, 0.3);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn-agenda:hover {
+      background: #135c7a;
+      transform: translateY(-2px);
+    }
+  </style>
+
+  <script>
+    function toggleLangDropdown(e) {
+      if (e && typeof e.stopPropagation === 'function') {
+        e.stopPropagation();
+      }
+      const btn = (e && e.currentTarget) ? e.currentTarget : document.querySelector(".lang-btn");
+      const selector = btn ? btn.closest(".lang-selector") : document.querySelector(".lang-selector");
+      if (selector) {
+        const isOpen = selector.classList.toggle("open");
+        if (btn) btn.setAttribute("aria-expanded", isOpen);
+      }
+    }
+
+    function switchLang(lang, targetUrl) {
+      localStorage.setItem("preferred_lang", lang);
+      if (targetUrl && targetUrl !== "#") {
+        window.location.href = targetUrl;
+      }
+    }
+
+    document.addEventListener("click", function (event) {
+      const selector = document.querySelector(".lang-selector");
+      const btn = document.querySelector(".lang-btn");
+      if (selector && !selector.contains(event.target)) {
+        selector.classList.remove("open");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="../#home" aria-label="IHTF Home">
+      <img class="logo-white" src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20blanco.png" alt="IHTF 40 White" />
+      <img class="logo-color" src="../../assets/LOGO_EXPORTS%202/LOGOS_DIGITAL/Web/logo%20colores.png" alt="IHTF 40 Color" />
+    </a>
+    <div class="nav-container">
+      <nav class="main-nav" aria-label="Main menu">
+        <div class="nav-dropdown-wrapper">
+          <a href="../agenda/" class="nav-dropdown-trigger">PROGRAM</a>
+          <div class="nav-submenu">
+            <a href="../agenda/" class="submenu-item">2026 PROGRAM</a>
+            <a href="../programa-de-mano/" class="submenu-item">Playbill</a>
+            <a href="../calendario/" class="submenu-item">Calendar</a>
+            <a href="../eventos-adicionales/" class="submenu-item">Additional Events</a>
+            <div class="dropdown-divider"></div>
+            <a href="../dia-internacional-del-nino/" class="submenu-item">International Children's Day</a>
+            <a href="../teatros/" class="submenu-item">Theaters</a>
+            <a href="../sponsors/" class="submenu-item">Support IHTF</a>
+            <a href="../archivos-del-festival/" class="submenu-item">Festival Archives</a>
+          </div>
+        </div>
+        <a href="../contactanos/">CONTACT US</a>
+        <div class="nav-dropdown-wrapper">
+          <a href="../nosotros/" class="nav-dropdown-trigger">ABOUT US</a>
+          <div class="nav-submenu">
+            <a href="../nosotros/#compania" class="submenu-item">Festival History</a>
+            <a href="../nosotros/#personal" class="submenu-item">Staff</a>
+          </div>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSczcvvSrHnWwI0TgvGq_Ad9R9uOO-UCv7Eqy5VTrn_HMan4-g/viewform?usp=header" target="_blank">41ST IHTF INSCRIPTIONS</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-selector">
+          <button class="lang-btn" onclick="toggleLangDropdown(event)" aria-label="Switch language" aria-expanded="false">
+            <svg class="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span class="lang-text">English</span>
+            <svg class="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <a href="../../es/programa-de-mano/" class="lang-opt" onclick="switchLang('es', '../../es/programa-de-mano/')">Español</a>
+            <a href="#" class="lang-opt active" onclick="switchLang('en'); return false;">English</a>
+          </div>
+        </div>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const mainNav = document.querySelector(".main-nav");
+        if (hamburger && mainNav) {
+          hamburger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const isOpen = hamburger.classList.toggle("open");
+            mainNav.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", isOpen);
+          });
+          document.addEventListener("click", function (event) {
+            if (!hamburger.contains(event.target) && !mainNav.contains(event.target)) {
+              hamburger.classList.remove("open");
+              mainNav.classList.remove("open");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+    </script>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="coming-soon-card">
+      <div class="pill-badge">40TH IHTF EDITION</div>
+      <h1>Playbill - Coming Soon</h1>
+      <p>We are preparing the official digital Playbill for the festival. It will be available very soon.</p>
+      <a href="../agenda/" class="btn-agenda">View Full Program</a>
+    </div>
+  </main>
+</body>
+
+</html>
